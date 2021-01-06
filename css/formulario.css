@@ -5,30 +5,11 @@ html, body{
     margin: 0;
     padding: 0;
 }
-.boton{
-    cursor: pointer;
-    display: inline-block;
-    transition: all .3s;
-    text-align: center;
-    background-color: #DB052C;
-    color: #ffffff;
-    font-size: 1.05em;
-    font-weight:700;
-    letter-spacing: .06em;
-    padding: 10px 65px 9px;
-    margin: 15px auto ;
-    border: 2px #DB052C solid;
-}
-.boton:hover{
-    color: #DB052C;
-    background-color: transparent;
-    border: 2px #DB052C solid;
-}
 #back_form{
 	width: 100%;
 	height: 100%;
 	padding: 30px 0 60px;
-	background: url(../img/back_copa.jpg) no-repeat;
+	background: url(back_copa.jpg) no-repeat;
 	background-position: bottom left;
 	background-size: cover;
 	display: inline-table;
