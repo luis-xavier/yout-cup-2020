@@ -31,7 +31,8 @@ html, body{
 	background: url(../img/back_copa.jpg) no-repeat;
 	background-position: bottom left;
 	background-size: cover;
-	display: inline-table;
+    display: inline-table;
+    margin-top: 71px;
 }
 #form-wrapper{
     font-family: 'FC Bayern Sans', sans-serif;
@@ -322,6 +323,11 @@ html, body{
 	#form-wrapper h1{
 		font-size: 1.5em;
 	}
+}
+@media (max-width: 960px){
+    #back_form{
+        margin-top: 51px;
+    }
 }
 @media (max-width: 340px){
     

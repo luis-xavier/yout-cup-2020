@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+ /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0; padding: 0; border:0; font-size: 100%; font: inherit; vertical-align: baseline;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
 body {line-height: 1;}
@@ -93,7 +93,7 @@ header{
     top: 0;
     background: rgb(243,245,246);
     background: linear-gradient(313deg, rgba(243,245,246,1) 19%, rgba(255,255,255,1) 77%);
-    z-index: 2;
+    z-index: 5;
 }
 .first-section-header{
     display: flex;
@@ -137,12 +137,14 @@ header{
     justify-content: flex-end;
 }
 .top-bar div{
+    color: #FFF;
     margin: auto 20px;
 }
 .idiomas button{
     background-color: transparent;
     border: none;
     cursor: pointer;
+    color: #FFF;
 }
 .idiomas button:focus{
     outline: none;
@@ -334,7 +336,6 @@ nav > ul > li:hover .dropdown-menu li a{
     cursor: pointer;
     margin: auto -15px auto auto;
     z-index: 20;
-
 }
 .menu_anvorguesa::before{
     position: absolute;
@@ -399,7 +400,7 @@ nav > ul > li:hover .dropdown-menu li a{
 	position: absolute;
 	display: block;
 	height: 100vh;
-	width: 100vw;
+    width: 100vw;
 	background: rgba(0, 24, 41, .9);
 	background-position: 39% 88%;
 	z-index: 500;
@@ -428,13 +429,11 @@ nav > ul > li:hover .dropdown-menu li a{
     flex-direction: row;
     align-content: center;
     justify-content: center;
+    color: #FFF;
+    flex-wrap: wrap;
 }
 #menu-mobile-bar .idiomas button{
-    width: 20%;
     margin: auto 10px;
-}
-#menu-mobile-bar .idiomas img{
-    width: 100%;
 }
 #menu-mobile-bar .redes-sociales-header{
     width: 50%;
@@ -445,7 +444,7 @@ nav > ul > li:hover .dropdown-menu li a{
 }
 #menu-mobile-bar .redes-sociales-header a{
     margin: auto 10px;
-    width: 15%;
+    width: 12%;
 }
 #menu-mobile-bar .redes-sociales-header img{
     width: 100%;
@@ -465,7 +464,7 @@ nav > ul > li:hover .dropdown-menu li a{
 }
 #menu-mobile li a{
 	display: block;
-	font-size: 1.5em;
+	font-size: 20px;
 	font-weight: normal;
 	text-decoration: none;
 	color: #FFF;
@@ -531,6 +530,9 @@ nav > ul > li:hover .dropdown-menu li a{
 .first-section-home article{
     margin: 60px 5% 20px;
     font-size: 1.875em;
+}
+.first-section-home article h1{
+    display: none;
 }
 .first-section-home article p{
     text-align: center;
@@ -690,64 +692,71 @@ nav > ul > li:hover .dropdown-menu li a{
     background-color: #DB052C;
     
 }
-.first-section-footer{
+.newsletter{
     display: flex;
+    flex-direction: row;
     background: linear-gradient(to right, #9d0528, #DB052C);
     width: 100%;
     height: 71px;
     margin: auto;
 }
-.first-section-footer div{
+.newsletter div{
     width: 100%;
     margin: 0 5%;
     display: flex;
     flex-direction: row;
 }
-.first-section-footer p{
+.newsletter p{
     color: #ffffff;
     font-weight: bold;
     font-size: 1.125em;
     margin: auto;
+    margin-left: 0;
 }
-.first-section-footer form{
+.newsletter form{
     margin: auto;
     width: 50%;
     display: flex;
     flex-direction: row;
     margin-right: -4%;
 }
-.first-section-footer input{
+.newsletter input{
     background-color: transparent;
+    color: white;
     border: none;
     width: 70%;
     height: 50px;
     border: 3px white solid;
+    border-right: 2px;
+    padding: 3% 0 3% 3%;
 }
-.first-section-footer input:focus{
+.newsletter input [type=text]{
+    color: white;
+}
+.newsletter input:focus{
     outline: none;
 }
-.first-section-footer input::placeholder{
-    color: #ffffff;
+.newsletter input::placeholder{
+    color: rgba(255, 255, 255, 0.8);
     font-size: 1.125em;
-    margin: auto;
 }
-.first-section-footer form button{
+.newsletter form button{
     background-color: white;
     color: #DB052C;
     font-weight: bold;
     border: 3px white solid;
     padding: 0 20px;
-    transition: all .8s;
+    transition: all .3s;
+    cursor: pointer;
 }
-.first-section-footer form button:hover{
+.newsletter form button:hover{
     background-color: transparent;
     outline: none;
     color: #fff;
     border: 3px white solid;
     padding: 0 20px;
-    border-left: none;
 }
-.first-section-footer form button:focus{
+.newsletter form button:focus{
     outline: none;
 }
 footer{
@@ -755,6 +764,7 @@ footer{
     background-color: #001829;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .subsections-footer{
     display: flex;
@@ -783,14 +793,19 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 20%;
 }
 .third-subsection-footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 20%;
 }
 .third-subsection-footer a{
     color: white;
+}
+.third-subsection-footer a:hover{
+    text-decoration:underline #FFF;
 }
 .fourth-section-footer {
     display: flex;
@@ -801,8 +816,20 @@ footer{
     margin: 10px;
     width: 100%;
 }
+.whatsapp{
+    display: none;
+}
+.span-f{
+    display: none;
+    margin: 20px auto;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
 footer address{
     margin: 2% 5%;
+    font-size: 16px;
     color: rgba(220, 226, 229, 0.5);
     text-align: center;
     border-top: 1px rgba(220, 226, 229, 0.5) solid;
@@ -835,6 +862,7 @@ footer address{
     text-transform: capitalize;
     display: block;
     float: left;
+    margin-top: 16px;
 }
 .section-acerca-de article p{
     margin-top: 30px;
@@ -985,6 +1013,12 @@ footer address{
     .nothing{
         display: none;
     }
+    .first-section-footer p{
+        font-size: 17px;
+    }
+    .first-section-footer form{
+        width: 45%;
+    }
 }
 @media screen and (max-width: 950px){
     .first-section-header{
@@ -995,6 +1029,12 @@ footer address{
     }
     .menu-desktop{
         width: 100%;
+    }
+    .first-section-footer form{
+        width: 50%;
+    }
+    .first-section-footer p{
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 800px){
@@ -1010,7 +1050,9 @@ footer address{
 		width: 94%;
 		height: 52px;
         background-color: #F3F5F6;
-        overflow: visible;
+    }
+    .logo-header{
+        width: unset;
     }
     .first-section-header{
         width: 100%;
@@ -1022,6 +1064,7 @@ footer address{
         display: flex;
         width: 34%;
         margin-right: -3%;
+        cursor: pointer;
     }
     .first-section-home{
         margin-top: 53px;
@@ -1037,6 +1080,91 @@ footer address{
         display: block;
         margin: 10px auto 20px;
     }
+    .newsletter{
+        height: 184px;
+    }
+    .newsletter > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 5% 8%;
+    }
+    .newsletter p{
+        font-size: 16px;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .newsletter form{
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto;
+    }
+    .newsletter input::placeholder{
+        font-size: 16px;
+    }
+    .newsletter input{
+        height: 32px;
+        margin: 0 auto;
+        width: 80%;
+        border-right: 3px #FFF solid;
+        margin-bottom: 20px;
+    }
+    .newsletter form button{
+        height: 32px;
+        width: 145px;
+        margin: auto;
+        font-size: 15px;
+    }
+    .second-subsection-footer, .third-subsection-footer{
+        display: none;
+    }
+    .whatsapp{
+        display: block;
+    }
+    .whatsapp img{
+        width: 88%;
+    }
+    .first-subsection-footer{
+        width: 40%;
+    }
+    .fourth-section-footer{
+        width: 30%;
+        justify-content: unset;
+        margin-right: -10%;
+        margin: auto 0;
+    }
+    .fourth-section-footer a:nth-child(2n){
+        margin: 0 20px;
+        margin-top: 3px;
+    }
+    .fourth-section-footer a:first-child{
+        margin-top: 2px;
+    }
+    .span-f{
+        display: block;
+    }
+    footer address{
+        font-size: 12px;
+    }
+    .img-container-acerca-de{
+        width: 100%;
+        margin-top: 51px;
+    }
+}
+@media screen and (max-width:700px){
+    .logo-header{
+        width: 100%;
+    }
+    .newsletter p{
+        text-align: left;
+    }
+    .newsletter input{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 500px){
     .first-section-home article { 
@@ -1045,6 +1173,10 @@ footer address{
     .first-section-home article h1{
         font-size: 1.375em;
     }
+    .menu_anvorguesa p{
+        font-size: .9em;
+    }
+}
 @media screen and (max-width: 400px){
     .menu_anvorguesa{
         width: 40%;
@@ -1057,6 +1189,38 @@ footer address{
         width: 50px;
         margin: -5px -5px auto 0;
     }
-    
+    .third-section-home{
+        overflow: hidden;
+    }
+    .subsections-footer{
+        margin: 3% 6%;
+        align-content: space-around;
+    }
+    .first-subsection-footer{
+        width: 50%;
+    }
+    .first-subsection-footer div{
+        margin: 0 10px; 
+    }
+    .first-subsection-footer a{
+        width: 100%;
+    }
+    .first-subsection-footer a img{
+        width: 100%;
+    }
+    .fourth-section-footer{
+        width: 50%;
+        margin: 0 auto;
+        align-items: center;
+        margin-right: -42px;
+    }
+    .fourth-section-footer a:nth-child(2n){
+        margin: 3px 15px 0 10px;
+    }
+    .fourth-section-footer a:nth-child(2n) img{
+        width: 115%;
+    }
+    .fourth-section-footer a img{
+        margin: 0;
+    } 
 }
-	

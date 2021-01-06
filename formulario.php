@@ -1,4 +1,5 @@
-<meta charset="utf-8">
+<?php include "header.php" ?>
+
 <link rel="stylesheet" type="text/css" href="css/formulario.css">
 <script type="text/javascript" src="js/formulario.js"></script>
 
@@ -108,3 +109,8 @@
 
 </section>
 </div>
+
+<?php include "newsletter.php" ?>
+
+<?php include "footer.php" ?>
+
