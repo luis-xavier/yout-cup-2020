@@ -5,6 +5,13 @@
 <div class="banner-torneo">
     <img src="img/banner-torneo.jpg" alt="">
 </div>
+<div id="menu-torneo-mobile">
+    <ul>
+        <li><a href="#torneo" id="torneo-link-mobile" class="">Reglas</a></li>
+        <li><a href="#competencia" id="competencia-link-mobile" class="">Competencia</a></li>
+        <li class="costo"><a href="#costos" id="costos-link-mobile" class="">Registro y costo</a></li>
+    </ul>
+</div>
 <h2>Torneo</h2>
 <section class="torneo-wrapper">
     <div id="menu-torneo-desktop">
@@ -69,7 +76,7 @@
             </ul>
             <p>La Gran Final Nacional se disputará entre los equipos campeones y subcampeones de las ediciones estatales, así como semifinalistas del torneo de CDMX en el estadio Miguel Alemán de la Ciudad de Celaya, Guanajuato. </p>
             <p>Los equipos clasificados deben confirmar su participación y formato de registro de jugadores, así como completar el proceso de Altas y Bajas antes del día 23 de Abril de 2021. De no hacerlo a más tardar el día señalado, se procederá a hacer la invitación al tercer lugar (quien tendrá 72 horas para confirmar) y si este no puede, al cuarto lugar (que también contará con 72 horas para confirmar su participación.</p>
-            <button class="boton-reverse">DESCARGAR REGLAMENTO</button>
+            <button class="boton boton-reverse">DESCARGAR REGLAMENTO</button>
         </div>
 
         <div id="costos">

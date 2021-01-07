@@ -26,6 +26,7 @@ const topMenu = $("header"),
  topMenuHeight = topMenu.outerHeight()+1,
  // All list items
  menuItems = $("#menu-torneo-desktop a"),
+ menuItemsMob = $("#menu-torneo-mobile a"),
  // Anchors corresponding to menu items
  scrollItems = menuItems.map(function(){
    const item = $($(this).attr("href"));
@@ -45,10 +46,20 @@ menuItems.click(function(e){
   e.preventDefault();
 });
 
+menuItemsMob.click(function(e){
+  const href = $(this).attr("href")
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-45;
+      console.log(href);
+  $('html, body').stop().animate({
+      scrollTop: offsetTop
+  }, 850);
+  e.preventDefault();
+});
+
 // Bind to scroll
 $(window).scroll(function(){
    // Get container scroll position
-   const fromTop = $(this).scrollTop()+topMenuHeight+15;
+   const fromTop = $(this).scrollTop()+topMenuHeight+50;
 
    // Get id of current scroll item
    let cur = scrollItems.map(function(){
@@ -62,11 +73,12 @@ $(window).scroll(function(){
 	// Set/remove active class
 	console.log(id)
 	menuItems.removeClass("active");
-	$('#'+id+'-link').addClass('active');
+  $('#'+id+'-link').addClass('active');
+  
+  menuItemsMob.removeClass("active-mobile");
+	$('#'+id+'-link-mobile').addClass('active-mobile');
 	
 });
-
-
 $('.overlay-confirmacion, .modal .btn-morado, .cerrar-modal').on('click', function(){
 	$('.overlay-confirmacion').fadeOut();
 })

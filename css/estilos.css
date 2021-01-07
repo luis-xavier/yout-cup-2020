@@ -281,6 +281,7 @@ nav > ul > li:hover:after{
     padding: 10px 20px;
     border-top: 3px #DB052C solid;
     transition: all .5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 1px -5px 36px -3px rgba(0,0,0,.1);
     box-sizing: border-box;
     text-align: center;
     hyphens: none;
@@ -925,6 +926,35 @@ footer address{
     justify-content: space-around;
     position: relative;
 }
+#menu-torneo-mobile{
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    background: #0067B2;
+    position: sticky;
+    top: 54px;
+    z-index: 2;
+}
+#menu-torneo-mobile ul{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin: auto 3%;
+}
+#menu-torneo-mobile li a{
+    color: #FFF;
+    width: 100%;
+    font-size: 15px;
+    padding: 11px 35px;
+    transition: all .3s;
+}
+#menu-torneo-mobile li a:hover, #menu-torneo-mobile li a.active-mobile{
+    background: rgba(111, 194, 254, 0.2);
+    font-weight: bold;
+}
 #menu-torneo-desktop{
     width: 25%;
     color: #001829;
@@ -969,7 +999,10 @@ footer address{
 }
 .texto-torneo a{
     margin: 30px auto;
-    width: 25%;
+    display: table;
+}
+#competencia a{
+    display: table;
 }
 #torneo{
     border-bottom: 1px #001829 solid;
@@ -1004,7 +1037,7 @@ footer address{
 .boton-reverse{
     cursor: pointer;
     text-transform: uppercase;
-    display: inline-block;
+    display: table;
     transition: all .3s;
     text-align: center;
     background-color: transparent;
@@ -1061,6 +1094,14 @@ footer address{
         font-size: 22px;
     }
 }
+@media screen and (max-width: 1050px){
+    .texto-torneo{
+        width: 70%;
+    }
+    #menu-torneo-desktop{
+        width: 30%;
+    }
+}
 @media screen and (max-width: 950px){
     .first-section-header{
         width: 58%;
@@ -1076,6 +1117,12 @@ footer address{
     }
     .first-section-footer p{
         font-size: 16px;
+    }
+    .texto-torneo{
+        width: 65%;
+    }
+    #menu-torneo-desktop{
+        width: 35%;
     }
 }
 @media screen and (max-width: 800px){
@@ -1126,10 +1173,9 @@ footer address{
     }
     .tv-cuatro-mobile{
         display: block;
-        margin: 0 auto;
+        margin: 10px auto 30px;
         width: 320px;
         height: 50px;
-        margin-bottom: 20px;
     }
     .second-section-home{
         display: none;
@@ -1155,6 +1201,9 @@ footer address{
         margin-bottom: 20px;
         height: auto;
     }
+    .swiper-pagination > span{
+        background-color: #001829;
+    }
     .noticia h3{
         font-size: 25px;
         margin-bottom: 10px;
@@ -1168,6 +1217,18 @@ footer address{
     }
     .third-section-home h2{
         font-size: 30px;
+    }
+    .banner-torneo{
+        margin-top: 51px;
+    }
+    #menu-torneo-desktop{
+        display: none;
+    }
+    #menu-torneo-mobile{
+        display: flex;
+    }
+    .texto-torneo{
+        width: 100%;
     }
     .newsletter{
         height: 184px;
@@ -1196,7 +1257,7 @@ footer address{
         font-size: 16px;
     }
     .newsletter input{
-        height: 32px;
+        height: 40px;
         margin: 0 auto;
         width: 80%;
         border-right: 3px #FFF solid;
@@ -1232,7 +1293,7 @@ footer address{
         width: 88%;
     }
     .first-subsection-footer{
-        width: 40%;
+        width: 20%;
     }
     .fourth-section-footer{
         width: 30%;
@@ -1257,7 +1318,9 @@ footer address{
         width: 100%;
         margin-top: 51px;
     }
-}
+    #competencia a{
+        margin-top: 20px;
+    }
 @media screen and (max-width:700px){
     .logo-header{
         width: 100%;
@@ -1290,8 +1353,45 @@ footer address{
     .noticia a{
         font-size: 16px;
     }
+    #menu-torneo-mobile li a{
+        font-size: 13px;
+        padding: 11px 25px;
+    }
+    .first-subsection-footer{
+        width: 42%;
+    }
 }
 @media screen and (max-width: 500px){
+    h2{
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    h4{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .texto-torneo{
+        font-size: 15px;
+        line-height: 1.3em;
+    }
+    .texto-torneo p{
+        margin-bottom: 10px;
+    }
+    .texto-torneo li{
+        margin: 10px auto;
+    }
+    .terminos-y-condiciones{
+        font-size: 12px;
+    }
+    .terminos-y-condiciones p{
+        margin-bottom: unset;
+    }
+    #costos li:last-child{
+        margin-bottom: 10px;
+    }
+    .cancelacion{
+        margin-top: 30px;
+    }
     .first-section-home article { 
         font-size: 1em;
     }
@@ -1305,10 +1405,13 @@ footer address{
         font-size: 22px;
         margin-top: 20px;
     }
-    .boton, .boton-reverse{
+    .boton{
         margin-top: unset;
         font-size: 15px;
         padding: 10px 35px 9px;
+    }
+    .boton-reverse{
+        margin: 20px auto 30px;
     }
     .newsletter form button{
         margin: auto;
@@ -1332,12 +1435,24 @@ footer address{
     .third-section-home{
         overflow: hidden;
     }
+    #menu-torneo-mobile ul{
+        margin: unset;
+    }
+    #menu-torneo-mobile ul li{
+        width: 30%;
+    }
+    #menu-torneo-mobile li a{
+        display: block;
+        text-align: center;
+        padding: 12px 0px;
+        width: 100%;
+    }
     .subsections-footer{
         margin: 3% 6%;
         align-content: space-around;
     }
     .first-subsection-footer{
-        width: 50%;
+        width: 42%;
     }
     .first-subsection-footer div{
         margin: 0 10px; 
