@@ -88,13 +88,10 @@ $('.modal').on('click', function(){
 })
 
 function mensajeIntro(){
-	setTimeout(function(){
 		$('.overlay-confirmacion').fadeIn('slow');
-	},1000)
 }
-//mensajeIntro();
-
-$('#logo').on('click', function(){
-	mensajeIntro();
-})
-
+setTimeout(
+  function(){
+    mensajeIntro()
+  }, 500
+)

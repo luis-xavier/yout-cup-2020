@@ -38,7 +38,7 @@
                         </ul>
                     </li>
                     <li style="z-index: 4;"><a href="file:///Users/canek/Documents/Canek/Youth%20Cup/torneo.html">Torneo</a></li>
-                    <li style="z-index: 3;"><a href="">Youth CUP 2019</a></li>
+                    <li style="z-index: 3;"><a href="">Youth Cup</a></li>
                     <li style="z-index: 2;"><a href="">Noticias</a></li>
                     <li style="z-index: 1;" id="participa"><a href="" >Participa</a></li>
                 </ul>
@@ -59,7 +59,7 @@
         <ul id="menu-mobile">
             <li><a href="" class="">Acerca de</a></li>
             <li><a href="" class="">Torneo</a></li>
-            <li><a href="" class="">Youth Cup 2019</a></li>
+            <li><a href="" class="">Youth Cup</a></li>
             <li><a href="" class="">Noticias</a></li>
             <li><a href="" class="">Participa</a></li>
             <li><a href="" class="">Mi equipo</a></li>

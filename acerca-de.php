@@ -8,7 +8,7 @@
 <section class="section-acerca-de">
     <h2>Acerca de</h2>
     <article>
-        <p>la FC Bayern Youth Cup es una serie de torneos internacionales en varios países en el mundo incluyendo Brasil, China, India, Italia, Japón, Estados Unidos, entre otros. El objetivo es brindar a los niños de todo el mundo la oportunidad de mostrar su talento, independientemente de su origen social. Curveball Sports y el FC Bayern lanzarán el torneo en México en 2021.
+        <p><span class="letter-capital">l</span>a FC Bayern Youth Cup es una serie de torneos internacionales en varios países en el mundo incluyendo Brasil, China, India, Italia, Japón, Estados Unidos, entre otros. El objetivo es brindar a los niños de todo el mundo la oportunidad de mostrar su talento, independientemente de su origen social. Curveball Sports y el FC Bayern lanzarán el torneo en México en 2021.
         </p>
         <p>El FC Bayern ha estado organizando torneos de selección local, estos dan lugar a una Final Nacional en el país participante, en la que un representante del FC Bayern selecciona la denominada Selección Nacional, que está formada por los diez mejores jugadores masculinos del país participante de entre 14 y 16 años. Luego, este equipo viaja a Múnich para participar en la final mundial de la FC Bayern Youth Cup y competir contra los equipos de los otros países participantes. La final mundial tiene lugar en el Allianz Arena al día siguiente del último partido en casa del FC Bayern.
         </p>
