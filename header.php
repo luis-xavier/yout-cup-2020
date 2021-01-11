@@ -11,7 +11,7 @@
 <body>
 <header>
     <div class="first-section-header">
-        <a href="file:///Users/canek/Documents/Canek/Youth%20Cup/index.html"><img class="logo-header" src="img/fcbc-mx.svg" alt=""></a>
+        <a href="index.php"><img class="logo-header" src="img/fcbc-mx.svg" alt=""></a>
     </div>
     <div class="second-section-header">
         <div class="top-bar">
@@ -24,23 +24,23 @@
                 <a href=""><img src="img/facebook.svg" alt=""></a>
             </div>
             <div class="mi-equipo">
-                <a href=""><img src="img/mi-equipo.svg" alt=""></a>
+                <a href="login.php"><img src="img/mi-equipo.svg" alt=""></a>
             </div>
         </div>
         <div class="header-nav">
             <nav class="menu-desktop main-menu">
                 <ul>
                     <li style="z-index: 6; width: 5%; border-bottom: none;" class="nothing"><div></div></li>
-                    <li style="z-index: 5;"><a href="file:///Users/canek/Documents/Canek/Youth%20Cup/acerca-de.html">Acerca de</a>
+                    <li style="z-index: 5;"><a href="acerca-de.php">Acerca de</a>
                         <ul class="dropdown-menu">
                             <img src="img/flecha.svg" alt="">
                             <li><a href="" id="actividades1-link">Preguntas frecuentes</a></li>
                         </ul>
                     </li>
-                    <li style="z-index: 4;"><a href="file:///Users/canek/Documents/Canek/Youth%20Cup/torneo.html">Torneo</a></li>
-                    <li style="z-index: 3;"><a href="">Youth Cup</a></li>
-                    <li style="z-index: 2;"><a href="">Noticias</a></li>
-                    <li style="z-index: 1;" id="participa"><a href="" >Participa</a></li>
+                    <li style="z-index: 4;"><a href="torneo.php">Torneo</a></li>
+                    <li style="z-index: 3;"><a href="yc.php">Youth Cup</a></li>
+                    <li style="z-index: 2;"><a href="noticias.php">Noticias</a></li>
+                    <li style="z-index: 1;" id="participa"><a href="formulario.php" >Participa</a></li>
                 </ul>
             </nav>
         </div>
@@ -57,11 +57,11 @@
     </div>
     <div id="menu-container" class="">
         <ul id="menu-mobile">
-            <li><a href="" class="">Acerca de</a></li>
-            <li><a href="" class="">Torneo</a></li>
-            <li><a href="" class="">Youth Cup</a></li>
-            <li><a href="" class="">Noticias</a></li>
-            <li><a href="" class="">Participa</a></li>
+            <li><a href="acerca-de.php" class="">Acerca de</a></li>
+            <li><a href="torneo.php" class="">Torneo</a></li>
+            <li><a href="yc.php" class="">Youth Cup</a></li>
+            <li><a href="noticias.php" class="">Noticias</a></li>
+            <li><a href="formulario.php" class="">Participa</a></li>
             <li><a href="" class="">Mi equipo</a></li>
         </ul>
         <div id="menu-mobile-bar">

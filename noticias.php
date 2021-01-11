@@ -8,7 +8,7 @@
         <article>
             <h2>TEXTO PRINCIPAL</h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-            <a href="" class="boton boton-reverse">leer más</a>
+            <a href="noticia.php" class="boton boton-reverse">leer más</a>
         </article>
     </div>
 </section>
@@ -18,37 +18,37 @@
             <img src="img/noticia.jpg" alt="">
             <h3>Noticia</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-            <a href="">LEER MÁS</a>
+            <a href="noticia-yc.php">LEER MÁS</a>
         </div>
         <div class="noticia">
             <img src="img/noticia.jpg" alt="">
             <h3>Noticia</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-            <a href="">LEER MÁS</a>
+            <a href="noticia-yc.php">LEER MÁS</a>
         </div>
         <div class="noticia">
             <img src="img/noticia.jpg" alt="">
             <h3>Noticia</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-            <a href="">LEER MÁS</a>
+            <a href="noticia-yc.php">LEER MÁS</a>
         </div>
         <div id="noticia-4" class="noticia">
             <img src="img/noticia.jpg" alt="">
             <h3>Noticia</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-            <a href="">LEER MÁS</a>
+            <a href="noticia-yc.php">LEER MÁS</a>
         </div>
         <div class="noticia">
             <img src="img/noticia.jpg" alt="">
             <h3>Noticia</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-            <a href="">LEER MÁS</a>
+            <a href="noticia-yc.php">LEER MÁS</a>
         </div>
         <div class="noticia">
             <img src="img/noticia.jpg" alt="">
             <h3>Noticia</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-            <a href="">LEER MÁS</a>
+            <a href="noticia-yc.php">LEER MÁS</a>
         </div>
     </div>
 </section>
