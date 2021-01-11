@@ -80,16 +80,18 @@
 
 <div class="overlay-confirmacion">
 	<div class="modal">
-		<div class="cerrar-modal"><img src="img/cross.svg" alt=""></div>
-		<h2>Suscríbete al newsletter y participa en la rifa de un jersey</h2>
-		<form action="">
-            <input type="text" placeholder="Nombre">
-            <input type="text" placeholder="Correo electrónico">
-            <input type="checkbox" class="checkbox-estilizado" name="aviso" id="aviso" onchange="validarCheckAviso('aviso')">
-                <label for="aviso">Acepto términos y condiciones contenidos en el <a href="" class="inline-link">Aviso de privacidad</a></label>
-        </form>
-        <button type="submit" name="enviar" onclick="validacion()" class="boton">ENVIAR</button>
-        <p>Conoce las reglas <a href="">aquí</a></p>
+		<div class="cerrar-modal"></div>
+        <section id="modal-wrapper">
+            <h2>Suscríbete al newsletter y participa en la rifa de un jersey</h2>
+            <form action="">
+                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Correo electrónico">
+                <input type="checkbox" class="checkbox-estilizado" name="aviso" id="aviso" onchange="validarCheckAviso('aviso')">
+                    <label for="aviso">Acepto términos y condiciones contenidos en el <a href="" class="inline-link">Aviso de privacidad</a></label>
+            </form>
+            <button type="submit" name="enviar" onclick="validacion()" class="boton">ENVIAR</button>
+            <p>Conoce las reglas <a href="">aquí</a></p>
+        </section>
 	</div>
 </div>
 

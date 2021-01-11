@@ -1163,35 +1163,60 @@ footer address{
 	background-size: cover;
 	z-index: 10;
 }
-.modal h2{
+#modal-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 6% 10%;
+}
+#modal-wrapper h2{
 	font-size: 24px;
-    margin: auto;
+    margin: auto auto 20px;
     text-align: center;
 	color: #DB052C;
 }
-.modal p:first-child{
-	margin: 6% 4% 0;
+#modal-wrapper form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
 }
-.modal p{
-	margin: 2% 4% 0;
-	text-align: left;
-	color: #444;
-	font-size: .9em;
+#modal-wrapper form input{
+    margin-bottom: 30px;
+    height: 30px;
+    color: #001829;
+    background-color: #F3F5F6;
+    padding-left: 10px;
+    border: unset;
+    border-bottom: 2px #001829 solid;
 }
-.modal .mails-modal{
-	text-align: center;
-	color: #777;
-	display: inline-block;
-	width: 100%;
-	margin: 1% auto;
-	font-size: .85em;
+#modal-wrapper input [type=text]{
+    color: #001829;
 }
-.modal h3, .modal h4{
-	color: #DB052C;
-	font-size: 1em;
-	font-weight: 600;
-	margin: 1rem auto 0;
-	text-align: center;
+#modal-wrapper input:focus{
+    outline: none;
+}
+#modal-wrapper input::placeholder{
+    color: #001829;
+    padding-left: 20px;
+    font-size: 1.125em;
+}
+#modal-wrapper label {
+    font-size: 16px;
+}
+#modal-wrapper label a{
+    color: #DB052C;
+}
+#modal-wrapper p{
+    font-size: 16px;
+    margin-top: 20px;
+    color: #001829;
+}
+#modal-wrapper p a{ 
+    color: #DB052C;
 }
 .checkbox-estilizado {
     position: absolute;
@@ -1244,7 +1269,7 @@ footer address{
     height: 2px;
     box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -1691,6 +1716,51 @@ footer address{
         font-size: 15px;
         padding: 10px 35px 9px;
         border: 2px #FFF solid;
+    }
+    #modal-wrapper h2{
+        font-size: 20px;
+    }
+    #modal-wrapper form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: none;
+        border: none;
+    }
+    #modal-wrapper form input{
+        margin-bottom: 30px;
+        height: 30px;
+        color: #001829;
+        background-color: #F3F5F6;
+        padding-left: 10px;
+        border: unset;
+        border-bottom: 2px #001829 solid;
+    }
+    #modal-wrapper input [type=text]{
+        color: #001829;
+    }
+    #modal-wrapper input:focus{
+        outline: none;
+    }
+    #modal-wrapper input::placeholder{
+        color: #001829;
+        padding-left: 20px;
+        font-size: 1.125em;
+    }
+    #modal-wrapper label {
+        font-size: 16px;
+    }
+    #modal-wrapper label a{
+        color: #DB052C;
+    }
+    #modal-wrapper p{
+        font-size: 16px;
+        margin-top: 20px;
+        color: #001829;
+    }
+    #modal-wrapper p a{ 
+        color: #DB052C;
     }
 }
 @media screen and (max-width: 400px){
