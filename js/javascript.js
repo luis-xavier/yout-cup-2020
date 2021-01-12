@@ -92,6 +92,6 @@ function mensajeIntro(){
 }
 setTimeout(
   function(){
-    //mensajeIntro()
+    mensajeIntro()
   }, 500
 )

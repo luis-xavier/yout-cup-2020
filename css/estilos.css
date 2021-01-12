@@ -51,6 +51,10 @@ html, body{
     font-family: 'FC Bayern Sans', sans-serif;
     color: #001829;
     position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 a{
     text-decoration: none;
@@ -62,7 +66,7 @@ h2{
     font-weight: bold;
     font-size: 2.063em;
     text-align: center;
-    margin: 40px auto;
+    margin: 40px auto 0px;
 }
 h4{
     font-size: 1.250em;
@@ -113,7 +117,7 @@ header{
     box-shadow: 23px 0px 20px 3px rgba(0,0,0,0.1);
 }
 .first-section-header a{
-    margin: auto 10%;
+    margin: auto 22%;
     width: 100%;
     height: auto;
     display: flex;
@@ -415,14 +419,15 @@ nav > ul > li:hover .dropdown-menu li a{
 	right: 0;
 }
 #menu-mobile-bar{
-    width: 100%;
+    width: 100vw;
     height: 60px;
     background-color: #001829;
     bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    position: absolute;
+    position: fixed;
+    z-index: 10;
 }
 #menu-mobile-bar .idiomas{
     width: 60%;
@@ -436,6 +441,20 @@ nav > ul > li:hover .dropdown-menu li a{
 #menu-mobile-bar .idiomas button{
     margin: auto 10px;
 }
+#menu-mobile-bar .idioma:hover, .seleccionado{
+    font-weight: bold;
+}
+.idioma{
+    font-size: 20px;
+}
+.if-mobile{
+    display: block;
+    color: #FFF;
+    width: 1px;
+    background-color: #FFF;
+    height: 50%;
+    transform: skew(334deg);
+}
 #menu-mobile-bar .redes-sociales-header{
     width: 50%;
     display: flex;
@@ -445,7 +464,8 @@ nav > ul > li:hover .dropdown-menu li a{
 }
 #menu-mobile-bar .redes-sociales-header a{
     margin: auto 10px;
-    width: 12%;
+    width: 10%;
+    min-width: 30px;
 }
 #menu-mobile-bar .redes-sociales-header img{
     width: 100%;
@@ -495,7 +515,7 @@ nav > ul > li:hover .dropdown-menu li a{
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-top: 71px;
+    margin:71px 0 30px;
 }
 .first-section-home video{
     display: none;
@@ -567,17 +587,23 @@ nav > ul > li:hover .dropdown-menu li a{
 }
 .second-section-home{
     width: 100%;
-    height: 280px;
     display: flex;
     background-color: #DCE2E5;
+    padding: 30px 0;
 }
 .banner-tvcuatro{
     display: block;
+    position: relative;
     width: 728px;
     height: 90px;
     margin: auto;
-    background-color: #C4C4C4;
     border: 1px black solid;
+}
+.banner-tvcuatro img{
+    width: 100%;
+}
+.tv-cuatro-desktop{
+    display: block;
 }
 .tv-cuatro-mobile{
     display: none;
@@ -585,6 +611,7 @@ nav > ul > li:hover .dropdown-menu li a{
 .third-section-home{
     display: flex;
     flex-direction: column;
+    padding: 0 0 30px;
 }
 .third-section-home >span{
     font-size: 1.125em;
@@ -595,7 +622,7 @@ nav > ul > li:hover .dropdown-menu li a{
 .noticias-wrapper{
     display: flex;
     flex-direction: row;
-    margin: 0 5% 0px;
+    margin: 0 5% 15px;
 }
 .noticia{
     width: 33%;
@@ -632,7 +659,7 @@ nav > ul > li:hover .dropdown-menu li a{
 }
 .np-wrapper{
     display: block;
-    margin: auto 5%;
+    margin: auto 7%;
     margin-top: 102px;
     margin-bottom: 20px;
 }
@@ -642,7 +669,6 @@ nav > ul > li:hover .dropdown-menu li a{
     flex-direction: row-reverse;
 }
 .noticia-principal >img{
-    width: 60%;
     display: block;
     margin-bottom: 0;
 }
@@ -678,10 +704,13 @@ nav > ul > li:hover .dropdown-menu li a{
     width: 31%;
     margin: unset;
     margin-bottom: 30px;
-    margin-left: 15px;
 }
-#display-noticia:first-child{
-    margin-left: 4%;
+.noticia-principal img{
+    width: 60%;
+}
+.nw-noticia{
+    margin: unset;
+    margin-top: 20px;
 }
 #noticia-1, #noticia-4{
     margin-left: 10px;
@@ -747,6 +776,7 @@ nav > ul > li:hover .dropdown-menu li a{
     justify-content: space-evenly;
     margin: 2% auto 3%;
     width: 100%;
+    max-width: 1350px;
 }
 .yc{
     background-color: #FFF;
@@ -774,8 +804,8 @@ nav > ul > li:hover .dropdown-menu li a{
     flex-direction: row;
     background: linear-gradient(to right, #9d0528, #DB052C);
     width: 100%;
-    height: 71px;
     margin: auto;
+    padding: 20px 0;
 }
 .newsletter div{
     width: 100%;
@@ -911,7 +941,8 @@ footer address{
     color: rgba(220, 226, 229, 0.5);
     text-align: center;
     border-top: 1px rgba(220, 226, 229, 0.5) solid;
-    padding-top: 2%;
+    padding: 2% 0 2%;
+    margin-bottom: unset;
 }
 .section-acerca-de{
     margin: 3% 13%;
@@ -936,6 +967,7 @@ footer address{
     display: block;
     float: left;
     margin-top: 11px;
+    margin-right: 5px;
 }
 .section-acerca-de article p{
     margin-top: 30px;
@@ -1086,7 +1118,7 @@ footer address{
     font-weight:700;
     letter-spacing: .06em;
     padding: 10px 65px 9px;
-    margin: 15px auto ;
+    margin: 30px auto ;
     border: 2px #DB052C solid;
 }
 .boton-reverse:hover{
@@ -1145,9 +1177,9 @@ footer address{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 60vw;
-	height: 70vh;
-	margin: -35vh 0 0 -30vw;
+	width: 50vw;
+	height: 60vh;
+	margin: -35vh 0 0 -25vw;
 	background: #FFF;
 	color: #333;
 	overflow: auto;
@@ -1158,10 +1190,10 @@ footer address{
 	height: 26px;
 	position: absolute;
 	top: 3%;
-	right: 1%;
-	background: url(..img/cerrar-modal.svg) no-repeat;
-	background-size: cover;
-	z-index: 10;
+	right: 2%;
+	background: url(../img/cerrar-modal.svg);
+    z-index: 10;
+    background-size: cover;
 }
 #modal-wrapper{
     display: flex;
@@ -1184,28 +1216,8 @@ footer address{
     background: none;
     border: none;
 }
-#modal-wrapper form input{
-    margin-bottom: 30px;
-    height: 30px;
-    color: #001829;
-    background-color: #F3F5F6;
-    padding-left: 10px;
-    border: unset;
-    border-bottom: 2px #001829 solid;
-}
-#modal-wrapper input [type=text]{
-    color: #001829;
-}
-#modal-wrapper input:focus{
-    outline: none;
-}
-#modal-wrapper input::placeholder{
-    color: #001829;
-    padding-left: 20px;
-    font-size: 1.125em;
-}
-#modal-wrapper label {
-    font-size: 16px;
+#modal-wrapper form{
+    margin-top: 10px;
 }
 #modal-wrapper label a{
     color: #DB052C;
@@ -1217,6 +1229,113 @@ footer address{
 }
 #modal-wrapper p a{ 
     color: #DB052C;
+}
+#modal-wrapper .boton{
+    margin-top: 30px;
+}
+.formulario li{
+    list-style: none;
+    display: inline-block;
+    clear:both;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 1.45em;
+    padding: 0;
+    position: relative;
+    font-family: 'FC Bayern Sans', sans-seriff;
+}
+.formulario li.half-columnA{
+	width: 46%;
+	margin: 0 4% 1.45em 0;
+	float: left;
+	clear: none;
+}
+.formulario li.half-columnB{
+    width: 46%;
+    margin: 0 0 1.45em 4%;
+    float: left;
+    clear: none;
+}
+.formulario label, input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+.formulario input[type="text"],
+.formulario input[type="password"]{
+    font-size: 1.5em;
+    padding: 5px 7px;
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 1px solid #001829;
+    background-color:#F3F5F6;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 3px 3px 0 0;
+    cursor: text;
+    position: relative;
+    z-index: 2;
+    font-size: .9em;
+    font-weight: 500;
+    color:#001829;
+    width: 100%;
+}
+.formulario input[type="text"] + label,
+.formulario input[type="password"] + label{
+    position: absolute;
+    color:#001829;
+    z-index: 2;
+    top: 8px;
+    left: 7px;
+    font-size: .8em;
+}
+.formulario input:focus,
+.formulario select:focus {
+    outline: 0;
+    border: 0;
+}
+.formulario input[type="text"]:focus,
+.formulario input[type="password"]:focus{
+    border-bottom: 2px solid #1A334D;
+    background-color:rgba(200, 200, 200, .1);
+}
+.formulario input[type="text"]:focus + label, 
+.formulario input[type="password"]:focus + label,
+.formulario input[type="text"]:valid + label,
+.formulario input[type="password"]:valid + label{
+    margin-top:-15px;
+    font-size: .7em;
+    color: #001829BB;
+}
+.formulario input:valid{
+    background: transparent;
+}
+.formulario select{
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    background-color: #F3F5F6;
+    color: #001829;
+    font-size: .8em;
+    font-weight: 400;
+    padding: 5px 7px;
+    text-align:left;
+    background-image: 
+    url("data:image/svg+xml;utf8,<svg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11 1L6 6L1 1' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-position: calc(100% - 10px) calc(1em - 1px);
+    background-size: 10px 5px;
+    background-repeat: no-repeat;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+}
+.formulario label.select-label{
+    display:block;
+    float:none;
+    text-align:left;
+    color:#001829;
+    margin:0;
+    font-size:.9em;
+    margin:0 0 5px;
 }
 .checkbox-estilizado {
     position: absolute;
@@ -1269,13 +1388,18 @@ footer address{
     height: 2px;
     box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
     -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++++++++++++++++++++++++++++++    MEDIA QUERIES SIZE    +++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media screen and (max-width: 1400px){
+    .first-section-header a{
+        margin: auto 10%;
+    }
+}
 @media screen and (max-width: 1100px){
     .menu-desktop{
         width: 100%;
@@ -1291,6 +1415,7 @@ footer address{
     }
     .third-section-home h2{
         margin-bottom: unset;
+        font-size: 30px;
     }
     .noticia h3{
         font-size: 22px;
@@ -1389,23 +1514,11 @@ footer address{
     .first-section-home article .strong-red{
         color:#001829;
     }
-    .tv-cuatro-mobile{
-        display: block;
-        margin: 10px auto 30px;
-        width: 320px;
-        height: 50px;
-    }
-    .second-section-home{
-        display: none;
-    }
     .noticias-wrapper, .third-section-home > span{
         display: none;
     }
     #display-noticia{
         display: flex;
-    }
-    .third-section-home h2{
-        margin-bottom: unset;
     }
     .container{
         display: block;
@@ -1436,9 +1549,6 @@ footer address{
     .noticia a{
         font-size: 18px;
     }
-    .third-section-home h2{
-        font-size: 30px;
-    }
     .third-section-home > a{
         margin: 10px auto 20px;
         display: block;
@@ -1448,13 +1558,14 @@ footer address{
         margin-top: 51px;
     }
     .section-acerca-de{
-        margin: 3% 5%;
+        margin: 3% 7%;
     }
     .section-acerca-de h2{
         margin-bottom: unset;
     }
     .section-acerca-de article p{
        margin-top: 15px;
+       line-height: 20px;
     }
     .letter-capital{
         margin-top: 13px;
@@ -1482,7 +1593,8 @@ footer address{
         width: 90%;
         flex-direction: column;
         align-items: unset;
-        margin: 3% 5% 4%;
+        margin: 3% auto 4%;
+        max-width: 400px;
     }
     .yc{
         width: 100%;
@@ -1612,8 +1724,27 @@ footer address{
         margin: unset;
         margin-bottom: 20px;
     }
+    .modal{
+        width: 70vw;
+        height: 60vh;
+        margin: -35vh 0 0 -35vw;
+    }
+    .cerrar-modal{
+        width: 20px;
+        height: 20px;
+    }
 }
 @media screen and (max-width: 600px){
+    .tv-cuatro-desktop{
+        display: none;
+    }
+    .tv-cuatro-mobile{
+        display: block;
+    }
+    .banner-tvcuatro{
+        width: 320px;
+        height: 50px;
+    }
     .swiper-slide{
         height: 308px;
         background-color: transparent;
@@ -1641,6 +1772,10 @@ footer address{
     .first-subsection-footer{
         width: 42%;
     }
+    footer address{
+        padding: 4% 0;
+    }
+    
 }
 @media screen and (max-width: 500px){
     h2{
@@ -1682,10 +1817,6 @@ footer address{
     .menu_anvorguesa p{
         font-size: .9em;
     }
-    .third-section-home h2{
-        font-size: 22px;
-        margin-top: 20px;
-    }
     .section-acerca-de h2{
         font-size: 22px;
         margin-top: 20px;
@@ -1693,9 +1824,13 @@ footer address{
     .section-acerca-de{
         font-size: 15px;
     }
+    .noticia a{
+        font-size: 15px;
+    }
     .yc h2{
         font-size: 22px;
         margin: 4% 7% 6%;
+        font-size: 1.3em;
     }
     .yc p{
         font-size: 15px
@@ -1719,48 +1854,29 @@ footer address{
     }
     #modal-wrapper h2{
         font-size: 20px;
+        margin-bottom: 15px;
     }
-    #modal-wrapper form{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background: none;
-        border: none;
+    .formulario li{
+        margin-bottom: 20px;
     }
-    #modal-wrapper form input{
-        margin-bottom: 30px;
-        height: 30px;
-        color: #001829;
-        background-color: #F3F5F6;
-        padding-left: 10px;
-        border: unset;
-        border-bottom: 2px #001829 solid;
+    .modal {
+        width: 90vw;
+        height: 60vh;
+        margin: -35vh 0 0 -45vw;
     }
-    #modal-wrapper input [type=text]{
-        color: #001829;
-    }
-    #modal-wrapper input:focus{
-        outline: none;
-    }
-    #modal-wrapper input::placeholder{
-        color: #001829;
-        padding-left: 20px;
-        font-size: 1.125em;
-    }
-    #modal-wrapper label {
-        font-size: 16px;
-    }
-    #modal-wrapper label a{
-        color: #DB052C;
+    #modal-wrapper .boton{
+        margin: 15px auto;
     }
     #modal-wrapper p{
-        font-size: 16px;
-        margin-top: 20px;
-        color: #001829;
+        margin-top: 10px;
+        font-size: 12px;
     }
-    #modal-wrapper p a{ 
-        color: #DB052C;
+    .checkbox-estilizado + label{
+        margin: 15px auto;
+    }
+    .cerrar-modal{
+        width: 15px;
+        height: 15px;
     }
 }
 @media screen and (max-width: 400px){
@@ -1797,18 +1913,12 @@ footer address{
         font-size: 18px;
         margin-bottom: 15px;
     }
-    .noticia-principal p{
-        font-size: 13px;
-    }
-    .noticia p{
-        font-size: 13px;
-    }
     .subsections-footer{
         margin: 3% 6%;
         align-content: space-around;
     }
     .first-subsection-footer{
-        width: 42%;
+        width: 40%;
     }
     .first-subsection-footer div{
         margin: 0 10px; 
@@ -1826,12 +1936,31 @@ footer address{
         margin-right: -42px;
     }
     .fourth-section-footer a:nth-child(2n){
-        margin: 3px 15px 0 10px;
+        margin: 3px 20px 0 20px;
     }
     .fourth-section-footer a:nth-child(2n) img{
         width: 115%;
     }
+    .fourth-section-footer a{
+        width: 17%;
+    }
     .fourth-section-footer a img{
         margin: 0;
     } 
+    .whatsapp img{
+        width: 113%;
+        margin-top: 5px;
+    }
+    #modal-wrapper h2 {
+        font-size: 16px;
+    }
+    .checkbox-estilizado + label{
+        margin: 5px auto;
+    }
+    .modal{
+        height: 55vh;
+    }
+    @media screen and (max-width: 400px){
+        s
+    }
 }

@@ -290,6 +290,49 @@ html, body{
     left: 56px;
     animation: lds-ellipsis3 0.6s infinite;
 }
+.login{
+        display: flex;
+    flex-direction: column;
+}
+.contraseña{
+    color: #001829;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: all .3s;
+}
+.contraseña:after{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    background-image: url(../img/flecha-login.svg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contraseña:hover{
+    color: #DB052C;
+}
+.formulario li.half-columnA{
+    width: 40%;
+}
+.formulario li.half-columnB{
+    width: 50%;
+    float: right;
+}
+#form-wrapper #registro{
+    font-size: 15px;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+#form-wrapper #registro a{
+    color: #DB052C;
+}
+.boton-login{
+    margin: -10px auto 15px;
+}
 @keyframes lds-ellipsis1 {
     0% {
     transform: scale(0);
@@ -329,11 +372,32 @@ html, body{
         margin-top: 51px;
     }
 }
-@media (max-width: 340px){
-    
+@media (max-width: 470px){
+    .contraseña{
+       font-size: 13px;
+    }
+    .contraseña:after{
+        width: 13px;
+        height: 13px;
+    }
+    #form-wrapper #registro{
+        font-size: 13px;
+    }
+    #form-wrapper .boton{
+        margin-top: unset;
+        margin-bottom: 20px;
+    }
 }
-@media (max-height: 540px){
-
+@media (max-width: 370px){
+    .contraseña:after{
+        width: 10px;
+        height: 10px;
+        display: none;
+    }
+    .formulario .columA-login{
+        width: 51%;
+        margin: unset;
+    }
 }
 /*-- Campos ocultos --*/ 
 .oculto{
