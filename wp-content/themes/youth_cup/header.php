@@ -42,20 +42,28 @@
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
-		<div id="container">
+	<header>
+    <div class="first-section-header">
+        <a href="<?= home_url() ?>">
+		<img class="logo-header" src="<?= get_stylesheet_directory_uri() ?>/library/img/fcbc-mx.svg" alt=""></a>
+    </div>
+    <div class="second-section-header">
+        <div class="top-bar">
+            <div class="idiomas">
+                <button name="button"><span class="seleccionado idioma-desk">ES</span></button>/
+                <button name="button"><span class=" idioma-desk">EN</span></button>
+            </div>
+            <div class="redes-sociales-header">
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+            </div>
+            <div class="mi-equipo">
+                <a href="login.php"><span>Mi equipo</span><img src="img/equipo.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="header-nav">
 
-			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-
-				<div id="inner-header" class="wrap cf">
-
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
-
-
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+		<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -72,6 +80,62 @@
 
 					</nav>
 
-				</div>
 
-			</header>
+					
+            <nav class="menu-desktop main-menu">
+                <ul>
+                    <li style="z-index: 6; width: 5%; border-bottom: none;" class="nothing"><div></div></li>
+                    <li style="z-index: 5;"><a href="acerca-de.php">Acerca de</a>
+                        <ul class="dropdown-menu">
+                            <img src="img/flecha.svg" alt="">
+                            <li><a href="preguntas-frecuentes.php" id="actividades1-link">Preguntas frecuentes</a></li>
+                        </ul>
+                    </li>
+                    <li style="z-index: 4;"><a href="torneo.php">Torneo</a></li>
+                    <li style="z-index: 3;"><a href="yc.php">Youth Cup</a>
+                        <ul class="dropdown-menu cup-container">
+                            <img src="img/flecha.svg" alt="">
+                            <li><a href="" id="actividades1-link" class="yc-2020">Youth Cup 2020</a></li>
+                            <li><a href="" id="actividades1-link" class="yc-2019">Youth Cup 2019</a></li>
+                        </ul>
+                    </li>
+                    <li style="z-index: 2;"><a href="noticias.php">Noticias</a></li>
+                    <li style="z-index: 1;" id="participa"><a href="formulario.php" >Participa</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="menu_anvorguesa">
+        <p>MENÚ</p>
+        <div class="anvorguesa">
+            <svg viewBox="0 0 800 600">
+                <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+                <path d="M300,320 L540,320" id="middle"></path>
+                <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+            </svg>
+        </div>
+    </div>
+    <div id="menu-container" class="">
+
+
+        <ul id="menu-mobile">
+            <li><a href="acerca-de.php" class="">Acerca de</a></li>
+            <li><a href="torneo.php" class="">Torneo</a></li>
+            <li><a href="yc.php" class="">Youth Cup</a></li>
+            <li><a href="noticias.php" class="">Noticias</a></li>
+            <li><a href="formulario.php" class="">Participa</a></li>
+            <li><a href="login.php" class="">Mi equipo</a></li>
+        </ul>
+        <div id="menu-mobile-bar">
+            <div class="idiomas">
+                <button name="button"><span class="idioma seleccionado">ES</span></button>
+                <span class="item-footer if-mobile"></span>
+                <button name="button"><span class="idioma">EN</span></button>
+            </div>
+            <div class="redes-sociales-header">
+                <a href=""><img style="margin-top: 3px;" src="img/instagram.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+</header>
