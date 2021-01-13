@@ -54,11 +54,11 @@
                 <button name="button"><span class=" idioma-desk">EN</span></button>
             </div>
             <div class="redes-sociales-header">
-                <a href=""><img src="img/instagram.svg" alt=""></a>
-                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram.svg" alt=""></a>
+                <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook.svg" alt=""></a>
             </div>
             <div class="mi-equipo">
-                <a href="login.php"><span>Mi equipo</span><img src="img/equipo.svg" alt=""></a>
+                <a href="login.php"><span>Mi equipo</span><img src="<?= get_stylesheet_directory_uri() ?>/library/img/equipo.svg" alt=""></a>
             </div>
         </div>
         <div class="header-nav">
@@ -81,20 +81,20 @@
 					</nav>
 
 
-					
+
             <nav class="menu-desktop main-menu">
                 <ul>
                     <li style="z-index: 6; width: 5%; border-bottom: none;" class="nothing"><div></div></li>
                     <li style="z-index: 5;"><a href="acerca-de.php">Acerca de</a>
                         <ul class="dropdown-menu">
-                            <img src="img/flecha.svg" alt="">
+                            <img src="<?= get_stylesheet_directory_uri() ?>/library/img/flecha.svg" alt="">
                             <li><a href="preguntas-frecuentes.php" id="actividades1-link">Preguntas frecuentes</a></li>
                         </ul>
                     </li>
                     <li style="z-index: 4;"><a href="torneo.php">Torneo</a></li>
                     <li style="z-index: 3;"><a href="yc.php">Youth Cup</a>
                         <ul class="dropdown-menu cup-container">
-                            <img src="img/flecha.svg" alt="">
+                            <img src="<?= get_stylesheet_directory_uri() ?>/library/img/flecha.svg" alt="">
                             <li><a href="" id="actividades1-link" class="yc-2020">Youth Cup 2020</a></li>
                             <li><a href="" id="actividades1-link" class="yc-2019">Youth Cup 2019</a></li>
                         </ul>
@@ -133,9 +133,12 @@
                 <button name="button"><span class="idioma">EN</span></button>
             </div>
             <div class="redes-sociales-header">
-                <a href=""><img style="margin-top: 3px;" src="img/instagram.svg" alt=""></a>
-                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img style="margin-top: 3px;" src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram.svg" alt=""></a>
+                <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook.svg" alt=""></a>
             </div>
         </div>
     </div>
 </header>
+
+
+<div class="overlay-black"></div>
