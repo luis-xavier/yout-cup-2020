@@ -53,6 +53,7 @@
     </section>
 </section>
 
+<?php include "modal.php" ?>
 
 <?php include "newsletter.php" ?>
 

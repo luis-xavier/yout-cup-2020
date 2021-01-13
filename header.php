@@ -16,15 +16,15 @@
     <div class="second-section-header">
         <div class="top-bar">
             <div class="idiomas">
-                <button name="button"><span class="idioma">ES</span></button>/
-                <button name="button"><span class="idioma">EN</span></button>
+                <button name="button"><span class="seleccionado idioma-desk">ES</span></button>/
+                <button name="button"><span class=" idioma-desk">EN</span></button>
             </div>
             <div class="redes-sociales-header">
                 <a href=""><img src="img/instagram.svg" alt=""></a>
                 <a href=""><img src="img/facebook.svg" alt=""></a>
             </div>
             <div class="mi-equipo">
-                <a href="login.php"><img src="img/mi-equipo.svg" alt=""></a>
+                <a href="login.php"><span>Mi equipo</span><img src="img/equipo.svg" alt=""></a>
             </div>
         </div>
         <div class="header-nav">
@@ -34,11 +34,17 @@
                     <li style="z-index: 5;"><a href="acerca-de.php">Acerca de</a>
                         <ul class="dropdown-menu">
                             <img src="img/flecha.svg" alt="">
-                            <li><a href="" id="actividades1-link">Preguntas frecuentes</a></li>
+                            <li><a href="preguntas-frecuentes.php" id="actividades1-link">Preguntas frecuentes</a></li>
                         </ul>
                     </li>
                     <li style="z-index: 4;"><a href="torneo.php">Torneo</a></li>
-                    <li style="z-index: 3;"><a href="yc.php">Youth Cup</a></li>
+                    <li style="z-index: 3;"><a href="yc.php">Youth Cup</a>
+                        <ul class="dropdown-menu cup-container">
+                            <img src="img/flecha.svg" alt="">
+                            <li><a href="" id="actividades1-link" class="yc-2020">Youth Cup 2020</a></li>
+                            <li><a href="" id="actividades1-link" class="yc-2019">Youth Cup 2019</a></li>
+                        </ul>
+                    </li>
                     <li style="z-index: 2;"><a href="noticias.php">Noticias</a></li>
                     <li style="z-index: 1;" id="participa"><a href="formulario.php" >Participa</a></li>
                 </ul>

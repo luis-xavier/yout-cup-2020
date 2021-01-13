@@ -157,8 +157,22 @@ header{
     padding: 0 5px;
     cursor: pointer;
 }
-.mi-equipo{
+.mi-equipo a{
     padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.mi-equipo span{
+    display: block;
+    color: white;
+    margin: 0px 5px 0 0;
+    transition: all .3s;
+    font-size: 15px;
+}
+.mi-equipo > a > span:hover{
+    text-decoration: white underline;
 }
 .header-nav{
     display: flex;
@@ -293,6 +307,18 @@ nav > ul > li:hover:after{
     transform: translateY(20px);
     opacity: 0;
 }
+.cup-container{
+    box-shadow: 1px -5px 36px -3px rgba(0,0,0,.1);
+}
+.dropdown-menu .yc-2020{
+    box-shadow: none;
+    border-bottom: 4px rgba(0,0,0,.1) solid;
+}
+.dropdown-menu .yc-2019{
+    border-top: none;
+    z-index: 0;
+    box-shadow:none;
+}
 nav > ul > li:hover .dropdown-menu{
     transform:scaleY(1);
 }
@@ -304,7 +330,7 @@ nav > ul > li:hover .dropdown-menu li a{
     opacity: 1;
 }
 .dropdown-menu li a:hover{
-   background-color: #DCE2E5;
+   background-color: #F3F5F6;
 }
 #participa{
     background-color: #DB052C;
@@ -446,6 +472,13 @@ nav > ul > li:hover .dropdown-menu li a{
 }
 .idioma{
     font-size: 20px;
+}
+.top-bar .idioma-desk{
+    transition: all .3s;
+}
+.top-bar .idioma-desk:hover, .seleccionado{
+    font-size: bold;
+    color: #DB052C;
 }
 .if-mobile{
     display: block;
@@ -1775,7 +1808,6 @@ footer address{
     footer address{
         padding: 4% 0;
     }
-    
 }
 @media screen and (max-width: 500px){
     h2{
@@ -1959,8 +1991,5 @@ footer address{
     }
     .modal{
         height: 55vh;
-    }
-    @media screen and (max-width: 400px){
-        s
     }
 }
