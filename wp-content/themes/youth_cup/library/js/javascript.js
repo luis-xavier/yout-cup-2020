@@ -1,97 +1,105 @@
-var switcher = true;
-
-(function () {
-  $(".menu_anvorguesa").click(function () {
-    $(this).toggleClass("cross");
-	  $('#menu-container').toggleClass("open");
-	  $('.overlay-black').toggle();
-  });
-}).call(this);
+jQuery(document).ready(function($) {
 
 
-$('#menu-container li a').click(function(e){
-  const href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-5;
-  $('html, body').stop().animate({
-      scrollTop: offsetTop
-  }, 850);
-  $('.menu_anvorguesa').removeClass("cross");
-  $('#menu-container').removeClass("open");
-	$('.overlay-black').fadeOut();
-  e.preventDefault();
-});
+      var switcher = true;
 
-// Cache selectors
-const topMenu = $("header"),
- topMenuHeight = topMenu.outerHeight()+1,
- // All list items
- menuItems = $("#menu-torneo-desktop a"),
- menuItemsMob = $("#menu-torneo-mobile a"),
- // Anchors corresponding to menu items
- scrollItems = menuItems.map(function(){
-   const item = $($(this).attr("href"));
-    if (item.length) { return item; }
- });
- //console.log(menuItems);
+      (function () {
+        
+        $(".menu_anvorguesa").click(function () {
+          $(this).toggleClass("cross");
+          $('#menu-container').toggleClass("open");
+          $('.overlay-black').toggle();
+        });
+      }).call(this);
 
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  const href = $(this).attr("href")
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-10;
-      console.log(href);
-  $('html, body').stop().animate({
-      scrollTop: offsetTop
-  }, 850);
-  e.preventDefault();
-});
 
-menuItemsMob.click(function(e){
-  const href = $(this).attr("href")
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-45;
-      console.log(href);
-  $('html, body').stop().animate({
-      scrollTop: offsetTop
-  }, 850);
-  e.preventDefault();
-});
+      $('#menu-container li a').click(function(e){
+        const href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-5;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 850);
+        $('.menu_anvorguesa').removeClass("cross");
+        $('#menu-container').removeClass("open");
+        $('.overlay-black').fadeOut();
+        e.preventDefault();
+      });
 
-// Bind to scroll
-$(window).scroll(function(){
-   // Get container scroll position
-   const fromTop = $(this).scrollTop()+topMenuHeight+50;
+      // Cache selectors
+      const topMenu = $("header"),
+      topMenuHeight = topMenu.outerHeight()+1,
+      // All list items
+      menuItems = $("#menu-torneo-desktop a"),
+      menuItemsMob = $("#menu-torneo-mobile a"),
+      // Anchors corresponding to menu items
+      scrollItems = menuItems.map(function(){
+        const item = $($(this).attr("href"));
+          if (item.length) { return item; }
+      });
+      //console.log(menuItems);
 
-   // Get id of current scroll item
-   let cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   let id = cur && cur.length ? cur[0].id : "";
-		
-	// Set/remove active class
-	console.log(id)
-	menuItems.removeClass("active");
-  $('#'+id+'-link').addClass('active');
-  
-  menuItemsMob.removeClass("active-mobile");
-	$('#'+id+'-link-mobile').addClass('active-mobile');
-	
-});
-$('.overlay-confirmacion, .modal .btn-morado, .cerrar-modal').on('click', function(){
-	$('.overlay-confirmacion').fadeOut();
-})
+      // Bind click handler to menu items
+      // so we can get a fancy scroll animation
+      menuItems.click(function(e){
+        const href = $(this).attr("href")
+            offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-10;
+            console.log(href);
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 850);
+        e.preventDefault();
+      });
 
-$('.modal').on('click', function(){
-	return false;
-})
+      menuItemsMob.click(function(e){
+        const href = $(this).attr("href")
+            offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-45;
+            console.log(href);
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 850);
+        e.preventDefault();
+      });
 
-function mensajeIntro(){
-		$('.overlay-confirmacion').fadeIn('slow');
-}
-setTimeout(
-  function(){
-  mensajeIntro()
-  }, 500
-)
+      // Bind to scroll
+      $(window).scroll(function(){
+        // Get container scroll position
+        const fromTop = $(this).scrollTop()+topMenuHeight+50;
+
+        // Get id of current scroll item
+        let cur = scrollItems.map(function(){
+          if ($(this).offset().top < fromTop)
+            return this;
+        });
+        // Get the id of the current element
+        cur = cur[cur.length-1];
+        let id = cur && cur.length ? cur[0].id : "";
+          
+        // Set/remove active class
+        console.log(id)
+        menuItems.removeClass("active");
+        $('#'+id+'-link').addClass('active');
+        
+        menuItemsMob.removeClass("active-mobile");
+        $('#'+id+'-link-mobile').addClass('active-mobile');
+        
+      });
+      $('.overlay-confirmacion, .modal .btn-morado, .cerrar-modal').on('click', function(){
+        $('.overlay-confirmacion').fadeOut();
+      })
+
+      $('.modal').on('click', function(){
+        return false;
+      })
+
+      function mensajeIntro(){
+          $('.overlay-confirmacion').fadeIn('slow');
+      }
+      setTimeout(
+        function(){
+        mensajeIntro()
+        }, 500
+      )
+
+
+
+    });
