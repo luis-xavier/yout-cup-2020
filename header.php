@@ -41,7 +41,7 @@
                     <li style="z-index: 3;"><a href="yc.php">¿Que es Youth Cup?</a>
                         <ul class="dropdown-menu cup-container">
                             <img src="img/flecha.svg" alt="">
-                            <li><a href="" id="actividades1-link" class="yc-2020">Youth Cup 2020</a></li>
+                            <li><a href="" id="actividades1-link" class="yc-2021">Youth Cup 2021</a></li>
                             <li><a href="" id="actividades1-link" class="yc-2019">Youth Cup 2019</a></li>
                         </ul>
                     </li>
@@ -77,9 +77,10 @@
                 <button name="button"><span class="idioma">EN</span></button>
             </div>
             <div class="redes-sociales-header">
+                <a class="whatsapp-header" href=""><img src="img/whatsapp.svg" alt=""></a>
                 <a href=""><img style="margin-top: 3px;" src="img/instagram-gris.svg" alt=""></a>
                 <a href=""><img src="img/facebook-gris.svg" alt=""></a>
-                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href="" class="youtube-header"><img src="img/youtube.svg" alt=""></a>
             </div>
         </div>
     </div>
