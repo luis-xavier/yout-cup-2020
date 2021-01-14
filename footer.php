@@ -18,8 +18,9 @@
             </div>
             <div class="fourth-section-footer subsection-footer">
                 <a class="whatsapp"href=""><img src="img/whatsapp.svg" alt=""></a>
-                <a href=""><img src="img/instagram.svg" alt=""></a>
-                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href="" class="youtube"><img src="img/youtube.svg" alt=""></a>
+                <a href="" class="instagram"><img src="img/instagram-gris.svg" alt=""></a>
+                <a href=""><img src="img/facebook-gris.svg" alt=""></a>
             </div>
         </div>
         <span class="span-f">contacto@curveball.mx</span>

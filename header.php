@@ -38,7 +38,7 @@
                         </ul>
                     </li>
                     <li style="z-index: 4;"><a href="torneo.php">Torneo</a></li>
-                    <li style="z-index: 3;"><a href="yc.php">Youth Cup</a>
+                    <li style="z-index: 3;"><a href="yc.php">¿Que es Youth Cup?</a>
                         <ul class="dropdown-menu cup-container">
                             <img src="img/flecha.svg" alt="">
                             <li><a href="" id="actividades1-link" class="yc-2020">Youth Cup 2020</a></li>
@@ -65,7 +65,7 @@
         <ul id="menu-mobile">
             <li><a href="acerca-de.php" class="">Acerca de</a></li>
             <li><a href="torneo.php" class="">Torneo</a></li>
-            <li><a href="yc.php" class="">Youth Cup</a></li>
+            <li><a href="yc.php" class="">¿Que es Youth Cup?</a></li>
             <li><a href="noticias.php" class="">Noticias</a></li>
             <li><a href="formulario.php" class="">Participa</a></li>
             <li><a href="login.php" class="">Mi equipo</a></li>
@@ -77,8 +77,9 @@
                 <button name="button"><span class="idioma">EN</span></button>
             </div>
             <div class="redes-sociales-header">
-                <a href=""><img style="margin-top: 3px;" src="img/instagram.svg" alt=""></a>
-                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img style="margin-top: 3px;" src="img/instagram-gris.svg" alt=""></a>
+                <a href=""><img src="img/facebook-gris.svg" alt=""></a>
+                <a href=""><img src="img/youtube.svg" alt=""></a>
             </div>
         </div>
     </div>

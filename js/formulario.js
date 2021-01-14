@@ -257,4 +257,5 @@ function validacion(e){
             formulario.innerHTML = loader; 
         }, 50);
     }
+    
 }
