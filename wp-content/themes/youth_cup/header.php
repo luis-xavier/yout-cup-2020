@@ -63,12 +63,14 @@
         </div>
         <div class="header-nav">
 
-		<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
+
+            <nav class="menu-desktop main-menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+            <?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
+    					         'menu' => __( 'Main Menu', 'bonestheme' ),  // nav name
+    					         'menu_class' => 'menu-desktop main-menu',               // adding custom nav class
     					         'theme_location' => 'main-nav',                 // where it's located in the theme
     					         'before' => '',                                 // before the menu
         			               'after' => '',                                  // after the menu
@@ -78,12 +80,8 @@
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 
-					</nav>
 
-
-
-            <nav class="menu-desktop main-menu">
-                <ul>
+                <!--ul>
                     <li style="z-index: 6; width: 5%; border-bottom: none;" class="nothing"><div></div></li>
                     <li style="z-index: 5;"><a href="acerca-de.php">Acerca de</a>
                         <ul class="dropdown-menu">
@@ -101,8 +99,10 @@
                     </li>
                     <li style="z-index: 2;"><a href="noticias.php">Noticias</a></li>
                     <li style="z-index: 1;" id="participa"><a href="formulario.php" >Participa</a></li>
-                </ul>
+                </ul-->
             </nav>
+
+
         </div>
     </div>
     <div class="menu_anvorguesa">

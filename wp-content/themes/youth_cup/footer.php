@@ -49,22 +49,7 @@
                 <p>contacto@curveball.mx</p>
             </div>
             <div class="third-subsection-footer subsection-footer">
-                <a href=""><p>Aviso de privacidad</p></a>
-                <a href=""><p>Términos de uso</p></a>
-                <a href=""><p>Política de cookies</p></a>
-            </div>
-            <div class="fourth-section-footer subsection-footer">
-                <a class="whatsapp"href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/whatsapp.svg" alt=""></a>
-                <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram.svg" alt=""></a>
-                <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook.svg" alt=""></a>
-            </div>
-        </div>
-        <span class="span-f">contacto@curveball.mx</span>
-    </section>
-    <address><?php bloginfo( 'name' ); ?> <?= date('Y'); ?> &copy; Derechos reservados</address>
-</footer>
-
-<nav role="navigation">
+            <nav role="navigation">
 						<?php wp_nav_menu(array(
     					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
     					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
@@ -79,6 +64,21 @@
     					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 						)); ?>
 </nav>
+            </div>
+
+
+            <div class="fourth-section-footer subsection-footer">
+                <a class="whatsapp"href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/whatsapp.svg" alt=""></a>
+                <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram.svg" alt=""></a>
+                <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook.svg" alt=""></a>
+            </div>
+        </div>
+        <span class="span-f">contacto@curveball.mx</span>
+    </section>
+    <address><?php bloginfo( 'name' ); ?> <?= date('Y'); ?> &copy; Derechos reservados</address>
+</footer>
+
+
 
 
 
