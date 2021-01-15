@@ -204,9 +204,14 @@ function validarCheckAviso(idEl){
         validadoForm(elemento);
     }
 } 
+
     
-//------  Función de validar todo el formulario  ---------//
+    
+
+
+
 function validacion(e){
+    console.log("validation is running")
     event.preventDefault(e);
     let formulario = document.getElementById('formulario');
     let tieneError;

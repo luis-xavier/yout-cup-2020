@@ -21,6 +21,9 @@ function bones_ahoy() {
   # USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
   require_once( 'library/custom-post-type.php' );
 
+  # pal form de regiastro
+  require_once( 'library/registro.php' );
+
   # launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
   # A better title
