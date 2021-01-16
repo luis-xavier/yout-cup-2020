@@ -71,6 +71,7 @@
                 <a class="whatsapp"href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/whatsapp.svg" alt=""></a>
                 <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram.svg" alt=""></a>
                 <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook.svg" alt=""></a>
+                <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/img/facebook-gris.svg" alt=""></a>
             </div>
         </div>
         <span class="span-f">contacto@curveball.mx</span>
@@ -80,40 +81,7 @@
 
 
 
-
-
-
-		<?php wp_footer(); ?>
-
-		<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 2,
-    spaceBetween: 30,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-        },
-        // when window width is >= 480px
-        480: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-        },
-        // when window width is >= 640px
-        800: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        
-    }
-   
-});
-</script>
+<?php wp_footer(); ?>
 
 	</body>
 
