@@ -1,29 +1,77 @@
 <?php
-/*
- Template Name: Custom Page Example
- *
- * This is your custom page template. You can create as many of these as you need.
- * Simply name is "page-whatever.php" and in add the "Template Name" title at the
- * top, the same way it is here.
- *
- * When you create your page, you can just select the template and viola, you have
- * a custom page template to call your very own. Your mother would be so proud.
- *
- * For more info: http://codex.wordpress.org/Page_Templates
-*/
-?>
 
-<?php get_header(); ?>
+if(isset($_POST['enviado'])) {
+
+        //aqui tengo que vbolver a validor todos los campos 
+
+
+        //si si si ya todo esta chido...
+        global $wpdb;
+        $table = $wpdb->prefix.'registro';
+        $data = array(
+            'equipo' => $_POST['nombre_equipo'], 
+            'afilia' => $_POST['afiliacion'],
+            'dir' => $_POST['direccion'], 
+            'pais' => $_POST['pais'], 
+            'ciudad' => $_POST['ciudad'], 
+            'cp' => $_POST['cp'], 
+            'tel' => $_POST['mobile'], 
+            'contacto' => $_POST['nombre'],
+            'correo' => $_POST['email'], 
+            'relacion' => $_POST['yourrelation'], 
+            'como' => $_POST['enteraste'], 
+            'motivo' => $_POST['reasontoregister'], 
+            'aviso' => $_POST['aviso']
+        );
+        $format = array('%s','%s','%s','%s','%s','%d','%s','%s','%s','%s','%s','%s','%s');
+        $wpdb->insert($table,$data);
+
+    
+        $my_id = $wpdb->insert_id;
+
+        //var_dump($my_id);
+
+        //$wpdb->print_error();
+        //var_dump($wpdb);
+
+
+
+}
+
+get_header(); 
+
+?>
 
 
 <div id="back_form">
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    <?php 
+
+        if (isset($my_id)){
+            echo  "$('#gracias').show('slow');";
+            echo  "$('#form-wrapper').hide(0);";
+        }else{
+            echo  "$('#form-wrapper').show('slow');";
+            echo  "$('#gracias').hide(0);";
+        }
+    ?>
+
+});
+</script>
+
+<section id="gracias">
+<h1>Gracias por tu registro </h1>
+</section>
+
 <section id="form-wrapper">
 	<h1>Registra a tu equipo</h1>
     <p><b>Estás a unos pasos de mostrar tu talento en Munich.</b><br>Llena el siguiente formulario para que podamos validar tu información e inscribir a tu equipo.</p>
     <form action="" method="POST" id="formulario" class="formulario">            
         <ul>
             <li>
-                <input id="nombre_equipo" maxlength="50" name="nombre" size="20" type="text" required="" class="sinvalidar" onBlur="validarNombreEquipo('nombre_equipo')" oninput="validarNombreEquipo('nombre_equipo')"/>
+                <input id="nombre_equipo" maxlength="50" name="nombre_equipo" size="20" type="text" required="" class="sinvalidar" onBlur="validarNombreEquipo('nombre_equipo')" oninput="validarNombreEquipo('nombre_equipo')"/>
                 <label for="nombre_equipo">Nombre del equipo</label>
             </li>
 
@@ -118,18 +166,13 @@
 
         <button type="submit" name="enviar" onclick="validacion()" class="boton" id="enviador">ENVIAR</button>
 
+        <input type="hidden" name="enviado" value="true" />
+
     </form>
 
 </section>
 </div>
 
-
-
-			<div id="content">
-
-			<h1>Simon carnaaaaaallll</h1>
-
-			</div>
 
 
 <?php get_footer(); ?>
