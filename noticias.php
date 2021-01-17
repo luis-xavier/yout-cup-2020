@@ -4,20 +4,20 @@
 
 <section class="np-wrapper">
     <div class="noticia-principal noticia">
-        <img src="img/img-texto.svg" alt="">
+        <img src="img/tweet.jpg" alt="">
         <article>
-            <h2>TEXTO PRINCIPAL</h2>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-            <a href="noticia.php" class="boton boton-reverse">leer más</a>
+            <h2>La FC Bayern Youth Cup llega a México</h2>
+            <p>FC Bayern y Curveball Sports se han unido para llevar a cabo en México el prestigioso torneo juvenil.</p>
+            <a href="curveball-youth-cup.php" class="boton boton-reverse">Leer más</a>
         </article>
     </div>
     <section class="noticias">
         <div id="display-noticia" class="noticias-wrapper nw-noticia">
             <div id="noticia-1" class="noticia">
                 <img src="img/img-texto.svg" class="img-np" alt="">
-                <h3>Noticia</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-                <a href="noticia-yc.php">LEER MÁS</a>
+                <h3>La FC Bayern Youth Cup llega a México</h3>
+                <p></p>
+                <a href="curveball-youth-cup.php">LEER MÁS</a>
             </div>
             <div class="noticia">
                 <img src="img/img-texto.svg" alt="">

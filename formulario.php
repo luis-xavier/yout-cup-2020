@@ -1,4 +1,11 @@
-<?php include "header.php" ?>
+<?php 
+include "header.php";
+if(isset($_SESSION) ){
+    //$_POST = array();
+}
+var_dump($_SESSION);
+?>
+
 
 <link rel="stylesheet" type="text/css" href="css/formulario.css">
 <script type="text/javascript" src="js/formulario.js"></script>
@@ -7,10 +14,10 @@
 <section id="form-wrapper">
 	<h1>Registra a tu equipo</h1>
     <p><b>Estás a unos pasos de mostrar tu talento en Munich.</b><br>Llena el siguiente formulario para que podamos validar tu información e inscribir a tu equipo.</p>
-    <form action="" method="POST" id="formulario" class="formulario">            
+    <form action="functions/contacto.php" method="POST" id="formulario" class="formulario">            
         <ul>
             <li>
-                <input id="nombre_equipo" maxlength="50" name="nombre" size="20" type="text" required="" class="sinvalidar" onBlur="validarNombreEquipo('nombre_equipo')" oninput="validarNombreEquipo('nombre_equipo')"/>
+                <input id="nombre_equipo" maxlength="50" name="nombre_equipo" size="20" type="text" required="" class="sinvalidar" onBlur="validarNombreEquipo('nombre_equipo')" oninput="validarNombreEquipo('nombre_equipo')"/>
                 <label for="nombre_equipo">Nombre del equipo</label>
             </li>
 
@@ -46,7 +53,7 @@
             </li>
 
             <li class="half-columnB">
-                <input id="telefono" maxlength="13" name="mobile" size="20" type="text" required="" class="sinvalidar" onBlur="validarTelefono('telefono')" oninput="validarTelefono('telefono')" onkeypress="return isNumberKey(event)"/>
+                <input id="telefono" maxlength="13" name="telefono" size="20" type="text" required="" class="sinvalidar" onBlur="validarTelefono('telefono')" oninput="validarTelefono('telefono')" onkeypress="return isNumberKey(event)"/>
                 <label for="telefono">Teléfono</label>
             </li>
 
