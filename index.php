@@ -4,9 +4,13 @@
 <section class="first-section-home section-white">
     <div class="section-video">
         <h1>FC Bayern Youth Cup Mexico</h1>
-        <img src="img/still-video 1.jpg" alt="">
-        <video src=""></video>
-        <button class="muted"><img src="img/mute.svg" alt=""></button>
+        <div class="video-overlay"></div>
+        <video playsinline autoplay muted loop width="100%" height="auto">
+            <source src="videos/yc-video-hero.mp4" type="video/mp4">
+        </video>
+        <button id="abrir-modal" class="abrir-modal"><img src="img/expandir.svg" alt=""></button>
+        <iframe id="iframe-yc" width="560" height="315" src="https://www.youtube.com/embed/yQQOlKEbdkw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="overlay-black ob-one"></div>
     </div>
     <article>
         <h1>FC Bayern Youth Cup Mexico</h1>
@@ -22,26 +26,26 @@
 </section>
 <section class="third-section-home noticias section-gray">
     <h2>Noticias</h2>
-    <span>Actualización al 29 de dicembre</span>
+    <span>Actualización al 17 de enero</span>
     <div class="noticias-wrapper">
         <div class="noticia">
-            <img src="img/noticia.jpg" alt="">
-            <h3>Título de la Noticia 1</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-            <a href="">LEER MÁS</a>
+            <img src="img/twit-noticia.jpg" alt="">
+            <h3>La FC Bayern Youth Cup llega a México</h3>
+            <p>FC Bayern y Curveball Sports se han unido para llevar a cabo en México el prestigioso torneo juvenil.</p>
+            <a href="curveball-youth-cup.php">LEER MÁS</a>
         </div>
         <div class="noticia">
             <img src="img/noticia.jpg" alt="">
-            <h3>Título de la Noticia 2</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-            <a href="">LEER MÁS</a>
+            <h3>México participará en la FC Bayern Youth Cup Freestyle 2021</h3>
+            <p>Como parte de la FC Bayern Youth Cup 2021, México participará en la edición Freestyle del mismo torneo a través de las plataformas oficiales del club alemán.</p>
+            <a href="bayern-freestyle.php">LEER MÁS</a>
         </div>
-        <div class="noticia">
+        <!-- <div class="noticia">
             <img src="img/noticia.jpg" alt="">
             <h3>Título de la Noticia 3</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
             <a href="">LEER MÁS</a>
-        </div>
+        </div> -->
     </div>
 
     <section class="container">
@@ -50,28 +54,28 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="noticia">
-                        <img src="img/noticia.jpg" alt="">
-                        <h3>Título de la Noticia 1</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-                        <a href="">LEER MÁS</a>
+                        <img src="img/twit-noticia.jpg" alt="">
+                        <h3>La FC Bayern Youth Cup llega a México</h3>
+                        <p>FC Bayern y Curveball Sports se han unido para llevar a cabo en México el prestigioso torneo juvenil.</p>
+                        <a href="curveball-youth-cup.php">LEER MÁS</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="noticia">
                         <img src="img/noticia.jpg" alt="">
-                        <h3>Título de la Noticia 1</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
-                        <a href="">LEER MÁS</a>
-                    </div class="noticia">
+                        <h3>México participará en la FC Bayern Youth Cup Freestyle 2021</h3>
+                        <p></p>
+                        <a href="bayern-freestyle.php">LEER MÁS</a>
+                    </div>
                 </div>
-                <div class="swiper-slide">
+                <!-- <div class="swiper-slide">
                     <div class="noticia">
                         <img src="img/noticia.jpg" alt="">
                         <h3>Título de la Noticia 1</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,</p>
                         <a href="">LEER MÁS</a>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="swiper-pagination"></div>
         </div>

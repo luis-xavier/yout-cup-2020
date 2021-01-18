@@ -20,8 +20,9 @@
                 <button name="button"><span class=" idioma-desk">EN</span></button>
             </div>
             <div class="redes-sociales-header">
-                <a href=""><img src="img/instagram.svg" alt=""></a>
-                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram-gris.svg" alt=""></a>
+                <a href="" class="facebook-header"><img src="img/facebook-gris.svg" alt=""></a>
+                <a href="https://www.youtube.com/c/fcbayern" class="youtube-header" ><img src="img/youtube.svg" alt=""></a>
             </div>
             <div class="mi-equipo">
                 <a href="login.php"><span>Mi equipo</span><img src="img/equipo.svg" alt=""></a>
@@ -42,7 +43,7 @@
                         <ul class="dropdown-menu cup-container">
                             <img src="img/flecha.svg" alt="">
                             <li><a href="" id="actividades1-link" class="yc-2021">Youth Cup 2021</a></li>
-                            <li><a href="" id="actividades1-link" class="yc-2019">Youth Cup 2019</a></li>
+                            <li><a href="ediciones-anteriores.php" id="actividades1-link" class="yc-2019">Ediciones anteriores</a></li>
                         </ul>
                     </li>
                     <li style="z-index: 2;"><a href="noticias.php">Noticias</a></li>
