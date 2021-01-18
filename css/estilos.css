@@ -972,6 +972,7 @@ footer{
 .first-subsection-footer{
     display: flex;
     width: 25%;
+    height: 72px;
     flex-direction: row;
     justify-content: space-around;
 }
