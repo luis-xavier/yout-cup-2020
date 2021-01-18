@@ -30,7 +30,7 @@
             <h5>Premiación y Selectivo Mexicano</h5>
             <p>El campeón, subcampeón y tercer lugar de cada Torneo Estatal recibirán:1 trofeo y 1 medalla para cada uno de sus jugadores y entrenador </p>
             <p>El campeón, subcampeón y tercer lugar de la Gran Final Nacional recibirán: 1 trofeo y 1 medalla para cada uno de sus jugadores y entrenador</p>
-            <h5>Se otorgarán trofeos, también, a:</h5>
+            <h5>También se premiarán las siguientes categorías:</h5>
             <ul>
                 <li>Máximo goleador del torneo (que participe en Gran Final Nacional)</li>
                 <li>Mejor portero del torneo (que participe en Gran Final Nacional)</li>
@@ -110,7 +110,7 @@
             <p>De ser admitido, el equipo será asiganado a uno de los espacios en la localidad correspondiente y su delegado estará encargado de recibir los registros y uniforme de su equipo.</p>
             <div class="cancelacion">
                 <p><strong class="strong-black">Cancelación del torneo y fuerza mayor</strong></p>
-                <p>Ni al FC Bayern Youth Cup ni el organizador son responsables de las pérdidas financieras o los daños que puedan ocurrir debido a eventos fuera del control del FC Bayern Youth Cup o del organizador, como eventos bélicos, epidemias como COVID19, incencios, inundaciones, interrupciones en conexiones de transporte público, acciones gubernamentales huelga u otras circunstacias similares.</p>
+                <p>Ni al FC Bayern Youth Cup ni el organizador son responsables de las pérdidas financieras o los daños que puedan ocurrir debido a eventos fuera del control del FC Bayern Youth Cup o del organizador, como eventos bélicos, epidemias como COVID19, incendios, inundaciones, interrupciones en conexiones de transporte público, acciones gubernamentales, huelga u otras circunstancias similares.</p>
             </div>
             <a href="" class="boton">QUIERO PARTICIPAR</a>
         </div>

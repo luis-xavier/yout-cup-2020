@@ -14,7 +14,7 @@
     <section class="noticias">
         <div id="display-noticia" class="noticias-wrapper nw-noticia">
             <div id="noticia-1" class="noticia">
-                <img src="img/img-texto.svg" class="img-np" alt="">
+                <img src="img/freestyle.jpg" class="img-np" alt="">
                 <h3>México participará en la FC Bayern Youth Cup Freestyle 2021</h3>
                 <p>Como parte de la FC Bayern Youth Cup 2021, México participará en la edición Freestyle del mismo torneo a través de las plataformas oficiales del club alemán.</p>
                 <a href="bayern-freestyle.php">LEER MÁS</a>

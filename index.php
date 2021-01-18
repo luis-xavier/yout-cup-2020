@@ -1,16 +1,24 @@
 <?php include "header.php" ?>
 
 <div class="overlay-black"></div>
+
+<div id='overlay-video'>
+    <div class='modal-video'>
+        <div class='cerrar-modal'></div>
+        <iframe id='iframe-yc' width='560' height='315' src='https://www.youtube.com/embed/yQQOlKEbdkw' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+    </div>
+</div>
+
+<div class="overlay-black ob-one"></div>
+
 <section class="first-section-home section-white">
     <div class="section-video">
-        <h1>FC Bayern Youth Cup Mexico</h1>
+        <h1>FC Bayern Youth Cup México</h1>
         <div class="video-overlay"></div>
         <video playsinline autoplay muted loop width="100%" height="auto">
             <source src="videos/yc-video-hero.mp4" type="video/mp4">
         </video>
-        <button id="abrir-modal" class="abrir-modal"><img src="img/expandir.svg" alt=""></button>
-        <iframe id="iframe-yc" width="560" height="315" src="https://www.youtube.com/embed/yQQOlKEbdkw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class="overlay-black ob-one"></div>
+        <button id="abrir-modal" class="abrir-modal"><img src="img/expand.svg" alt=""></button>
     </div>
     <article>
         <h1>FC Bayern Youth Cup Mexico</h1>
@@ -35,7 +43,7 @@
             <a href="curveball-youth-cup.php">LEER MÁS</a>
         </div>
         <div class="noticia">
-            <img src="img/noticia.jpg" alt="">
+            <img src="img/freestyle.jpg" alt="">
             <h3>México participará en la FC Bayern Youth Cup Freestyle 2021</h3>
             <p>Como parte de la FC Bayern Youth Cup 2021, México participará en la edición Freestyle del mismo torneo a través de las plataformas oficiales del club alemán.</p>
             <a href="bayern-freestyle.php">LEER MÁS</a>

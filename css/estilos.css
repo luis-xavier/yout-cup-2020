@@ -577,9 +577,6 @@ nav > ul > li:hover .dropdown-menu li a{
     position: absolute;
     background-color: rgba(0, 0, 0, .5);
 }
-.section-video img{
-    width: 60%;
-}
 .section-video h1{
     color: white;
     width: 100%;
@@ -595,23 +592,46 @@ nav > ul > li:hover .dropdown-menu li a{
 .abrir-modal{
     position: absolute;
     background-color: transparent;
-    right: 0%;
-    bottom: 3%;
+    right: 2%;
+    bottom: 4%;
     border: none;
     cursor: pointer;
     z-index: 5;
+    width: 52px;
+    margin: 0;
+    padding: 0;
 }
 .abrir-modal:focus{
     outline: none;
 }
-#iframe-yc{
+.abrir-modal img{
+    width: 100%;
+}
+#overlay-video{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    z-index: 100;
+    display: none;
+}
+.modal-video{
     position: absolute;
     z-index: 6;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    height:90%;
+    max-width: 650px;
+    height:auto;
+    padding: 50px 20px 20px;
+    box-sizing: border-box;
+    background: #FFF;
+}
+.modal-video iframe{
+    margin: 0 auto;
+    display: block;
+    width: 100%;
 }
 .first-section-home article{
     margin: 60px 5% 20px;

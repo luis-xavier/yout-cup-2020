@@ -3,6 +3,7 @@
 <div class="overlay-black"></div>
 
 <div class="freestyle-bayern">
+    <img src="img/freestyle.jpg" class="first-image">
     <h1 class="estilos-titulo">FC Bayern Youth Cup Freestyle 2021</h1>
     <br>
     <p><span class="letter-capital">C</span>omo parte de la FC Bayern Youth Cup 2021, México participará en la edición Freestyle del mismo torneo a través de las plataformas oficiales del club alemán.</p>
@@ -13,7 +14,7 @@
     <p>El representante de Togo, Sidike Tando, venció a su contraparte de Nigeria en la final, ganándose un viaje a Londres en Julio de 2021 para asistir a un partido de la Euro 2021 en el estadio de Wembley en Londres, acompañado por el club.</p>
     <p>Para la edición de 2021, México contará con un representante para competir en la FC Bayern Youth Cup Freestyle.</p>
     <br>
-    <iframe src="https://fcbayern.com/en/club/international-youth-programs/youth-cup" frameborder="0"></iframe>
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We need your help the last time to clinch the gold🙏🏾🙏🏾🙏🏾🙏🏾🙏🏾<br><br>United we stand!!! <br><br>Please help vote for one of ours in the on going football freestyle battle for the Bayern youth cup 2020...... <a href="https://t.co/qwpRb8cSps">pic.twitter.com/qwpRb8cSps</a></p>&mdash; Gugu_media(GMB) (@Gugu_media) <a href="https://twitter.com/Gugu_media/status/1285998499046326279?ref_src=twsrc%5Etfw">July 22, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <br>
 </div>
 

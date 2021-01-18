@@ -11,7 +11,7 @@
 <body>
 <header>
     <div class="first-section-header">
-        <a href="index.php"><img class="logo-header" src="img/fcbc-mx.svg" alt=""></a>
+        <a href="index.php"><img class="logo-header" src="img/fcyouthcup-mx.svg" alt=""></a>
     </div>
     <div class="second-section-header">
         <div class="top-bar">

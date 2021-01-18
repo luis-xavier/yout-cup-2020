@@ -25,7 +25,7 @@
         </div>
         <span class="span-f">contacto@curveball.mx</span>
     </section>
-    <address>FC bayern Youth Cup 2020 Derechos reservados</address>
+    <address>FC Bayern Youth Cup 2021 Derechos reservados</address>
 </footer>
 <!-- SCRIPTS -->
 <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
