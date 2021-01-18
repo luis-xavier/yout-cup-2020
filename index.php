@@ -1,4 +1,17 @@
-<?php include "header.php" ?>
+<?php
+include "header.php";
+function actual_date ()  
+{  
+    $week_days = array ("domingo", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado");  
+    $months = array ("", "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre");  
+    $year_now = date ("Y");  
+    $month_now = date ("n");  
+    $day_now = date ("j");  
+    $week_day_now = date ("w");  
+    $date = $week_days[$week_day_now] . " " . $day_now . " de " . $months[$month_now] . " de " . $year_now;   
+    return $date;    
+}
+?>
 
 <div class="overlay-black"></div>
 
@@ -34,7 +47,7 @@
 </section>
 <section class="third-section-home noticias section-gray">
     <h2>Noticias</h2>
-    <span>Actualización al 17 de enero</span>
+    <span>Actualización: <?= actual_date(); ?></span>
     <div class="noticias-wrapper">
         <div class="noticia">
             <img src="img/twit-noticia.jpg" alt="">

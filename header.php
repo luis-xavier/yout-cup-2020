@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 <header>
