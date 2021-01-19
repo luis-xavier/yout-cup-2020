@@ -24,6 +24,9 @@ function bones_ahoy() {
   # pal form de regiastro
   require_once( 'library/registro.php' );
 
+  # pa ver los regisytrados
+  require_once( 'library/members.php' );
+
   # launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
   # A better title
@@ -221,21 +224,7 @@ function bones_comments( $comment, $args, $depth ) {
       <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
     </article>
   <?php # </li> is added by WordPress automatically ?>
-  <?php 
-  /************* menu de miembros *********************/
 
-  function registro_de_miembros_menu() {
-    global $team_page;
-    add_menu_page( __( 'Members', 'members' ), __( 'Members', 'members' ), 'edit_posts', 'members', 'registro_de_miembros', 'dashicons-groups', 6 );
-   }
-   add_action( 'admin_menu', 'registro_de_miembros_menu' );
-   
-   function registro_de_miembros() {
-     echo 'Hello World!';
-   }
-
-  
-  ?>
 <?php
 } # don't remove this bracket!
 ?>

@@ -1,11 +1,67 @@
 <?php
 
 if(isset($_POST['enviado'])) {
-
         //aqui tengo que vbolver a validor todos los campos 
+        global $reg_errors;
+        $reg_errors = new WP_Error;
 
+        if ( empty( $_POST['nombre_equipo'] ) ) {
+            $reg_errors->add("empty-name-team", "Debes agregar el nombre de tu equipo");
+          }
+          if ( empty( $_POST['afiliacion'] ) ) {
+            $reg_errors->add("empty-afiliacion", "Selecciona tu tipo de afiliación");
+          }
+          if ( empty( $_POST['direccion'] ) ) {
+            $reg_errors->add("empty-dir", "Escribe la dirección de tu equipo");
+          }
+          if ( empty( $_POST['pais'] ) ) {
+            $reg_errors->add("empty-pais", "Escribe el nombre de tu país");
+          }
+          if ( empty( $_POST['ciudad'] ) ) {
+            $reg_errors->add("empty-cd", "Escribe el nombre de tu ciudad");
+          }
+          if ( empty( $_POST['cp'] ) ) {
+            $reg_errors->add("empty-cp", "Ingresa tu código postal");
+          }
+          if ( empty( $_POST['mobile'] ) ) {
+            $reg_errors->add("empty-mob", "Ingresa tu número telefónico");
+          }
+          if ( empty( $_POST['nombre'] ) ) {
+            $reg_errors->add("empty-name", "Por favor agrega tu nombre");
+          }
+          if ( empty( $_POST['email'] ) ) {
+            $reg_errors->add("empty-email", "Ingresa un correo válido");
+          }
+          if ( empty( $_POST['yourrelation'] ) ) {
+            $reg_errors->add("empty-rel", "Selecciona la relación que tienes con el equipo");
+          }
+          if ( empty( $_POST['enteraste'] ) ) {
+            $reg_errors->add("empty-enteraste", "Elige la forma en que te enteraste del torneo");
+          }
+          if ( empty( $_POST['reasontoregister'] ) ) {
+            $reg_errors->add("empty-reason", "Elige la razón más importante por la que te registras");
+          }
+          if ( empty( $_POST['aviso'] ) ) {
+            $reg_errors->add("empty-aviso", "Debes términos y condiciones ");
+          }
+          
+          if ( !is_email( $_POST['email'] ) ) {
+            $reg_errors->add( "invalid-email", "El e-mail no tiene un formato válido" );
+          }
 
-        //si si si ya todo esta chido...
+          if ( strlen( $_POST['cp'] ) != 5 ) {
+            $reg_errors->add( "invalid-postalcode", "El Código Postal debe tener 5 caracteres" );
+          }
+
+          if ( is_wp_error( $reg_errors ) ) {
+            if (count($reg_errors->get_error_messages()) > 0) {
+
+                //si hay falla
+              
+            }
+          }else{
+
+             //si si si ya todo esta chido...
         global $wpdb;
         $table = $wpdb->prefix.'registro';
         $data = array(
@@ -36,6 +92,8 @@ if(isset($_POST['enviado'])) {
 
 
 
+          }
+
 }
 
 get_header(); 
@@ -65,6 +123,15 @@ jQuery(document).ready(function($) {
 
 <section id="gracias">
 <h1>Gracias por tu registro </h1>
+<?php
+        if (issei($reg_errors) && count($reg_errors->get_error_messages()) > 0) {
+
+            foreach ( $reg_errors->get_error_messages() as $error ) {
+                echo  "<h1> ".$error."</h1>";
+               }
+          
+        }
+?>
 </section>
 
 <section id="form-wrapper">
