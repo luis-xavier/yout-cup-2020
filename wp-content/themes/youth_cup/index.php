@@ -22,7 +22,73 @@
     </div>
 </section>
 
-<?php get_footer(); ?>
+<section class="third-section-home noticias section-gray">
+    <h2>Noticias</h2>
+    <!--span>Actualización al 29 de dicembre</span-->
+    <div class="noticias-wrapper">
+    <?php 
+
+        if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
+                ?>
+                <div class="noticia">
+                <?php (has_post_thumbnail() ? the_post_thumbnail() : false) ?>
+            <h3><?php the_title(); ?></h3>
+            <p><?php the_excerpt(); ?></p>
+            <a href="<?= esc_url( get_permalink( )) ?>">LEER MÁS</a>
+        </div>
+
+
+
+
+                <?php
+            endwhile;
+        else :
+            _e( 'Sorry, no posts were found.', 'textdomain' );
+        endif;
+
+    ?>
+
+    </div>
+</section>    
+
+
+<section class="container">
+        <!-- SWIPER -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+<?php 
+
+if ( have_posts() ) :
+    while ( have_posts() ) : the_post();
+        // Your loop code
+        ?>
+
+        <div class="swiper-slide">
+                    <div class="noticia">
+                        <?php (has_post_thumbnail() ? the_post_thumbnail() : false) ?>
+                        <h3><?php the_title(); ?></h3>
+                        <p><?php the_excerpt(); ?></p>
+                        <a href="<?php get_permalink() ?>">LEER MÁS</a>
+                    </div>
+        </div>
+
+
+        <?php
+    endwhile;
+else :
+    _e( 'Sorry, no posts were found.', 'textdomain' );
+endif;
+
+?>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="js/swiper-6.4.5.min.js"></script>
 
 <!-- Initialize Swiper -->
 <script>
@@ -53,3 +119,6 @@
    
 });
 </script>
+
+
+<?php get_footer(); ?>

@@ -227,5 +227,13 @@ function bones_comments( $comment, $args, $depth ) {
 
 <?php
 } # don't remove this bracket!
+
+/************* quit read more  *********************/
+function new_excerpt_more($more) {
+  global $post;
+  remove_filter('excerpt_more', 'new_excerpt_more'); 
+  return '';
+}
+add_filter('excerpt_more','new_excerpt_more',11);
 ?>
 
