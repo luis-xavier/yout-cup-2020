@@ -1,5 +1,3 @@
-var switcher = true;
-
 (function () {
   $(".menu_anvorguesa").click(function () {
     $(this).toggleClass("cross");
@@ -108,6 +106,9 @@ $('.modal-video').on('click', function(){
   return false;
 })
 
+
 $("#abrir-modal") .click(function(e){
   $('#overlay-video') .fadeIn(1000);
+  let altura = $('.modal-video').outerWidth();  
+  $('#iframe-yc').height(altura * .55);
 });

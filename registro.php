@@ -18,38 +18,38 @@
                 <label for="Fecha">Fecha de nacimiento:</label>
                 <div class="date-selector"> 
                     <select name="año" id="año">
-                        <option value="AAAA">AAAA</option>
+                        <option value="AAAA">Año</option>
                         <option value="2004">2004</option>
                         <option value="2005">2005</option>
                         <option value="2006">2006</option>
                         <option value="2007">2007</option>
                     </select>
                     <select name="meses" id="meses">
-                        <option value="MM">MM</option>
-                        <option value="Enero">1</option>
-                        <option value="Febrero">2</option>
-                        <option value="Marzo">3</option>
-                        <option value="Abril">4</option>
-                        <option value="Mayo">5</option>
-                        <option value="Junio">6</option>
-                        <option value="Julio">7</option>
-                        <option value="Agosto">8</option>
-                        <option value="Septiembre">9</option>
+                        <option value="MM">Mes</option>
+                        <option value="Enero">01</option>
+                        <option value="Febrero">02</option>
+                        <option value="Marzo">03</option>
+                        <option value="Abril">04</option>
+                        <option value="Mayo">05</option>
+                        <option value="Junio">06</option>
+                        <option value="Julio">07</option>
+                        <option value="Agosto">08</option>
+                        <option value="Septiembre">09</option>
                         <option value="Octubre">10</option>
                         <option value="Noviembre">11</option>
                         <option value="Diciembre">12</option>
                     </select>
                     <select name="dias" id="dias">
-                        <option value="DD">DD</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
+                        <option value="DD">Día</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
                         <option value="10">10</option>
                         <option value="11">11</option>
                         <option value="12">12</option>

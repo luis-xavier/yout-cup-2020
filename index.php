@@ -18,7 +18,7 @@ function actual_date ()
 <div id='overlay-video'>
     <div class='modal-video'>
         <div class='cerrar-modal'></div>
-        <iframe id='iframe-yc' width='560' height='315' src='https://www.youtube.com/embed/yQQOlKEbdkw' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+        <iframe id='iframe-yc' width='100%' height='1' src='video-full.html' frameborder='0' allowfullscreen></iframe>
     </div>
 </div>
 
