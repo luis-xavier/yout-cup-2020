@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
         let id = cur && cur.length ? cur[0].id : "";
           
         // Set/remove active class
-        console.log(id)
+        //console.log(id)
         menuItems.removeClass("active");
         $('#'+id+'-link').addClass('active');
         

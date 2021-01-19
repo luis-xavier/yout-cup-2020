@@ -130,7 +130,7 @@ function bones_scripts_and_styles() {
 
 				#vengan los estilos
 				wp_register_style( 'youth_cup', get_stylesheet_directory_uri() . '/library/css/estilos.css', array(), '', 'all' );
-				wp_register_style( 'formulario_style', get_stylesheet_directory_uri() . '/library/css/formulario.css', array(), '', 'all' );
+				#wp_register_style( 'formulario_style', get_stylesheet_directory_uri() . '/library/css/formulario.css', array(), '', 'all' );
 				wp_register_style( 'acordeon_style', get_stylesheet_directory_uri() . '/library/css/acordeon.css', array(), '', 'all' );
 				wp_register_style( 'login_style', get_stylesheet_directory_uri() . '/library/css/login.css', array(), '', 'all' );
 				wp_register_style( 'swiper_style', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), '', 'all' );
@@ -149,7 +149,7 @@ function bones_scripts_and_styles() {
 						#vengan los js´s
 
 						wp_register_script( 'swiper', get_stylesheet_directory_uri() . '/library/js/libs/swiper-6.4.5.min.js', array ('jquery'), '6.4.5', true );
-						wp_register_script( 'formulario', get_stylesheet_directory_uri() . '/library/js/formulario.js', array ('jquery'), '0.1', false);
+						#wp_register_script( 'formulario', get_stylesheet_directory_uri() . '/library/js/formulario.js', array ('jquery'), '0.1', false);
 						wp_register_script( 'entrar', get_stylesheet_directory_uri() . '/library/js/login.js', array ('jquery'), '0.1', false);
 						wp_register_script( 'main', get_stylesheet_directory_uri() . '/library/js/javascript.js', array ('jquery'), '0.1', true);
 						wp_register_script( 'acordeon', get_stylesheet_directory_uri() . '/library/js/acordeon.js', array ('jquery'), '0.1', true);

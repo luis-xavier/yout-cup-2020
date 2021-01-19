@@ -42,6 +42,8 @@ get_header();
 
 ?>
 
+<link rel="stylesheet" type="text/css" href="<?= get_stylesheet_directory_uri() . '/library/css/formulario.css' ?>">
+<script type="text/javascript" src="<?= get_stylesheet_directory_uri() . '/library/js/formulario.js' ?>"></script>
 
 <div id="back_form">
 
@@ -164,7 +166,7 @@ jQuery(document).ready(function($) {
             </li>
         </ul>
 
-        <button type="submit" name="enviar" onclick="validacion()" class="boton" id="enviador">ENVIAR</button>
+        <button type="submit" name="enviar" onclick="window.validacion()" class="boton" id="enviador">ENVIAR</button>
 
         <input type="hidden" name="enviado" value="true" />
 

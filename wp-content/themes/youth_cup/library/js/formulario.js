@@ -206,12 +206,10 @@ function validarCheckAviso(idEl){
 } 
 
     
-    
-
 
 
 function validacion(e){
-    console.log("validation is running")
+    console.log("validation is running");
     event.preventDefault(e);
     let formulario = document.getElementById('formulario');
     let tieneError;
