@@ -57,9 +57,9 @@
                 <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram.svg" alt=""></a>
                 <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook.svg" alt=""></a>
             </div>
-            <div class="mi-equipo">
+            <!---div class="mi-equipo">
                 <a href="login.php"><span>Mi equipo</span><img src="<?= get_stylesheet_directory_uri() ?>/library/img/equipo.svg" alt=""></a>
-            </div>
+            </div-->
         </div>
         <div class="header-nav">
 
@@ -119,12 +119,26 @@
 
 
         <ul id="menu-mobile">
-            <li><a href="acerca-de.php" class="">Acerca de</a></li>
+            <!--li><a href="acerca-de.php" class="">Acerca de</a></li>
             <li><a href="torneo.php" class="">Torneo</a></li>
             <li><a href="yc.php" class="">Youth Cup</a></li>
             <li><a href="noticias.php" class="">Noticias</a></li>
             <li><a href="formulario.php" class="">Participa</a></li>
-            <li><a href="login.php" class="">Mi equipo</a></li>
+            <li><a href="login.php" class="">Mi equipo</a></li-->
+            <?php wp_nav_menu(array(
+    					         'container' => false,                           // remove nav container
+    					         'container_class' => 'menu-mobile',                 // class of container (should you choose to use it)
+    					         'menu' => __( 'Main Menu', 'bonestheme' ),  // nav name
+    					         'menu_class' => 'menu-desktop main-menu',               // adding custom nav class
+    					         'theme_location' => 'main-nav',                 // where it's located in the theme
+    					         'before' => '',                                 // before the menu
+        			               'after' => '',                                  // after the menu
+        			               'link_before' => '',                            // before each link
+        			               'link_after' => '',                             // after each link
+        			               'depth' => 0,                                   // limit the depth of the nav
+    					         'fallback_cb' => ''                             // fallback function (if there is one)
+						)); ?>
+
         </ul>
         <div id="menu-mobile-bar">
             <div class="idiomas">
