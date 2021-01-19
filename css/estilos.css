@@ -502,6 +502,7 @@ nav > ul > li:hover .dropdown-menu li a{
     width: 1px;
     background-color: #FFF;
     height: 50%;
+    margin: auto 0;
     transform: skew(334deg);
 }
 #menu-mobile-bar .redes-sociales-header{
@@ -750,15 +751,15 @@ nav > ul > li:hover .dropdown-menu li a{
 }
 .noticia-principal{
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row-reverse;
 }
 .noticia-principal >img{
     display: block;
-    margin-bottom: 0;
 }
 .noticia-principal article{
-    width: 100%;
+    width: 29%;
     margin: 2% 3%;
 }
 .noticia-principal h2{
@@ -791,8 +792,19 @@ nav > ul > li:hover .dropdown-menu li a{
     margin: unset;
     margin-bottom: 30px;
 }
+.img-container{
+    width: 65%;
+}
+.img-container img{
+    width: 100%;
+    margin-bottom: unset;
+}
 .noticia-principal img{
     width: 60%;
+}
+.img-container img{
+    width: 100%;
+    margin-bottom: unset;
 }
 .nw-noticia{
     margin: unset;
@@ -808,7 +820,10 @@ nav > ul > li:hover .dropdown-menu li a{
 }
 .swiper-container {
     width: 100%;
-    height: 100%;
+    height: 400px;
+}
+.swiper-wrapper{
+    height: 93%;
 }
 .swiper-slide{
     display: none;
@@ -840,7 +855,9 @@ nav > ul > li:hover .dropdown-menu li a{
 }
 .swiper-pagination{
     color: #DB052C;
-    margin-top: 60px;
+}
+.swiper-pagination > span{
+    background-color: #001829;
 }
 .third-section-home >a:hover{
     color: #ffffff;
@@ -942,6 +959,8 @@ nav > ul > li:hover .dropdown-menu li a{
     padding: 0 20px;
     transition: all .3s;
     cursor: pointer;
+    height: 50px;
+    margin-left: -1px;
 }
 .newsletter form button:hover{
     background-color: transparent;
@@ -972,7 +991,7 @@ footer{
 .first-subsection-footer{
     display: flex;
     width: 25%;
-    height: 72px;
+    height: 70px;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -981,7 +1000,7 @@ footer{
 }
 .footer-item{
     background-color: #DCE2E5;
-    width: 1px;
+    width: 2px;
     height: 100%;
 }
 .second-subsection-footer{
@@ -1097,7 +1116,7 @@ footer address{
     display: none;
     flex-direction: row;
     width: 100%;
-    height: 40px;
+    height: 38px;
     background: #0067B2;
     position: sticky;
     top: 54px;
@@ -1511,6 +1530,42 @@ footer address{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    overflow: hidden;
+}
+.agradecimiento-wrapper{
+    background-color: #FFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.13);
+    display: block;
+    padding: 20px 0;
+    width: 40%;
+    height: 40%;
+    min-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.agradecimiento-wrapper section{
+    margin: 3% 7%;
+    height: 94%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+.agradecimiento-wrapper h2{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+#back_form{
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 60px;
+    background: url(../img/back_copa.jpg) no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    display: inline-table;
+    position: relative;
+    margin-top: 50px;
 }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -1559,7 +1614,7 @@ footer address{
         width: 30%;
     }
 }
-@media screen and (max-width: 950px){
+@media screen and (max-width: 955px){
     .first-section-header{
         width: 58%;
     }
@@ -1594,6 +1649,32 @@ footer address{
     .yc p{
         font-size: 17px;
     }
+    .img-container{
+        width: 100%;
+    }
+    .noticia-principal h2{
+        font-size: 22px;
+    }
+    .noticia-principal{
+        display: flex;
+        flex-direction: column;
+    }
+    .noticia-principal article{
+        width: 100%;
+    }
+    .noticia-principal img{
+        width: 100%;
+    }
+    .noticia-principal p{
+        font-size: 15px;
+        margin-right: 5%;
+    }
+    .noticia-principal .boton, .noticia-principal a{
+        display: table;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px 65px 9px;
+    }   
 }
 @media screen and (max-width: 800px){
     .section-video h1{
@@ -1664,11 +1745,7 @@ footer address{
     }
     .swiper-slide .noticia{
         width: 300px;
-        margin-bottom: 20px;
-        height: auto;
-    }
-    .swiper-pagination > span{
-        background-color: #001829;
+        margin-bottom: 0px;
     }
     .noticia h3{
         font-size: 25px;
@@ -1787,7 +1864,7 @@ footer address{
         width: 30%;
     }
     .fourth-section-footer{
-        width: 30%;
+        width: 34%;
         justify-content: flex-end;
         align-items: baseline;
         margin-right: -10%;
@@ -1820,6 +1897,12 @@ footer address{
     footer address{
         font-size: 12px;
     }
+    .historia-yc, .freestyle-bayern{
+        margin-top: 91px;
+    }
+    .ediciones-anteriores iframe{
+        width: 90%;
+    }
 @media screen and (max-width:750px){
     .logo-header{
         width: 100%;
@@ -1839,26 +1922,6 @@ footer address{
     }
     .np-wrapper{
         margin-top: 80px;
-    }
-    .noticia-principal h2{
-        font-size: 22px;
-    }
-    .noticia-principal{
-        display: flex;
-        flex-direction: column;
-    }
-    .noticia-principal img{
-        width: 100%;
-    }
-    .noticia-principal p{
-        font-size: 15px;
-        margin-right: 5%;
-    }
-    .noticia-principal .boton, .noticia-principal a{
-        display: table;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 10px 65px 9px;
     }
     #display-noticia .noticia{
         width: 48%;
@@ -1892,8 +1955,7 @@ footer address{
     }
     .swiper-slide .noticia{
         width: 255px;
-        margin-bottom: 20px;
-        height: auto;
+        height: 325px;
     }
     .noticia h3{
         font-size: 18px;
@@ -1908,7 +1970,7 @@ footer address{
     }
     #menu-torneo-mobile li a{
         font-size: 13px;
-        padding: 11px 25px;
+        padding: 11px 26px;
     }
     .first-subsection-footer{
         width: 42%;
@@ -2018,6 +2080,34 @@ footer address{
         width: 15px;
         height: 15px;
     }
+    .abrir-modal img{
+        width: 60%;
+    }
+    .abrir-modal{
+        right: -1%;
+    }
+    .historia-yc, .freestyle-bayern{
+        margin: 91px 7% 30px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .noticia-container{
+        margin: 51px 7% 30px;
+    }
+    .noticia-container p{
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    h2, .estilos-titulo{
+        font-size: 22px;
+    }
+    .historia-yc p, .freestyle-bayern p{
+        margin-bottom: 10px;
+    }
+    .agradecimiento-wrapper{
+        min-width: 350px;
+    }
 }
 @media screen and (max-width: 400px){
     .menu_anvorguesa{
@@ -2059,6 +2149,7 @@ footer address{
     }
     .first-subsection-footer{
         width: 39%;
+        height: 50px;
     }
     .first-subsection-footer div{
         margin: 0 10px; 
@@ -2105,5 +2196,19 @@ footer address{
     }
     .modal{
         height: 55vh;
+    }
+    #menu-mobile-bar .redes-sociales-header a{
+        margin: auto 0px;
+        min-width: 25px;
+    }
+    #menu-mobile-bar .redes-sociales-header img{
+        width: 92%;
+    }
+    #menu-torneo-mobile li #costos-link-mobile{
+        width: 101%;
+    }
+    .agradecimiento-wrapper{
+        min-width: 250px;
+        height: 50%;
     }
 }

@@ -258,7 +258,7 @@ html, body{
     margin-top: 8px;
     margin-left: -5px;
 }
-.formulario input[type="text"]:focus + label{
+.formulario-registro input[type="text"]:focus + label{
     font-size: 14px;
     color: #001829;
     margin-top: 8px;
@@ -493,7 +493,7 @@ html, body{
 }
 @media (max-width: 960px){
     #back_form{
-        margin-top: 51px;
+        margin-top: 37px;
     }
     #back_form_login{
         margin-top: 51px;
