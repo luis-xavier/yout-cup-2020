@@ -253,7 +253,7 @@ function validacion(e){
         return false;
     } else {
         //---- AQUÍ SE PUEDEN AGREGAR LAS ACCIONES PARA ENVIAR EL FORMULARIO ---//
-        document.getElementById('#formulario').submit();
+        document.getElementById('formulario').submit();
         // Cargar un loader mientras se envia //
         const loader = '<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>';
         setTimeout(function(){ 

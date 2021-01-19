@@ -96,14 +96,12 @@ if(isset($_POST['enviado'])) {
 
 }
 
-get_header(); 
 
 ?>
-
 <link rel="stylesheet" type="text/css" href="<?= get_stylesheet_directory_uri() . '/library/css/formulario.css' ?>">
 <script type="text/javascript" src="<?= get_stylesheet_directory_uri() . '/library/js/formulario.js' ?>"></script>
 
-<div id="back_form">
+<div id="">
 
 <script type="text/javascript">
 jQuery(document).ready(function($) {
@@ -120,6 +118,7 @@ jQuery(document).ready(function($) {
 
 });
 </script>
+
 
 <section id="gracias">
 <h1>Gracias por tu registro </h1>
@@ -241,7 +240,3 @@ jQuery(document).ready(function($) {
 
 </section>
 </div>
-
-
-
-<?php get_footer(); ?>

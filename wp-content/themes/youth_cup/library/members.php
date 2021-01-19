@@ -4,7 +4,7 @@
 
 function registro_de_miembros_menu() {
     add_menu_page( __( 'Members', 'members' ), __( 'Members', 'members' ), 'edit_posts', 'members', 'ver_miembros', get_stylesheet_directory_uri() . '/library/images/members.png', 9 );
-    add_submenu_page('members','Members Registration', 'Member Registration', 'manage_options', 'std-regd','grabar_mimebros');
+    add_submenu_page('members','Members Registration', 'Member Registration', 'manage_options', 'std-regd','grabar_miembros');
    }
 
    add_action( 'admin_menu', 'registro_de_miembros_menu' );
@@ -83,8 +83,7 @@ function ver_miembros(){
   <?php
 }
 
-function registration_callback(){
-
-    echo "23423423423"; 
+function grabar_miembros(){
+    require_once( 'save-member.php' );
 }
 ?>
