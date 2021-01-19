@@ -4,7 +4,9 @@
 
 <section class="np-wrapper">
     <div class="noticia-principal noticia">
-        <img src="img/twit-noticia.jpg" alt="">
+        <div class="img-container">
+            <img src="img/twit-noticia.jpg" alt="">
+        </div>
         <article>
             <h2>La FC Bayern Youth Cup llega a México</h2>
             <p>FC Bayern y Curveball Sports se han unido para llevar a cabo en México el prestigioso torneo juvenil.</p>
