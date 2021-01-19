@@ -134,8 +134,7 @@ jQuery(document).ready(function($) {
 </section>
 
 <section id="form-wrapper">
-	<h1>Registra a tu equipo</h1>
-    <p><b>Estás a unos pasos de mostrar tu talento en Munich.</b><br>Llena el siguiente formulario para que podamos validar tu información e inscribir a tu equipo.</p>
+	<h1>Save a team</h1>
     <form action="" method="POST" id="formulario" class="formulario">            
         <ul>
             <li>

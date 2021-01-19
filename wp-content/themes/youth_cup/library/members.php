@@ -3,8 +3,8 @@
 /************* menu de miembros *********************/
 
 function registro_de_miembros_menu() {
-    add_menu_page( __( 'Members', 'members' ), __( 'Members', 'members' ), 'edit_posts', 'members', 'ver_miembros', get_stylesheet_directory_uri() . '/library/images/members.png', 9 );
-    add_submenu_page('members','Members Registration', 'Member Registration', 'manage_options', 'std-regd','grabar_miembros');
+    add_menu_page( __( 'Members', 'members' ), __( 'Members', 'members' ), 'edit_posts', 'members', 'ver-miembros', get_stylesheet_directory_uri() . '/library/images/members.png', 9 );
+    add_submenu_page('members','Members Registration', 'Member Registration', 'manage_options', 'guardar-member','grabar_miembros');
    }
 
    add_action( 'admin_menu', 'registro_de_miembros_menu' );
