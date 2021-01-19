@@ -473,6 +473,10 @@
  .idioma{
      font-size: 20px;
  }
+ .idioma-desk {
+     color: #FFF;
+     text-decoration: none;
+ }
  .top-bar .idioma-desk{
      transition: all .3s;
  }
