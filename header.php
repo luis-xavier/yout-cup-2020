@@ -21,9 +21,9 @@
                 <button name="button"><span class=" idioma-desk">EN</span></button>
             </div>
             <div class="redes-sociales-header">
-                <a href=""><img src="img/instagram-gris.svg" alt=""></a>
-                <a href="" class="facebook-header"><img src="img/facebook-gris.svg" alt=""></a>
-                <a href="https://www.youtube.com/c/fcbayern" class="youtube-header" ><img src="img/youtube.svg" alt=""></a>
+                <a href="https://www.instagram.com/youthcupmexico/" target="_blank"><img src="img/instagram-gris.svg" alt=""></a>
+                <a href="https://www.facebook.com/Youth-Cup-M%C3%A9xico-102079555182521" target="_blank" class="facebook-header"><img src="img/facebook-gris.svg" alt=""></a>
+                <a href="https://www.youtube.com/channel/UCbnBjkUECYEqf2KNV6CoN0A" target="_blank" class="youtube-header" ><img src="img/youtube.svg" alt=""></a>
             </div>
             <div class="mi-equipo">
                 <a href="login.php"><span>Mi equipo</span><img src="img/equipo.svg" alt=""></a>

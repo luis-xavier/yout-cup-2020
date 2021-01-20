@@ -14,7 +14,7 @@
         </p>
         <p>Las selecciones llegan con unos días de antelación para participar en un campo de entrenamiento de cinco días en la Säbener Strasse y entrenar con los entrenadores juveniles del FC Bayern. Además, los jugadores de todo el mundo recibirán un completo programa social durante su estancia en Múnich. Se reunirán con los jugadores del primer equipo del FC Bayern, visitarán la ciudad de Múnich, asistirán al último partido en casa del FC Bayern y finalmente participarán en la final mundial de la Copa Juvenil del FC Bayern en el césped del mundialmente famoso Allianz Arena.
         </p>
-        <a href="" class="boton">QUIERO PARTICIPAR</a>
+        <a href="formulario.php" class="boton">QUIERO PARTICIPAR</a>
     </article>
 </section>
 

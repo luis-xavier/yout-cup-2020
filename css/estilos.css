@@ -1015,9 +1015,11 @@ footer{
     justify-content: space-between;
     width: 20%;
 }
+footer a,
 .third-subsection-footer a{
     color: #DCE2E5;
 }
+footer a:hover,
 .third-subsection-footer a:hover{
     text-decoration:underline #DCE2E5;
 }

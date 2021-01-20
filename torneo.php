@@ -54,7 +54,7 @@
                     <li>Que se cancele el torneo en México debido a la contigencia: los equipos que hayan realizado todo el proceso de inscripción serán reembolsados bajo la política de reembolsos disponible en nuestra página web, o podrán mantener su lugar para la edición de 2022.</li>
                 </ol>
             </div>
-            <a href="" class="boton">ÚNETE AL TORNEO</a>
+            <a href="formulario.php" class="boton">ÚNETE AL TORNEO</a>
         </div>
 
         <div id="competencia">
@@ -112,7 +112,7 @@
                 <p><strong class="strong-black">Cancelación del torneo y fuerza mayor</strong></p>
                 <p>Ni al FC Bayern Youth Cup ni el organizador son responsables de las pérdidas financieras o los daños que puedan ocurrir debido a eventos fuera del control del FC Bayern Youth Cup o del organizador, como eventos bélicos, epidemias como COVID19, incendios, inundaciones, interrupciones en conexiones de transporte público, acciones gubernamentales, huelga u otras circunstancias similares.</p>
             </div>
-            <a href="" class="boton">QUIERO PARTICIPAR</a>
+            <a href="formulario.php" class="boton">QUIERO PARTICIPAR</a>
         </div>
     </div>
 </section>

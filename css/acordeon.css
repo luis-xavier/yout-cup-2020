@@ -35,11 +35,13 @@
     transition: all .3s;
     text-transform: uppercase;
     overflow: hidden;
+    position: relative;
+    z-index: 2;
 }
 .accordion-header h3{
     color: #001829;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 1.3em;
     margin-left: 20px;
     padding: 20px 0 20px;
 }
@@ -49,8 +51,8 @@
     border-bottom: 1px solid rgba(0, 0, 0, .5);
 }   
 .accordion-header:hover {
-    position: relative;
-    z-index: 2;
+    
+    
 }
 /* .accordion__item.active .accordion-header:hover .accordion__item.active > .accordion-header::before {
     background-color: #001829;
@@ -74,31 +76,31 @@
 }
 .accordion__item > .accordion-header:after {
     content: url(../img/plus.svg);
-    height: 18px;
+    height: 100%;
     position: relative;
     background-color: transparent;
     transition: .3s all;
     transform: rotate(0deg);
     margin: auto 4%;
 }
-.accordion__item > .accordion-header::before {
+.accordion__item > .accordion-header:before {
     content: "";
     position: absolute;
     background-color: #DB052C;
     transition: .3s all;
     transform: rotate(0deg);
-    height: 68px;
+    height: 100%;
     width: 10%;
     overflow: hidden;
     right: 0;
 }
 .accordion__item.active > .accordion-header:after {
     transform: rotate(-224deg);
-    margin-right: 6%;
+    /*margin-right: 6%;*/
 }
-.accordion__item.active > .accordion-header::before {
+.accordion__item.active > .accordion-header:before {
     background-color: #001829;
-    padding-right: 45px;
+    /*padding-right: 45px;*/
 }
 .separator{
     width: 60px;
@@ -116,24 +118,27 @@
     .preguntas-frecuentes{
         margin-top: 40px;
     }
+    .accordion-header h3{
+        font-size: 1.1em;
+    }
 }
 @media screen and (max-width: 750px) {
     .accordion__item > .accordion-header::before {
-        width: 15%;
+        width: 12%;
     }
     .accordion__item > .accordion-header:after {
-       margin-right: 5.5%;
+       /*margin-right: 5.5%;*/
     }
     .accordion__item.active > .accordion-header:after {
-        margin-right: 9%;
+        /*margin-right: 9%;*/
     }
 }
 @media screen and (max-width: 650px) {
     .accordion__item > .accordion-header:after {
-       margin-right: 5%;
+       /*margin-right: 5%;*/
     }
     .accordion__item.active > .accordion-header:after {
-        margin-right: 10%;
+        /*margin-right: 10%;*/
     }
 }
 @media screen and (max-width: 500px) {
@@ -153,19 +158,13 @@
     .accordion-body__contents{
         font-size: 15px;
     }
-    .accordion__item > .accordion-header::before {
-        height: 48px;
-        width: 20%;
-    }
-    .accordion__item > .accordion-header:after {
-        height: 20px;
-        margin: auto 7%;
-    }
+    
+    
     .accordion__item.active > .accordion-header:after {
-        margin-right: 11%;
+        /*margin-right: 11%;*/
     }
     .accordion__item.active > .accordion-header::before {
-        padding-right: 30px;
+        /*padding-right: 30px;*/
     }
     .separator{
         margin-bottom: 20px;
