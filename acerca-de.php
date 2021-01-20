@@ -6,7 +6,7 @@
     <img src="img/banner-acerca.jpg" alt="">
 </div>
 <section class="section-acerca-de">
-    <h2>Acerca de</h2>
+    <h2>¿Qué es Youth Cup?</h2>
     <article>
         <p><span class="letter-capital">l</span>a FC Bayern Youth Cup es una serie de torneos internacionales en varios países en el mundo incluyendo Brasil, China, India, Italia, Japón, Estados Unidos, entre otros. El objetivo es brindar a los niños de todo el mundo la oportunidad de mostrar su talento, independientemente de su origen social. Curveball Sports y el FC Bayern lanzarán el torneo en México en 2021.
         </p>
