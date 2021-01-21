@@ -46,20 +46,19 @@ if( ! class_exists( 'WP_List_Table' ) ) {
 /**
  * Create a new table class that will extend the WP_List_Table
  */
-class Lista_De_Miembros extends WP_List_Table
-{
+class Lista_De_Miembros extends WP_List_Table{
     /**
      * Prepare the items for the table to process
      *
      * @return Void
      */
-    public function prepare_items()
-    {
+    public function prepare_items(){
         $columns = $this->get_columns();
         $hidden = $this->get_hidden_columns();
         $sortable = $this->get_sortable_columns();
 
         $data = $this->table_data();
+        
         usort( $data, array( &$this, 'sort_data' ) );
 
         $perPage = 10;
@@ -98,6 +97,7 @@ class Lista_De_Miembros extends WP_List_Table
             'motivo'      => '¿Porqué te registras en el torneo?',
             'created'      => 'Fecha registro',
             'aviso'      => 'Términos y condiciones',
+            //'invite'    => $this->invitador()
         );
 
         return $columns;
@@ -106,10 +106,18 @@ class Lista_De_Miembros extends WP_List_Table
     /**
      * Define which columns are hidden
      *
+     * @return string
+     */
+    public function invitador(){
+        echo '<input type="button" value="ha ha!" >';
+    }
+
+    /**
+     * Define which columns are hidden
+     *
      * @return Array
      */
-    public function get_hidden_columns()
-    {
+    public function get_hidden_columns(){
         return array();
     }
 
@@ -178,29 +186,25 @@ class Lista_De_Miembros extends WP_List_Table
      *
      * @return Mixed
      */
-    private function sort_data( $a, $b )
-    {
+    private function sort_data( $a, $b ){
         // Set defaults
         $orderby = 'id';
         $order = 'asc';
 
         // If orderby is set, use this as the sort column
-        if(!empty($_GET['orderby']))
-        {
+        if(!empty($_GET['orderby'])){
             $orderby = $_GET['orderby'];
         }
 
         // If order is set use this as the order
-        if(!empty($_GET['order']))
-        {
+        if(!empty($_GET['order'])){
             $order = $_GET['order'];
         }
 
 
         $result = strcmp( $a[$orderby], $b[$orderby] );
 
-        if($order === 'asc')
-        {
+        if($order === 'asc'){
             return $result;
         }
 
