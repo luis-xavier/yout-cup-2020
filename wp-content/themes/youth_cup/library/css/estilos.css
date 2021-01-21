@@ -68,6 +68,9 @@ h2, .estilos-titulo{
     text-align: center;
     margin: 40px auto 0px;
 }
+.history-h2{
+    margin-bottom: 40px;
+}
 h4{
     font-size: 1.250em;
     font-weight: bold;
@@ -197,9 +200,25 @@ header{
     width: 100%;
 }
 .menu-desktop{
-    width: 90%;
+    width: 100%;
     height: 100%;
     margin: auto 0 auto;
+}
+#menu-item-42{
+    background-color: #DB052C;
+    z-index: 2;
+}
+#menu-item-18{
+    z-index: 3;
+}
+#menu-item-61{
+    z-index: 4;
+}
+#menu-item-17{
+    z-index: 5;
+}
+#menu-item-42 a{
+    color: #FFF;
 }
 .menu-desktop > ul{
     height: 99%;
@@ -225,16 +244,6 @@ header{
     box-shadow: 23px 0px 20px 3px rgba(0,0,0,0.1);
     transition: all .8s;
 }
-.menu-desktop > ul >li:first-child:before{
-    background-color: transparent;
-    box-shadow: 23px 0px 20px 3px rgba(0,0,0,0.1);
-}
-.menu-desktop > ul > li:first-child:hover::before{
-    pointer-events: none;
-    background-color: unset !important;
-    box-shadow: 23px 0px 20px 3px rgba(0,0,0,0.1);
-    border-bottom: unset !important;
-}
 .menu-desktop > ul > li:last-child:before{
     position: absolute;
     content: "";
@@ -251,19 +260,6 @@ header{
     background-color: #DB052C;
     bottom: 0%;
     left:-7px;
-    width: 100%;
-    height: 3px;
-    position: absolute;
-    transition: all .3s;
-    transform-origin: left;
-    transform: scaleX(0);
-}
-.menu-desktop > ul > li:first-child:hover::after{
-    display: block;
-    content: "";
-    background-color: unset !important;
-    bottom: 0%;
-    left: -8px;
     width: 100%;
     height: 3px;
     position: absolute;
@@ -291,8 +287,15 @@ nav > ul > li:hover:after{
     z-index: 5;
     padding-top: 0px;
     transform-origin: top;
-    margin-left: -52px;
+    margin: 10px 0px 0px -57px;
+    box-shadow: 1px -5px 36px -3px rgba(0,0,0,.1);
+
     transform:scaleY(0);
+}
+#menu-item-99::before{
+    background-image: url(.../library/img/flecha.svg);
+    width: 100px;
+    height: 5px;
 }
 .dropdown-menu img{
     display: block;
@@ -304,7 +307,7 @@ nav > ul > li:hover:after{
 .dropdown-menu li{
     margin-top: -3px;
 }
-.dropdown-menu li a {
+.dropdown-menu li a{
     font-weight: 300;
     font-size: 1em;
     background-color: #fff;
@@ -323,9 +326,10 @@ nav > ul > li:hover:after{
     transform: translateY(20px);
     opacity: 0;
 }
-.cup-container{
-    margin-left: -23px;
-    box-shadow: 1px -5px 36px -3px rgba(0,0,0,.1);
+#menu-item-98 a, #menu-item-97 a{
+    border-top: 1px rgba(0,0,0,.1) solid;
+    z-index: 1;
+    box-shadow: none;
 }
 .dropdown-menu .yc-2021{
     box-shadow: none;
@@ -506,6 +510,7 @@ z-index: 10;
     width: 1px;
     background-color: #FFF;
     height: 50%;
+    margin: auto 0;
     transform: skew(334deg);
 }
 #menu-mobile-bar .redes-sociales-header{
@@ -568,16 +573,19 @@ z-index: 10;
     display: flex;
     flex-direction: column;
     position: relative;
-    margin:71px 0 30px;
-}
-.first-section-home video{
-    display: none;
+    overflow: hidden;
+    margin: 41px 0 30px;
 }
 .section-video{
     position: relative;
 }
-.section-video img{
+.video-overlay{
+    display: block;
+    z-index: 4;
+    height: 100%;
     width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
 }
 .section-video h1{
     color: white;
@@ -588,18 +596,53 @@ z-index: 10;
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 5;
     transform: translate(-50%, -50%);
 }
-.muted{
+.abrir-modal{
     position: absolute;
     background-color: transparent;
-    right: 1%;
-    bottom: 3%;
+    right: 2%;
+    bottom: 4%;
     border: none;
     cursor: pointer;
+    z-index: 5;
+    width: 52px;
+    margin: 0;
+    padding: 0;
 }
-.muted:focus{
+.abrir-modal:focus{
     outline: none;
+}
+.abrir-modal img{
+    width: 100%;
+}
+#overlay-video{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    z-index: 100;
+    display: none;
+}
+.modal-video{
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 950px;
+    height:auto;
+    padding: 37px 20px 10px;
+    box-sizing: border-box;
+    background: #FFF;
+    margin-top: -29px;
+}
+.modal-video iframe{
+    margin: 0 auto;
+    display: block;
+    width: 100%;
 }
 .first-section-home article{
     margin: 60px 5% 20px;
@@ -718,15 +761,15 @@ z-index: 10;
 }
 .noticia-principal{
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row-reverse;
 }
 .noticia-principal >img{
     display: block;
-    margin-bottom: 0;
 }
 .noticia-principal article{
-    width: 100%;
+    width: 29%;
     margin: 2% 3%;
 }
 .noticia-principal h2{
@@ -751,6 +794,7 @@ text-decoration: none;
 #display-noticia{
     flex-wrap: wrap;
     align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 }
 #display-noticia .noticia{
@@ -758,8 +802,19 @@ text-decoration: none;
     margin: unset;
     margin-bottom: 30px;
 }
+.img-container{
+    width: 65%;
+}
+.img-container img{
+    width: 100%;
+    margin-bottom: unset;
+}
 .noticia-principal img{
     width: 60%;
+}
+.img-container img{
+    width: 100%;
+    margin-bottom: unset;
 }
 .nw-noticia{
     margin: unset;
@@ -775,7 +830,10 @@ text-decoration: none;
 }
 .swiper-container {
     width: 100%;
-    height: 100%;
+    height: 400px;
+}
+.swiper-wrapper{
+    height: 93%;
 }
 .swiper-slide{
     display: none;
@@ -808,6 +866,9 @@ text-decoration: none;
 .swiper-pagination{
     color: #DB052C;
     margin-top: 60px;
+}
+.swiper-pagination > span{
+    background-color: #001829;
 }
 .third-section-home >a:hover{
     color: #ffffff;
@@ -885,10 +946,10 @@ text-decoration: none;
     color: white;
     border: none;
     width: 70%;
-    height: 50px;
+    height: 44px;
     border: 3px white solid;
     border-right: 2px;
-    padding: 3% 0 3% 3%;
+    padding: 0 0 0 3%;
 }
 .newsletter input [type=text]{
     color: white;
@@ -909,6 +970,8 @@ text-decoration: none;
     padding: 0 20px;
     transition: all .3s;
     cursor: pointer;
+    height: 50px;
+    margin-left: -1px;
 }
 .newsletter form button:hover{
     background-color: transparent;
@@ -939,6 +1002,7 @@ footer{
 .first-subsection-footer{
     display: flex;
     width: 25%;
+    height: 70px;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -947,7 +1011,7 @@ footer{
 }
 .footer-item{
     background-color: #DCE2E5;
-    width: 1px;
+    width: 2px;
     height: 100%;
 }
 .second-subsection-footer{
@@ -997,6 +1061,8 @@ footer{
     text-align: center;
 }
 footer address{
+    display: flex;
+    justify-content: center;
     margin: 2% 5%;
     font-size: 16px;
     color: rgba(220, 226, 229, 0.5);
@@ -1005,8 +1071,13 @@ footer address{
     padding: 2% 0 2%;
     margin-bottom: unset;
 }
+footer address a{
+    color: #FFF;
+    text-decoration: none;
+    margin-left: 5px;
+}
 .section-acerca-de{
-    margin: 3% 13%;
+    margin: 0 13% 3%;
     font-size: 1.125em;
 }
 .img-container-acerca-de{
@@ -1063,7 +1134,7 @@ footer address{
     display: none;
     flex-direction: row;
     width: 100%;
-    height: 40px;
+    height: 38px;
     background: #0067B2;
     position: sticky;
     top: 54px;
@@ -1205,7 +1276,12 @@ display: none;
 .noticia-container{
     display: flex;
     flex-direction: column;
-    margin: 101px 13% 30px;
+}
+.noticia-container > h1{
+    margin-bottom: 20px;
+}
+.noticia-container h2{
+    margin-top: 70px;
 }
 .first-image{
     display: block;
@@ -1250,8 +1326,8 @@ display: none;
     width: 26px;
     height: 26px;
     position: absolute;
-    top: 3%;
-    right: 2%;
+    top: 1%;
+    right: 1%;
     background: url(../img/cerrar-modal.svg);
     z-index: 10;
     background-size: cover;
@@ -1451,6 +1527,82 @@ display: none;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
 }
+.twitter-tweet{
+    display: block;
+    margin: 20px auto;
+}
+
+.historia-yc, .freestyle-bayern{
+    display: block;
+    font-size: 18px;
+    line-height: 1.51em;
+    margin: 0px 13% 30px;
+}
+.historia-yc p, .freestyle-bayern p{
+    margin-bottom: 20px;
+}
+.historia-yc h2{
+    margin-bottom: 20px;
+}
+.freestyle-bayern iframe{
+    width: 100%;
+    height: 100%;
+}
+.ediciones-anteriores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+.agradecimiento-wrapper{
+    background-color: #FFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.13);
+    display: block;
+    padding: 20px 0;
+    width: 40%;
+    height: 40%;
+    min-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.agradecimiento-wrapper section{
+    margin: 3% 7%;
+    height: 94%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+.agradecimiento-wrapper h2{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+#back_form{
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 60px;
+    background: url(../img/back_copa.jpg) no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    display: inline-table;
+    position: relative;
+    margin-top: 50px;
+}
+.menu-item-24{
+    margin-bottom: 10px;
+}
+.wp-block-image{
+    margin-bottom: 0px;
+}
+.wp-block-image img{
+    max-width: unset;
+    margin-top: -19px;
+    margin-bottom: 0em;
+    width: 100%;
+    height: 100%;
+}
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++++++++++++++++++++++++++++++    MEDIA QUERIES SIZE    +++++++++++++++++++++++++++++++++++++++++++++*/
@@ -1472,9 +1624,6 @@ display: none;
 @media screen and (max-width: 1100px){
     .menu-desktop{
         width: 100%;
-    }
-    .nothing{
-        display: none;
     }
     .first-section-footer p{
         font-size: 17px;
@@ -1501,7 +1650,7 @@ display: none;
         width: 30%;
     }
 }
-@media screen and (max-width: 950px){
+@media screen and (max-width: 960px){
     .first-section-header{
         width: 58%;
     }
@@ -1536,6 +1685,32 @@ display: none;
     .yc p{
         font-size: 17px;
     }
+    .img-container{
+        width: 100%;
+    }
+    .noticia-principal h2{
+        font-size: 22px;
+    }
+    .noticia-principal{
+        display: flex;
+        flex-direction: column;
+    }
+    .noticia-principal article{
+        width: 100%;
+    }
+    .noticia-principal img{
+        width: 100%;
+    }
+    .noticia-principal p{
+        font-size: 15px;
+        margin-right: 5%;
+    }
+    .noticia-principal .boton, .noticia-principal a{
+        display: table;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px 65px 9px;
+    }   
 }
 @media screen and (max-width: 800px){
     .section-video h1{
@@ -1606,11 +1781,7 @@ display: none;
     }
     .swiper-slide .noticia{
         width: 300px;
-        margin-bottom: 20px;
-        height: auto;
-    }
-    .swiper-pagination > span{
-        background-color: #001829;
+        margin-bottom: 0px;
     }
     .noticia h3{
         font-size: 25px;
@@ -1725,12 +1896,6 @@ display: none;
     .second-subsection-footer, .third-subsection-footer{
         display: none;
     }
-    .whatsapp{
-        display: block;
-    }
-    .whatsapp img{
-        width: 88%;
-    }
     .first-subsection-footer{
         width: 30%;
     }
@@ -1768,6 +1933,12 @@ display: none;
     footer address{
         font-size: 12px;
     }
+    .historia-yc, .freestyle-bayern{
+        margin-top: 91px;
+    }
+    .ediciones-anteriores iframe{
+        width: 90%;
+    }
 @media screen and (max-width:750px){
     .logo-header{
         width: 100%;
@@ -1787,26 +1958,6 @@ display: none;
     }
     .np-wrapper{
         margin-top: 80px;
-    }
-    .noticia-principal h2{
-        font-size: 22px;
-    }
-    .noticia-principal{
-        display: flex;
-        flex-direction: column;
-    }
-    .noticia-principal img{
-        width: 100%;
-    }
-    .noticia-principal p{
-        font-size: 15px;
-        margin-right: 5%;
-    }
-    .noticia-principal .boton, .noticia-principal a{
-        display: table;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 10px 65px 9px;
     }
     #display-noticia .noticia{
         width: 48%;
@@ -1840,8 +1991,7 @@ display: none;
     }
     .swiper-slide .noticia{
         width: 255px;
-        margin-bottom: 20px;
-        height: auto;
+        height: 325px;
     }
     .noticia h3{
         font-size: 18px;
@@ -1856,7 +2006,7 @@ display: none;
     }
     #menu-torneo-mobile li a{
         font-size: 13px;
-        padding: 11px 25px;
+        padding: 11px 26px;
     }
     .first-subsection-footer{
         width: 42%;
@@ -1966,6 +2116,34 @@ display: none;
         width: 15px;
         height: 15px;
     }
+    .abrir-modal img{
+        width: 60%;
+    }
+    .abrir-modal{
+        right: -1%;
+    }
+    .historia-yc, .freestyle-bayern{
+        margin: 91px 7% 30px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .noticia-container{
+        margin: 51px 7% 30px;
+    }
+    .noticia-container p{
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    h2, .estilos-titulo{
+        font-size: 22px;
+    }
+    .historia-yc p, .freestyle-bayern p{
+        margin-bottom: 10px;
+    }
+    .agradecimiento-wrapper{
+        min-width: 350px;
+    }
 }
 @media screen and (max-width: 400px){
     .menu_anvorguesa{
@@ -2007,6 +2185,7 @@ display: none;
     }
     .first-subsection-footer{
         width: 39%;
+        height: 50px;
     }
     .first-subsection-footer div{
         margin: 0 10px; 
@@ -2053,5 +2232,19 @@ display: none;
     }
     .modal{
         height: 55vh;
+    }
+    #menu-mobile-bar .redes-sociales-header a{
+        margin: auto 0px;
+        min-width: 25px;
+    }
+    #menu-mobile-bar .redes-sociales-header img{
+        width: 92%;
+    }
+    #menu-torneo-mobile li #costos-link-mobile{
+        width: 101%;
+    }
+    .agradecimiento-wrapper{
+        min-width: 250px;
+        height: 50%;
     }
 }

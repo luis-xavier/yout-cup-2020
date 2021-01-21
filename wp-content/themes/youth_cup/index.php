@@ -1,11 +1,20 @@
 <?php get_header(); ?>
 
+<div id='overlay-video'>
+    <div class='modal-video'>
+        <div class='cerrar-modal'></div>
+        <iframe id="iframe-yc" width="560" height="315" src="https://www.youtube.com/embed/Vk6IAfTgjmc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
+    </div>
+</div>
+
 <section class="first-section-home section-white">
-    <div class="section-video">
-        <h1>FC Bayern Youth Cup Mexico</h1>
-        <img src="<?= get_stylesheet_directory_uri() ?>/library/img/still-video 1.jpg" alt="">
-        <video src=""></video>
-        <button class="muted"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/mute.svg" alt=""></button>
+<div class="section-video">
+        <h1>FC Bayern Youth Cup México</h1>
+        <div class="video-overlay"></div>
+        <video playsinline autoplay muted loop width="100%" height="auto">
+            <source src="<?= get_template_directory_uri(); ?>/library/videos/yc-video-hero.mp4" type="video/mp4">
+        </video>
+        <button id="abrir-modal" class="abrir-modal"><img src="<?= get_template_directory_uri(); ?>/library/img/expand.svg" alt=""></button>
     </div>
     <article>
         <h1>FC Bayern Youth Cup Mexico</h1>
@@ -17,8 +26,8 @@
 
 <section class="second-section-home">
     <div class="banner-tvcuatro">
-        <img src="<?= get_stylesheet_directory_uri() ?>/library/img/banner-desktop.jpg" alt="" class="tv-cuatro-desktop">
-        <img src="<?= get_stylesheet_directory_uri() ?>/library/img/banner-mobile.jpg" alt="" class="tv-cuatro-mobile">
+        <img src="<?= get_template_directory_uri(); ?>/library/img/banner-desktop.jpg" alt="" class="tv-cuatro-desktop">
+        <img src="<?= get_template_directory_uri(); ?>/library/img/banner-mobile.jpg" alt="" class="tv-cuatro-mobile">
     </div>
 </section>
 
@@ -120,5 +129,6 @@ endif;
 });
 </script>
 
+<?php include "newsletter.php" ?>
 
 <?php get_footer(); ?>
