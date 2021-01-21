@@ -2,14 +2,14 @@
     <section class="second-section-footer">
         <div class="subsections-footer">
             <div class="first-subsection-footer subsection-footer">
-                <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/logo-footer.svg" alt=""></a>
+                <a href="https://fcbayern.com/es" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/logo-footer.svg" alt=""></a>
                 <div class="footer-item"></div>
                 <a href="" class="curveball"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/logo-curveball.svg" alt=""></a>
             </div>
             <div class="second-subsection-footer subsection-footer">
                 <p>Contáctanos:</p>
-                <p>000000000</p>
-                <p>contacto@curveball.mx</p>
+                <p>+52 461104 3805</p>
+                <a href="mailto:contacto@curveball.mx">contacto@curveball.mx</a>
             </div>
             <div class="third-subsection-footer subsection-footer">
             <nav role="navigation">
