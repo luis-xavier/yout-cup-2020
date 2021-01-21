@@ -1,5 +1,3 @@
-jQuery(document).ready(function($) {
-    
 var accordion = (function(){
   
     var $accordion = $('.js-accordion');
@@ -52,6 +50,3 @@ var accordion = (function(){
   $(document).ready(function(){
     accordion.init({ speed: 300, oneOpen: true });
   });
-
-
-});
