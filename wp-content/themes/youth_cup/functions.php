@@ -28,6 +28,9 @@ function bones_ahoy() {
   # pa ver los regisytrados
   require_once( 'library/members.php' );
 
+  # pa ver los newsletterados
+  require_once( 'library/news.php' );
+
   # launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
   # A better title
