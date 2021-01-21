@@ -54,9 +54,9 @@
                 <button name="button"><span class=" idioma-desk">EN</span></button>
             </div>
             <div class="redes-sociales-header">
-                <a href="https://www.instagram.com/"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram-gris.svg" alt=""></a>
-                <a class="facebook-header" href="https://www.facebook.com/"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook-gris.svg" alt=""></a>
-                <a href="https://www.youtube.com/c/fcbayern" class="youtube-header" ><img src="<?= get_stylesheet_directory_uri() ?>/library/img/youtube.svg" alt=""></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram-gris.svg" alt=""></a>
+                <a class="facebook-header" href="https://www.facebook.com/" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook-gris.svg" alt=""></a>
+                <a href="https://www.youtube.com/c/fcbayern" class="youtube-header" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/youtube.svg" alt=""></a>
             </div>
             <div class="mi-equipo">
                 <a href="login.php"><span>Mi equipo</span><img src="<?= get_stylesheet_directory_uri() ?>/library/img/equipo.svg" alt=""></a>
@@ -148,8 +148,10 @@
                 <button name="button"><span class="idioma">EN</span></button>
             </div>
             <div class="redes-sociales-header">
-                <a href=""><img style="margin-top: 3px;" src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram.svg" alt=""></a>
-                <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook.svg" alt=""></a>
+                <a class="whatsapp" href="https://wa.me/+524611043805?text=Hola%20quiero%20más%20información%20de%20la%20copa%20juvenil%202021" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/whatsapp.svg" alt=""></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram-gris.svg" alt=""></a>
+                <a class="facebook-header" href="https://www.facebook.com/" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook-gris.svg" alt=""></a>
+                <a href="https://www.youtube.com/c/fcbayern" class="youtube-header" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/youtube.svg" alt=""></a>
             </div>
         </div>
     </div>

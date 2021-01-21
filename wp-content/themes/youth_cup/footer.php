@@ -30,11 +30,10 @@
 
 
             <div class="fourth-section-footer subsection-footer">
-                <a href="" class="whatsapp"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/whatsapp.svg" alt=""></a>
-                <a href="" class="youtube"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/youtube.svg" alt=""></a>
-                <a href="" class="instagram"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram-gris.svg" alt=""></a>
-                <a href="" class="facebook"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook-gris.svg" alt=""></a>
-                <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/img/facebook-gris.svg" alt=""></a>
+                <a href="https://wa.me/+524611043805?text=Hola%20quiero%20más%20información%20de%20la%20copa%20juvenil%202021" target="_blank" class="whatsapp"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/whatsapp.svg" alt=""></a>
+                <a href="https://www.youtube.com/channel/UCbnBjkUECYEqf2KNV6CoN0A" target="_blank" class="youtube"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/youtube.svg" alt=""></a>
+                <a href="https://www.instagram.com/youthcupmexico/" target="_blank" class="instagram"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram-gris.svg" alt=""></a>
+                <a href="https://www.facebook.com/Youth-Cup-M%C3%A9xico-102079555182521" target="_blank" class="facebook"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/facebook-gris.svg" alt=""></a>
             </div>
         </div>
         <span class="span-f"><a href="">contacto@curveball.mx</a></span>
