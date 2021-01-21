@@ -2,6 +2,7 @@
 # LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
 
+
 # CUSTOMIZE THE WORDPRESS ADMIN (off by default)
 # require_once( 'library/admin.php' );
 
@@ -26,6 +27,9 @@ function bones_ahoy() {
 
   # pa ver los regisytrados
   require_once( 'library/members.php' );
+
+  # pa ver los newsletterados
+  require_once( 'library/news.php' );
 
   # launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );

@@ -20,7 +20,11 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+<<<<<<< HEAD
 define( 'DB_NAME', 'yc-wp' );
+=======
+define( 'DB_NAME', 'youth-cup-2020' );
+>>>>>>> 37d9ea8d0ad48082634546455c48bca69de1f6a8
 
 /** MySQL database username */
 define( 'DB_USER', 'root' );
