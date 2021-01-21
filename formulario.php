@@ -8,7 +8,6 @@ var_dump($_SESSION);
 
 
 <link rel="stylesheet" type="text/css" href="css/formulario.css">
-<script type="text/javascript" src="js/formulario.js"></script>
 
 <div id="back_form">
 <section id="form-wrapper">
@@ -117,7 +116,9 @@ var_dump($_SESSION);
 </section>
 </div>
 
+
 <?php include "modal.php" ?>
 
 <?php include "footer.php" ?>
 
+<script type="text/javascript" src="js/formulario.js"></script>

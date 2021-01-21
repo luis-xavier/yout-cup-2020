@@ -712,6 +712,7 @@ nav > ul > li:hover .dropdown-menu li a{
     display: flex;
     flex-direction: row;
     margin: 0 5% 15px;
+    justify-content: space-around;
 }
 .noticia{
     width: 33%;
@@ -788,7 +789,7 @@ nav > ul > li:hover .dropdown-menu li a{
     flex-wrap: wrap;
     align-items: center;
     align-items: stretch ;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #display-noticia .noticia{
     width: 31%;
@@ -978,6 +979,8 @@ nav > ul > li:hover .dropdown-menu li a{
 .page-container{
     position: relative;
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 261px;
 }
 footer{
     color: #DCE2E5;
@@ -985,9 +988,14 @@ footer{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+}
+.page-container footer{
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+.page-container .back-stadium{
+    /*adding-bottom: 261px;*/
 }
 .subsections-footer{
     display: flex;
@@ -1540,12 +1548,17 @@ footer address a{
     width: 100%;
     height: 100%;
 }
-.ediciones-anteriores{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    overflow: hidden;
+.ediciones-anteriores p{
+    margin: 0 0 40px;
+    text-align: center;
+}
+.ediciones-anteriores h4{
+    text-align: center;
+    margin: 0 0 10px;
+}
+.ediciones-anteriores iframe{
+    display: block;
+    margin: 0 auto 40px;
 }
 .agradecimiento-wrapper{
     background-color: #FFF;
@@ -1945,7 +1958,7 @@ footer address a{
     }
     .modal{
         width: 70vw;
-        height: 60vh;
+        height: 80vh;
         margin: -35vh 0 0 -35vw;
     }
     .cerrar-modal{
@@ -2078,7 +2091,7 @@ footer address a{
     }
     .modal {
         width: 90vw;
-        height: 60vh;
+        height: 80vh;
         margin: -35vh 0 0 -45vw;
     }
     #modal-wrapper .boton{
