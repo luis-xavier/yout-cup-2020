@@ -63,7 +63,7 @@ try {
     $mail->Username = 'xavier.fernandez.mx@gmail.com';
 
     //Password to use for SMTP authentication
-    $mail->Password = 'SionBabilon';
+    $mail->Password = '';
 
     //Recipients
     $mail->setFrom('xavier.fernandez.mx@gmail.com', 'Curveball Sports');
