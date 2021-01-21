@@ -58,3 +58,18 @@ temp/
 *.scssc
 
 /vendor/
+
+.vscode
+.gitignore
+wp-config.php
+
+._*
+.Trashes
+
+.svn
+
+*.DS_store
+.DS_store?
+
+
+
