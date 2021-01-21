@@ -1,9 +1,9 @@
 <?php
 if(is_admin()){
-    new Mis_equipos();
+    new Mis_newsletters();
 }
 
-class Mis_equipos{
+class Mis_newsletters{
     /**
      * Constructor will create the menu item
      */
@@ -16,8 +16,8 @@ class Mis_equipos{
      * Menu item will allow us to load the page to display the table
      */
     public function add_menu_example_list_table_page(){
-        add_menu_page( __( 'Members', 'members' ), __( 'Members', 'members' ), 'manage_options', 'registered-members', array($this, 'list_table_page'), get_stylesheet_directory_uri() . '/library/images/members.png', 9 );
-        add_submenu_page('registered-members','Members Registration', 'Member Registration', 'manage_options', 'guardar-member','grabar_miembros');
+        add_menu_page( __( 'Newsletter', 'newsletter' ), __( 'Newsletter', 'newsletter' ), 'manage_options', 'newsletter-list', array($this, 'list_table_page'), get_stylesheet_directory_uri() . '/library/images/newspaper.png', 9 );
+        //add_submenu_page('registered-members','Members Registration', 'Member Registration', 'manage_options', 'guardar-member','nuevo_newsleterado');
     }
 
     /**
@@ -26,12 +26,12 @@ class Mis_equipos{
      * @return Void
      */
     public function list_table_page(){
-        $exampleListTable = new Lista_De_Miembros();
+        $exampleListTable = new Lista_De_Newslleterados();
         $exampleListTable->prepare_items();
         ?>
             <div class="wrap">
                 <div id="icon-users" class="icon32"></div>
-                <h2>Registered teams</h2>
+                <h2>Members of newsletter</h2>
                 <?php $exampleListTable->display(); ?>
             </div>
         <?php
@@ -46,7 +46,7 @@ if( ! class_exists( 'WP_List_Table' ) ) {
 /**
  * Create a new table class that will extend the WP_List_Table
  */
-class Lista_De_Miembros extends WP_List_Table{
+class Lista_De_Newslleterados extends WP_List_Table{
     /**
      * Prepare the items for the table to process
      *
@@ -83,20 +83,10 @@ class Lista_De_Miembros extends WP_List_Table{
      */
     public function get_columns(){
         $columns = array(
-            'equipo'       => 'Nombre del equipo',
-            'afilia'       => 'Afiliación',
-            'dir' => 'Dirección',
-            'pais'        => 'País',
-            'ciudad'    => 'Ciudad',
-            'cp'      => 'Código postal',
-            'tel'      => 'Teléfono',
-            'contacto'      => 'Nombre de contacto',
-            'correo'      => 'Correo electrónico',
-            'relacion'      => 'Relación con el equipo',
-            'como'      => '¿Cómo te enteraste del torneo?',
-            'motivo'      => '¿Porqué te registras en el torneo?',
-            'created'      => 'Fecha registro',
+            'nombre'       => 'Nombre',
+            'correo'       => 'Email',            
             'aviso'      => 'Términos y condiciones',
+            'created'      => 'Fecha registro',
             //'invite'    => $this->invitador()
         );
 
@@ -128,8 +118,7 @@ class Lista_De_Miembros extends WP_List_Table{
      */
     public function get_sortable_columns(){
         return array(
-            'equipo' => array('equipo', false),
-            'pais' => array('pais', false),
+            'nombre' => array('nombre', false),
             'created' => array('created', false),
         );
     }
@@ -141,7 +130,7 @@ class Lista_De_Miembros extends WP_List_Table{
      */
     private function table_data(){
         global $wpdb;
-        $table = $wpdb->prefix.'registro';
+        $table = $wpdb->prefix.'news';
 
         $sql = "select * from $table";
        
@@ -161,20 +150,10 @@ class Lista_De_Miembros extends WP_List_Table{
     public function column_default( $item, $column_name ){
 
         switch( $column_name ) {
-            case 'equipo':
-            case 'afilia':
-            case 'dir':
-            case 'pais':
-            case 'ciudad':
-            case 'cp':
-            case 'tel':
-            case 'contacto':
+            case 'nombre':
             case 'correo':
-            case 'relacion':
-            case 'como':
-            case 'motivo':
-            case 'created':
             case 'aviso':
+            case 'created':
                 return $item[ $column_name ];
             default:
                 return print_r( $item, true ) ;
@@ -213,7 +192,7 @@ class Lista_De_Miembros extends WP_List_Table{
 }
 
 
-function grabar_miembros(){
+function nuevo_newsleterado(){
     require_once( 'save-member.php' );
 }
 ?>
