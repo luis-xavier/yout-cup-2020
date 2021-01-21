@@ -16,10 +16,10 @@
     </div>
     <div class="second-section-header">
         <div class="top-bar">
-            <div class="idiomas">
+            <!--div class="idiomas">
                 <button name="button"><span class="seleccionado idioma-desk">ES</span></button>/
                 <button name="button"><span class=" idioma-desk">EN</span></button>
-            </div>
+            </div-->
             <div class="redes-sociales-header">
                 <a href="https://www.instagram.com/youthcupmexico/" target="_blank"><img src="img/instagram-gris.svg" alt=""></a>
                 <a href="https://www.facebook.com/Youth-Cup-M%C3%A9xico-102079555182521" target="_blank" class="facebook-header"><img src="img/facebook-gris.svg" alt=""></a>
@@ -36,7 +36,7 @@
                     <li style="z-index: 5;"><a href="acerca-de.php">¿Qué es?</a>
                         <ul class="dropdown-menu cup-container">
                             <img src="img/flecha.svg" alt="">
-                            <li><a href="" id="actividades1-link" class="yc-2021">Youth Cup 2021</a></li>
+                            <!--li><a href="" id="actividades1-link" class="yc-2021">Youth Cup 2021</a></li-->
                             <li><a href="ediciones-anteriores.php" id="actividades1-link" class="yc-2019">Ediciones anteriores</a></li>
                             <li><a href="preguntas-frecuentes.php" class="preguntas" id="actividades1-link">Preguntas frecuentes</a></li>
                         </ul>

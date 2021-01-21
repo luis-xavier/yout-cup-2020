@@ -2,8 +2,9 @@
 <link rel="stylesheet" type="text/css" href="css/formulario.css">
 <script type="text/javascript" src="js/login.js"></script>
 
+<div class="page-container">
 <div id="back-stadium">
-    
+
 <section id="form-wrapper">
 	<h1>Ingresa con tus datos</h1>
     <form action="" method="POST" id="formulario" class="formulario login">            
@@ -39,3 +40,5 @@
 <?php include "modal.php" ?>
 
 <?php include "footer.php" ?>
+
+</div>

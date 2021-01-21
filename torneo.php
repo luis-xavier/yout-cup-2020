@@ -76,7 +76,7 @@
             </ul>
             <p>La Gran Final Nacional se disputará entre los equipos campeones y subcampeones de las ediciones estatales, así como semifinalistas del torneo de CDMX en el estadio Miguel Alemán de la Ciudad de Celaya, Guanajuato. </p>
             <p>Los equipos clasificados deben confirmar su participación y formato de registro de jugadores, así como completar el proceso de Altas y Bajas antes del día 23 de Abril de 2021. De no hacerlo a más tardar el día señalado, se procederá a hacer la invitación al tercer lugar (quien tendrá 72 horas para confirmar) y si este no puede, al cuarto lugar (que también contará con 72 horas para confirmar su participación.</p>
-            <a href="documents/Reglamento FC Bayern Youth Cup 2021.pdf" download="Reglamento FC Bayern Youth Cup 2021.pdf" class="boton boton-reverse">DESCARGAR REGLAMENTO</a>
+            <a href="documents/Reglamento FC Bayern Youth Cup 2021.pdf" download class="boton boton-reverse">DESCARGAR REGLAMENTO</a>
         </div>
 
         <div id="costos">
@@ -122,4 +122,5 @@
 <?php include "newsletter.php" ?>
 
 <?php include "footer.php" ?>
-        
+
+<script type="text/javascript" src="js/torneo.js"></script>

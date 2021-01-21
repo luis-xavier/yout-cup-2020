@@ -10,22 +10,17 @@
      <h2>Ediciones anteriores</h2>
      <br>
      <div class="ediciones-anteriores">
-        <h4>Youth Cup 2015</h4>
-        <br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/WGHIgui25nc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <br>
-        <h4>Youth Cup 2017</h4>
-        <br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/b9O9cOaAQrg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <br>
-        <h4>Youth Cup 2018</h4>
-        <br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/fZEs035wP6A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <br>
+       <h4>Youth Cup 2020</h4>
+       <p>No se llevó a cabo por causa de la pandemia.</p> 
+       
         <h4>Youth Cup 2019</h4>
-        <br>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/yQQOlKEbdkw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <br>
+
+        <h4>Youth Cup 2018</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fZEs035wP6A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <h4>Youth Cup 2017</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/b9O9cOaAQrg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      </div>
  </div>
 

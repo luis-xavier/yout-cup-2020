@@ -196,6 +196,7 @@ html, body{
 	color: red;
 	font-weight: 700;
 	margin: 4px 0 0;
+    text-align: left;
 }
 .formulario .error{
     border-color: red;

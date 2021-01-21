@@ -18,7 +18,8 @@ function actual_date ()
 <div id='overlay-video'>
     <div class='modal-video'>
         <div class='cerrar-modal'></div>
-        <iframe id='iframe-yc' width='100%' height='1' src='video-full.html' frameborder='0' allowfullscreen></iframe>
+        <!--iframe width='100%' height='1' src='video-full.html' frameborder='0' allowfullscreen></iframe-->
+        <iframe id='iframe-yc' width="560" height="315" src="https://www.youtube.com/embed/Vk6IAfTgjmc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
 
@@ -37,7 +38,7 @@ function actual_date ()
         <h1>FC Bayern Youth Cup Mexico</h1>
         <p>El torneo que te brindará la oportunidad de mostrar tu talento enfrente de representantes del FC Bayern Munich que te permitirán representar a México en la<strong class="strong-red"> final Mundial en Munich, Alemania</strong></p>
     </article>
-    <a href="" class="boton">INSCRÍBETE AQUÍ</a>
+    <a href="formulario.php" class="boton">INSCRÍBETE AQUÍ</a>
 </section>
 <section class="second-section-home">
     <div class="banner-tvcuatro">
@@ -101,7 +102,7 @@ function actual_date ()
             <div class="swiper-pagination"></div>
         </div>
     </section>
-    <a href="" class="boton boton-reverse">MÁS NOTICIAS</a>
+    <a href="noticias.php" class="boton boton-reverse">MÁS NOTICIAS</a>
 </section>
 
 <?php include "modal.php" ?>

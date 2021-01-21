@@ -29,6 +29,7 @@
 </footer>
 <!-- SCRIPTS -->
 <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/javascript.js"></script>
 <script type="text/javascript" src="js/acordeon.js"></script>
 </body>
