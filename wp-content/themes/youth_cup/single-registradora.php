@@ -1,13 +1,15 @@
 <?php
 
 if(isset($_POST['enviado'])) {
+
+
         //aqui tengo que vbolver a validor todos los campos 
         global $reg_errors;
         $reg_errors = new WP_Error;
 
-        if ( empty( $_POST['nombre_equipo'] ) ) {
-            $reg_errors->add("empty-name-team", "Debes agregar el nombre de tu equipo");
-          }
+          if ( empty( $_POST['nombre_equipo'] ) ) {
+              $reg_errors->add("empty-name-team", "Debes agregar el nombre de tu equipo");
+            }
           if ( empty( $_POST['afiliacion'] ) ) {
             $reg_errors->add("empty-afiliacion", "Selecciona tu tipo de afiliación");
           }
@@ -55,46 +57,42 @@ if(isset($_POST['enviado'])) {
 
           if ( is_wp_error( $reg_errors ) ) {
             if (count($reg_errors->get_error_messages()) > 0) {
-
                 //si hay falla
-              
+                
+            }else{
+              echo "no hay falla";
+
+                    //si si si ya todo esta chido...
+                global $wpdb;
+                $table = $wpdb->prefix.'registro';
+                $data = array(
+                    'equipo' => $_POST['nombre_equipo'], 
+                    'afilia' => $_POST['afiliacion'],
+                    'dir' => $_POST['direccion'], 
+                    'pais' => $_POST['pais'], 
+                    'ciudad' => $_POST['ciudad'], 
+                    'cp' => $_POST['cp'], 
+                    'tel' => $_POST['mobile'], 
+                    'contacto' => $_POST['nombre'],
+                    'correo' => $_POST['email'], 
+                    'relacion' => $_POST['yourrelation'], 
+                    'como' => $_POST['enteraste'], 
+                    'motivo' => $_POST['reasontoregister'], 
+                    'aviso' => $_POST['aviso']
+                );
+                $format = array('%s','%s','%s','%s','%s','%d','%s','%s','%s','%s','%s','%s','%s');
+                $wpdb->insert($table,$data);
+                $my_id = $wpdb->insert_id;
             }
-          }else{
+          }
 
-             //si si si ya todo esta chido...
-        global $wpdb;
-        $table = $wpdb->prefix.'registro';
-        $data = array(
-            'equipo' => $_POST['nombre_equipo'], 
-            'afilia' => $_POST['afiliacion'],
-            'dir' => $_POST['direccion'], 
-            'pais' => $_POST['pais'], 
-            'ciudad' => $_POST['ciudad'], 
-            'cp' => $_POST['cp'], 
-            'tel' => $_POST['mobile'], 
-            'contacto' => $_POST['nombre'],
-            'correo' => $_POST['email'], 
-            'relacion' => $_POST['yourrelation'], 
-            'como' => $_POST['enteraste'], 
-            'motivo' => $_POST['reasontoregister'], 
-            'aviso' => $_POST['aviso']
-        );
-        $format = array('%s','%s','%s','%s','%s','%d','%s','%s','%s','%s','%s','%s','%s');
-        $wpdb->insert($table,$data);
-
-    
-        $my_id = $wpdb->insert_id;
+          }
 
         //var_dump($my_id);
-
         //$wpdb->print_error();
         //var_dump($wpdb);
 
 
-
-          }
-
-}
 
 get_header(); 
 
