@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'yc-wp' );
+define( 'DB_NAME', 'fucho' );
 
 /** MySQL database username */
 define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', 'Choco01#' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', '127.0.0.1' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -54,8 +54,6 @@ define( 'AUTH_SALT',        '5:G!~D&:n29h3X/(ot47A44Hsqm2w14?Y?CUAA)MlO^p!uY8wU~
 define( 'SECURE_AUTH_SALT', ',Jg1-.55RD4(R,x|TYP(.^WgjG)bG/Do~p`xDD*LaABEDxqi^PD8k;=#;Ql@G@w ' );
 define( 'LOGGED_IN_SALT',   '!/-UsYRyikAQA>Mq,w ;xBwv,8.Kgn]3{op@}Xw0<0*aMj~>cLBBE>lM0<1q^/88' );
 define( 'NONCE_SALT',       'it|?r86>Pe!@+z8;C|-H#Z%wk9hZ~FsF.b?wR7`n{7,}Jy<SP&C+Cb=Ct]HKhJKU' );
-define( 'WP_HOME', 'http://localhost:8888/youth-server' );
-define( 'WP_SITEURL', 'http://localhost:8888/youth-server' );
 
 /**#@-*/
 
