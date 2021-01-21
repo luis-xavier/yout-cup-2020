@@ -60,7 +60,7 @@ if(isset($_POST['enviado'])) {
                 //si hay falla
                 
             }else{
-              echo "no hay falla";
+             // echo "no hay falla";
 
                     //si si si ya todo esta chido...
                 global $wpdb;

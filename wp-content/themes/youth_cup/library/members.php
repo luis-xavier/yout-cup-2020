@@ -16,8 +16,8 @@ class Mis_equipos{
      * Menu item will allow us to load the page to display the table
      */
     public function add_menu_example_list_table_page(){
-        add_menu_page( __( 'Members', 'members' ), __( 'Members', 'members' ), 'manage_options', 'example-list-table.php', array($this, 'list_table_page'), get_stylesheet_directory_uri() . '/library/images/members.png', 9 );
-        add_submenu_page('members','Members Registration', 'Member Registration', 'manage_options', 'guardar-member','grabar_miembros');
+        add_menu_page( __( 'Members', 'members' ), __( 'Members', 'members' ), 'manage_options', 'registered-members', array($this, 'list_table_page'), get_stylesheet_directory_uri() . '/library/images/members.png', 9 );
+        add_submenu_page('registered-members','Members Registration', 'Member Registration', 'manage_options', 'guardar-member','grabar_miembros');
     }
 
     /**
@@ -26,7 +26,7 @@ class Mis_equipos{
      * @return Void
      */
     public function list_table_page(){
-        $exampleListTable = new Example_List_Table();
+        $exampleListTable = new Lista_De_Miembros();
         $exampleListTable->prepare_items();
         ?>
             <div class="wrap">
@@ -46,7 +46,7 @@ if( ! class_exists( 'WP_List_Table' ) ) {
 /**
  * Create a new table class that will extend the WP_List_Table
  */
-class Example_List_Table extends WP_List_Table
+class Lista_De_Miembros extends WP_List_Table
 {
     /**
      * Prepare the items for the table to process
@@ -137,7 +137,6 @@ class Example_List_Table extends WP_List_Table
 
         $sql = "select * from $table";
        
-
         $result = $wpdb->get_results($sql, 'ARRAY_A');
 
         return $result;
