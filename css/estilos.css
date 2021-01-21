@@ -972,12 +972,19 @@ nav > ul > li:hover .dropdown-menu li a{
 .newsletter form button:focus{
     outline: none;
 }
+.page-container{
+    position: relative;
+    min-height: 100vh;
+}
 footer{
     color: #DCE2E5;
     background-color: #001829;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .subsections-footer{
     display: flex;
@@ -1059,6 +1066,9 @@ footer address{
     border-top: 1px rgba(220, 226, 229, 0.5) solid;
     padding: 2% 0 2%;
     margin-bottom: unset;
+}
+footer address a{
+    color: rgba(220, 226, 229, 0.7);
 }
 .section-acerca-de{
     margin: 3% 13%;
