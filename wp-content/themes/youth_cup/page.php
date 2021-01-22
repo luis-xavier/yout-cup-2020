@@ -8,10 +8,8 @@ $url_imagen=$thumb_url[0];
 
 $last11 = substr($url_imagen,-11);
 
-//var_dump($last11);
-//echo "ñero";
 
-if (isset($url_imagen) && $url_imagen == "default.png"){
+if (isset($url_imagen) && $last11 != "default.png"){
 ?>
 
 		<div class="overlay-black"></div>
