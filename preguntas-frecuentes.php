@@ -3,9 +3,66 @@
 <link rel="stylesheet" href="css/acordeon.css">
 <div class="preguntas-frecuentes">
     <h2>Preguntas frecuentes</h2>
-    <p>¿Tienes dudas sobre como participar en FC Bayern Youth Cup México? te invitamos a revisar nuestra preguntas frecuentes o escríbenis un correo a <a href="mailto:contacto@curveball.mx">contacto@curveball.mx</a></p>
+    <p>¿Tienes dudas sobre como participar en FC Bayern Youth Cup México? te invitamos a revisar nuestra preguntas frecuentes o escríbenos un correo a <a href="mailto:contacto@curveball.mx">contacto@curveball.mx</a></p>
 </div>
 <div class="accordion js-accordion">
+    <div class="accordion__item js-accordion-item active">
+        <div class="accordion-header js-accordion-header"><h3>¿Tengo que ser mexicano para ser seleccionado?</h3></div> 
+        <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+            Para ser parte del selectivo mexicano es necesario contar con pasaporte mexicano vigente.
+            </div>
+            <div class="accordion js-accordion"></div>
+        </div><!-- end of accordion body -->
+    </div><!-- end of accordion item -->
+    <div class="accordion__item js-accordion-item active">
+        <div class="accordion-header js-accordion-header"><h3>¿Si no tengo pasaporte vigente puedo participar en el torneo?</h3></div> 
+        <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+            Sí, pero no podràs ser seleccionado para viajar a Alemania
+            </div>
+            <div class="accordion js-accordion"></div>
+        </div><!-- end of accordion body -->
+    </div><!-- end of accordion item -->
+    <div class="accordion__item js-accordion-item active">
+        <div class="accordion-header js-accordion-header"><h3>¿Cómo puedo participar en el torneo freestyle?</h3></div> 
+        <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+            Envía un correo copn tus datos (nombre, fecha de nacimiento, club o escuela) a <a href="mailto:contacto@curveball.mx">contacto@curveball.mx</a> con el asunto: Inscripción Torneo Freestyle 2021
+            </div>
+            <div class="accordion js-accordion"></div>
+        </div><!-- end of accordion body -->
+    </div><!-- end of accordion item -->
+    <div class="accordion__item js-accordion-item active">
+        <div class="accordion-header js-accordion-header"><h3>¿Debo tener la misma edad para la Youth Cup y para el torneo Freestyle?</h3></div> 
+        <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+            Sí. Jugadores nacidos entre el 1 de enero de 2004 y el 31 de diciembre de 2006, pero no requiere tener pasaporte mexicano vigente.
+            </div>
+            <div class="accordion js-accordion"></div>
+        </div><!-- end of accordion body -->
+    </div><!-- end of accordion item -->
+    <div class="accordion__item js-accordion-item active">
+        <div class="accordion-header js-accordion-header"><h3>¿Se abrirán nuevas fechas y sedes?</h3></div> 
+        <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+            Para la edición de 2021 solamente contaremos con las sedes determinadas. Sin embargo éstas podrán irse ampliando para ediciones posteriores.
+            </div>
+            <div class="accordion js-accordion"></div>
+        </div><!-- end of accordion body -->
+    </div><!-- end of accordion item -->
+    <div class="accordion__item js-accordion-item active">
+        <div class="accordion-header js-accordion-header"><h3>¿Qué premios se darán para los equipos ganadores?</h3></div> 
+        <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+            Todos los campeones, subcampeones y tercer lugar recibirán un trofeo y una medalla, así como un reconocimento por haber participado en la primera FC Bayern Youth Cup llevada a cabo en México.
+            </div>
+            <div class="accordion js-accordion"></div>
+        </div><!-- end of accordion body -->
+    </div><!-- end of accordion item -->
+
+
+
     <div class="accordion__item js-accordion-item active">
         <div class="accordion-header js-accordion-header"><h3>¿Si mi equipo no pertenece a uno de los estados sede participantes se puede inscribir?</h3></div> 
         <div class="accordion-body js-accordion-body">
@@ -59,7 +116,7 @@
         <div class="accordion-header js-accordion-header"><h3>¿Cómo puedo participar en el torneo de Freestyle?</h3></div>
         <div class="accordion-body js-accordion-body">
             <div class="accordion-body__contents">
-            Envía un correo con tus datos (nombre, fecha de nacimiento, club o escuela) a <a href="mailto:contacto@curveball.mx">contacto@curveball.mx</a>  con el asunto: Inscripción Torneo Freestyle 2021
+            Envía un correo con tus datos (nombre, fecha de nacimiento, club o escuela) a <a href="mailto:contacto@curveball.mx">contacto@curveball.mx</a> con el asunto: Inscripción Torneo Freestyle 2021
             </div>
         </div><!-- end of accordion body -->
     </div><!-- end of accordion item -->

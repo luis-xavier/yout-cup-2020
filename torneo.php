@@ -82,11 +82,11 @@
         <div id="costos">
             <h4>registros y costos</h4>
             <p>El registro es por equipos, no hay registro de jugadores de manera individual.</p>
-            <p>Para poder realizar la solicitud de inscripción, se debe enviar el formato de solicitud antes del día 31 de Enero de 2021 con todos los campos correspondientes completados.</p>
+            <p>Para poder realizar la solicitud de inscripción, se debe enviar el formato de solicitud con todos los campos correspondientes completados.</p>
             <p>En caso de ser aprobada la solicitud, se enviará la parrilla de registro del equipo, la cual se deberá adjuntar en formatos excel y pdf a más tardar el día:</p>
             <ul>
-                <li>5 de Marzo de 2021 - Pachuca y Celaya</li>
-                <li>5 de Abril de 2021 - CDMX</li>
+                <li>Fechas por confirmar</li>
+                <!--li>5 de Abril de 2021 - CDMX</li-->
             </ul>
             <p>Costos:</p>
             <ul>
