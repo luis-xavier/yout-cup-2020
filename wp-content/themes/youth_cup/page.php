@@ -6,7 +6,12 @@ $thumb_id = get_post_thumbnail_id();
 $thumb_url = wp_get_attachment_image_src($thumb_id,'large', true);
 $url_imagen=$thumb_url[0];
 
-if (isset($url_imagen) && $url_imagen != null){
+$last11 = substr($url_imagen,-11);
+
+//var_dump($last11);
+//echo "ñero";
+
+if (isset($url_imagen) && $url_imagen == "default.png"){
 ?>
 
 		<div class="overlay-black"></div>
