@@ -35,8 +35,8 @@ del Mundo 2026”.</p>
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr">ℹ <a href="https://twitter.com/hashtag/FCBayern?src=hash&amp;ref_src=twsrc%5Etfw">#FCBayern</a> y Curveball Sports unen fuerzas para lanzar el prestigioso torneo juvenil, FC Bayern Youth Cup, en México. <br><br>➡ <a href="https://t.co/fFkzCeCftI">https://t.co/fFkzCeCftI</a> <a href="https://t.co/IpuiZVA6Ni">pic.twitter.com/IpuiZVA6Ni</a></p>&mdash; FC Bayern München Español (@FCBayernES) <a href="https://twitter.com/FCBayernES/status/1330888899560923149?ref_src=twsrc%5Etfw">November 23, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-<?php include "modal.php" ?>
-
 <?php include "newsletter.php" ?>
 
 <?php include "footer.php" ?>
+
+<?php include "modal.php" ?>

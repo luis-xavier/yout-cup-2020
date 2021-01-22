@@ -105,8 +105,6 @@ function actual_date ()
     <a href="noticias.php" class="boton boton-reverse">MÁS NOTICIAS</a>
 </section>
 
-<?php include "modal.php" ?>
-
 <!-- Swiper JS -->
 <script src="js/swiper-6.4.5.min.js"></script>
 
@@ -144,3 +142,4 @@ function actual_date ()
 
 <?php include "footer.php" ?>
 
+<?php include "modal.php" ?>

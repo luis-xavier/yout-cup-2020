@@ -46,7 +46,27 @@
         </section>
 	</div>
 </div>
+
+
 <script type="text/javascript">
+
+function mensajeIntro(){
+	$('.overlay-confirmacion').fadeIn('slow');
+}
+
+if ($.cookie('modal_shown') == null) {
+    $.cookie('modal_shown', 'yes', { expires: 7, path: '/' });
+    mensajeIntro();
+}
+
+$('.modal').on('click', function(){
+	return false;
+});
+
+$('.overlay-confirmacion, .modal .btn-morado, .cerrar-modal').on('click', function(){
+	$('.overlay-confirmacion').fadeOut();
+});
+
 function errorForm(idElementForm, textoAlerta){
     let elemento = idElementForm;
     let textoInterno = textoAlerta;

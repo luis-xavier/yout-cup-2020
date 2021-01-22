@@ -117,10 +117,10 @@
     </div>
 </section>
 
-<?php include "modal.php" ?>
-
 <?php include "newsletter.php" ?>
 
 <?php include "footer.php" ?>
 
 <script type="text/javascript" src="js/torneo.js"></script>
+
+<?php include "modal.php" ?>

@@ -330,11 +330,7 @@ nav > ul > li:hover:after{
 .cup-container{
     box-shadow: 2px 24px 36px -3px rgb(0 0 0 / 10%);
 }
-.dropdown-menu .yc-2021{
-    box-shadow: none;
-}
 .dropdown-menu .yc-2019{
-    border-top: 1px rgba(0,0,0,.1) solid;
     z-index: 1;
     box-shadow:none;
 }
@@ -994,9 +990,6 @@ footer{
     bottom: 0;
     width: 100%;
 }
-.page-container .back-stadium{
-    /*adding-bottom: 261px;*/
-}
 .subsections-footer{
     display: flex;
     flex-direction: row;
@@ -1535,14 +1528,38 @@ footer address a{
     margin: 20px auto;
 }
 
-.historia-yc, .freestyle-bayern{
+.historia-yc, .freestyle-bayern, .aviso-privacidad{
     display: block;
     font-size: 18px;
     line-height: 1.51em;
     margin: 101px 13% 30px;
 }
-.historia-yc p, .freestyle-bayern p{
+.historia-yc p, .freestyle-bayern p, .aviso-privacidad p{
     margin-bottom: 20px;
+}
+.aviso-privacidad .curve-span{
+    margin: 10px auto 20px;
+    display: block;
+    text-align: center;
+}
+.aviso-privacidad a{
+    color: #DB052C;
+    text-decoration: underline;
+}
+.aviso-privacidad ul{
+    padding-left: 5%;
+    list-style: disc inside;
+}
+.aviso-privacidad ol{
+    padding-left: 5%;
+    list-style: lower-alpha inside;
+    margin-bottom: 20px;
+}
+.aviso-privacidad ol li{
+    margin-bottom: 15px;
+}
+.aviso-privacidad ul li{
+    margin: 15px auto;
 }
 .freestyle-bayern iframe{
     width: 100%;
@@ -1567,6 +1584,7 @@ footer address a{
     padding: 20px 0;
     width: 40%;
     height: 40%;
+    max-width: 600px;
     min-width: 450px;
     position: absolute;
     top: 50%;
@@ -1574,15 +1592,19 @@ footer address a{
     transform: translate(-50%, -50%);
 }
 .agradecimiento-wrapper section{
-    margin: 3% 7%;
+    margin: 2% 7%;
     height: 94%;
     font-size: 18px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 .agradecimiento-wrapper h2{
     margin-top: 0px;
     margin-bottom: 20px;
+}
+.agradecimiento-wrapper p{
+    text-align: center;
 }
 #back_form{
     width: 100%;
@@ -1925,7 +1947,7 @@ footer address a{
     footer address{
         font-size: 12px;
     }
-    .historia-yc, .freestyle-bayern{
+    .historia-yc, .freestyle-bayern, .aviso-privacidad{
         margin-top: 91px;
     }
     .ediciones-anteriores iframe{
@@ -2114,10 +2136,13 @@ footer address a{
     .abrir-modal{
         right: -1%;
     }
-    .historia-yc, .freestyle-bayern{
+    .historia-yc, .freestyle-bayern, .aviso-privacidad{
         margin: 91px 7% 30px;
         font-size: 15px;
         line-height: 20px;
+    }
+    .aviso-privacidad h2{
+        margin-bottom: 0px;
     }
     .noticia-container{
         margin: 51px 7% 30px;
@@ -2130,7 +2155,7 @@ footer address a{
     h2, .estilos-titulo{
         font-size: 22px;
     }
-    .historia-yc p, .freestyle-bayern p{
+    .historia-yc p, .freestyle-bayern p, .aviso-privacidad p{
         margin-bottom: 10px;
     }
     .agradecimiento-wrapper{

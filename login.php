@@ -37,8 +37,8 @@
 
 </div>
 
-<?php include "modal.php" ?>
-
 <?php include "footer.php" ?>
+
+<?php include "modal.php" ?>
 
 </div>

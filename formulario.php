@@ -105,7 +105,7 @@ var_dump($_SESSION);
             </li>
             <li style="text-align: left;">
                 <input type="checkbox" class="checkbox-estilizado" name="aviso" id="aviso" onchange="validarCheckAviso('aviso')">
-                <label for="aviso">Acepto términos y condiciones contenidos en el <a href="" class="inline-link">Aviso de privacidad</a></label>
+                <label for="aviso">Acepto términos y condiciones contenidos en el <a href="aviso-privacidad.php" class="inline-link">Aviso de privacidad</a></label>
             </li>
         </ul>
 
@@ -116,9 +116,8 @@ var_dump($_SESSION);
 </section>
 </div>
 
-
-<?php include "modal.php" ?>
-
 <?php include "footer.php" ?>
 
 <script type="text/javascript" src="js/formulario.js"></script>
+
+<?php include "modal.php" ?>
