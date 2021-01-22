@@ -16,10 +16,10 @@
     </div>
     <div class="second-section-header">
         <div class="top-bar">
-            <!--div class="idiomas">
-                <button name="button"><span class="seleccionado idioma-desk">ES</span></button>/
-                <button name="button"><span class=" idioma-desk">EN</span></button>
-            </div-->
+            <div class="idiomas">
+                <a href="https://xochimaco.com/youth-cup" name="button"><span class="idioma-desk seleccionado" style="margin-right: 5px; margin-top: 2px;">ES</span></a>/
+                <a href="https://xochimaco.com/youth-cup-en/index-en.php" name="button"><span class="idioma-desk" style="color: white; margin-left: 5px;">EN</span></a>
+            </div>
             <div class="redes-sociales-header">
                 <a href="https://www.instagram.com/youthcupmexico/" target="_blank"><img src="img/instagram-gris.svg" alt=""></a>
                 <a href="https://www.facebook.com/Youth-Cup-M%C3%A9xico-102079555182521" target="_blank" class="facebook-header"><img src="img/facebook-gris.svg" alt=""></a>

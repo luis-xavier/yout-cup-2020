@@ -12,7 +12,7 @@
                 <p><a href="mailto:contacto@curveball.mx">contacto@curveball.mx</a></p>
             </div>
             <div class="third-subsection-footer subsection-footer">
-                <a href="#"><p>Aviso de privacidad</p></a>
+                <a href="aviso-privacidad.php"><p>Aviso de privacidad</p></a>
                 <!--a href=""><p>Términos de uso</p></a>
                 <a href=""><p>Política de cookies</p></a-->
             </div>
