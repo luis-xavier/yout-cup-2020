@@ -1,20 +1,27 @@
 <?php get_header(); ?>
 
-
-
-
-<div class="preguntas-frecuentes">
-
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-
 <?php 
 
 $thumb_id = get_post_thumbnail_id();
 $thumb_url = wp_get_attachment_image_src($thumb_id,'large', true);
 $url_imagen=$thumb_url[0];
 
+if (isset($url_imagen) && $url_imagen != null){
 ?>
+
+		<div class="overlay-black"></div>
+
+		<div class="banner-torneo">
+			<img src="<?= $url_imagen; ?>" alt="">
+		</div>
+<?php } ?>
+
+<div class="preguntas-frecuentes">
+
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+
+
     <!--img src="<?= $url_imagen ?>" class="first-image" alt=""-->
     <h2><?php the_title(); ?></h2>
     <p><?php  the_content(); ?></p>
