@@ -71,6 +71,10 @@ h2, .estilos-titulo{
 .history-h2{
     margin-bottom: 40px;
 }
+.preguntas-frecuentes h2{
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
 h4{
     font-size: 1.250em;
     font-weight: bold;
@@ -204,20 +208,20 @@ header{
     height: 100%;
     margin: auto 0 auto;
 }
-#menu-item-42{
+#menu-item-102, #menu-item-125{
     background-color: #DB052C;
     z-index: 2;
 }
-#menu-item-18{
+#menu-item-101, #menu-item-126{
     z-index: 3;
 }
-#menu-item-61{
+#menu-item-124, #menu-item-127{
     z-index: 4;
 }
-#menu-item-17{
+#menu-item-99, #menu-item-130{
     z-index: 5;
 }
-#menu-item-42 a{
+#menu-item-102 a, #menu-item-125 a{
     color: #FFF;
 }
 .menu-desktop > ul{
@@ -281,7 +285,7 @@ header{
 nav > ul > li:hover:after{
 	transform: scaleX(1);
 }
-.dropdown-menu {
+.dropdown-menu, .sub-menu{
     display: block;
     position: absolute;
     z-index: 5;
@@ -292,7 +296,7 @@ nav > ul > li:hover:after{
 
     transform:scaleY(0);
 }
-#menu-item-98::before{
+#menu-item-100::before, #menu-item-129::before{
     content: url(../img/flecha.svg);
     height: 18px;
     top: 0;
@@ -303,18 +307,18 @@ nav > ul > li:hover:after{
     transform: rotate(90deg);
     margin: -52px 48% 0;
 }
-.dropdown-menu img{
+.dropdown-menu img, .sub-menu img{
     display: block;
     transform: rotate(90deg);
     margin: 0 auto;
     transition: ease all .3s;
     opacity: 0;
 }
-.dropdown-menu li{
+.dropdown-menu li, .sub-menu li{
     margin-top: -3px;
     position: relative;
 }
-.dropdown-menu li a{
+.dropdown-menu li a, .sub-menu li a{
     font-weight: 300;
     font-size: 1em;
     background-color: #fff;
@@ -333,7 +337,7 @@ nav > ul > li:hover:after{
     transform: translateY(20px);
     opacity: 0;
 }
-#menu-item-97 a{
+#menu-item-123 a, #menu-item-128 a{
     border-top: 1px rgba(0,0,0,.1) solid;
     z-index: 1;
     box-shadow: none;
@@ -346,17 +350,17 @@ nav > ul > li:hover:after{
     z-index: 1;
     box-shadow:none;
 }
-nav > ul > li:hover .dropdown-menu{
+nav > ul > li:hover .dropdown-menu, nav > ul > li:hover .sub-menu{
     transform:scaleY(1);
 }
-nav > ul > li:hover .dropdown-menu img{
+nav > ul > li:hover .dropdown-menu img, nav > ul > li:hover .sub-menu img{
     opacity: 1;
 }
-nav > ul > li:hover .dropdown-menu li a{
+nav > ul > li:hover .dropdown-menu li a, nav > ul > li:hover .sub-menu li a{
     transform: translateY(0px);
     opacity: 1;
 }
-.dropdown-menu li a:hover{
+.dropdown-menu li a:hover, .sub-menu li a:hover{
 background-color: #F3F5F6;
 }
 #participa{
@@ -1288,6 +1292,9 @@ display: none;
 .noticia-curveball > h1{
     margin-bottom: 20px;
 }
+.noticia-container{
+    margin: 0 13% 60px;
+}
 .noticia-container h2{
     margin-top: 101px;
 }
@@ -1539,18 +1546,42 @@ display: none;
     display: block;
     margin: 20px auto;
 }
-
-.historia-yc, .freestyle-bayern{
+.historia-yc, .freestyle-bayern, .aviso-privacidad{
     display: block;
     font-size: 18px;
     line-height: 1.51em;
     margin: 0px 13% 30px;
 }
-.historia-yc p, .freestyle-bayern p{
+.historia-yc p, .freestyle-bayern p, .aviso-privacidad p{
     margin-bottom: 20px;
 }
 .historia-yc h2{
+    margin-top: 40px;
     margin-bottom: 20px;
+}
+.aviso-privacidad .curve-span{
+    margin: 10px auto 20px;
+    display: block;
+    text-align: center;
+}
+.aviso-privacidad a{
+    color: #DB052C;
+    text-decoration: underline;
+}
+.aviso-privacidad ul{
+    padding-left: 5%;
+    list-style: disc inside;
+}
+.aviso-privacidad ol{
+    padding-left: 5%;
+    list-style: lower-alpha inside;
+    margin-bottom: 20px;
+}
+.aviso-privacidad ol li{
+    margin-bottom: 15px;
+}
+.aviso-privacidad ul li{
+    margin: 15px auto;
 }
 .freestyle-bayern iframe{
     width: 100%;
@@ -1597,9 +1628,6 @@ display: none;
     display: inline-table;
     position: relative;
     margin-top: 50px;
-}
-.menu-item-24{
-    margin-bottom: 10px;
 }
 .wp-block-image{
     margin-top: -31px;
@@ -1732,6 +1760,9 @@ display: none;
     .section-video h1{
         display: none;
         font-size: 2.15em;
+    }
+    .preguntas-frecuentes h2{
+        margin-top: 41px;
     }
     header{
         display: flex;
@@ -1949,7 +1980,7 @@ display: none;
     footer address{
         font-size: 12px;
     }
-    .historia-yc, .freestyle-bayern{
+    .historia-yc, .freestyle-bayern, .aviso-privacidad{
         margin-top: 91px;
     }
     .ediciones-anteriores iframe{
@@ -2138,10 +2169,13 @@ display: none;
     .abrir-modal{
         right: -1%;
     }
-    .historia-yc, .freestyle-bayern{
+    .historia-yc, .freestyle-bayern, .aviso-privacidad{
         margin: 91px 7% 30px;
         font-size: 15px;
         line-height: 20px;
+    }
+    .aviso-privacidad h2{
+        margin-bottom: 0px;
     }
     .noticia-container{
         margin: 51px 7% 30px;
@@ -2157,7 +2191,7 @@ display: none;
     h2, .estilos-titulo{
         font-size: 22px;
     }
-    .historia-yc p, .freestyle-bayern p{
+    .historia-yc p, .freestyle-bayern p, .aviso-privacidad p{
         margin-bottom: 10px;
     }
     .agradecimiento-wrapper{

@@ -50,8 +50,8 @@
     <div class="second-section-header">
         <div class="top-bar">
         <div class="idiomas">
-                <button name="button"><span class="seleccionado idioma-desk">ES</span></button>/
-                <button name="button"><span class=" idioma-desk">EN</span></button>
+                <a name="button" href="?lang=es"><span class="seleccionado idioma-desk">ES</span></a>/
+                <a name="button" href="?lang=en"><span class=" idioma-desk">EN</span></a>
             </div>
             <div class="redes-sociales-header">
                 <a href="https://www.instagram.com/" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram-gris.svg" alt=""></a>
