@@ -38,6 +38,14 @@
         </div>
         <span class="span-f"><a href="">contacto@curveball.mx</a></span>
     </section>
+    <section class="third-section-footer">
+        <p>Amigos de la Youth Cup</p>
+        <div class="amigos-yc">
+            <a href="https://www.tvcuatro.com/" target="_blank" class="tv4"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/tv4.png" alt=""></a>
+            <!-- <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/embajada.svg" alt=""></a>
+            <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/estado.svg" alt=""></a>            -->
+        </div>
+    </section>
     <address><?php bloginfo( 'name' ); ?> <?= date('Y'); ?> &copy; Derechos reservados |<a href=""> Aviso de Privacidad</a></address>
 </footer>
 

@@ -212,11 +212,11 @@ header{
     background-color: #DB052C;
     z-index: 2;
 }
-#menu-item-101, #menu-item-126{
-    z-index: 3;
-}
-#menu-item-124, #menu-item-127{
+#menu-item-101, #menu-item-127{
     z-index: 4;
+}
+#menu-item-124, , #menu-item-126{
+    z-index: 3;
 }
 #menu-item-99, #menu-item-130{
     z-index: 5;
@@ -504,6 +504,9 @@ z-index: 10;
 .idioma{
     font-size: 20px;
 }
+.seleccionado{
+    margin: 2px 5px auto;
+}
 .idioma-desk {
     color: #FFF;
     text-decoration: none;
@@ -539,20 +542,25 @@ z-index: 10;
 #menu-mobile-bar .redes-sociales-header img{
     width: 100%;
 }
-#menu-mobile li{
+#menu-mobile li, #menu-menu-espanol-1 li{
     display: block;
     position: relative;
     width: 100%;
     height: 8%;
     margin: 5px 0 0 0;
 }
-#menu-mobile li:first-child{
+#menu-mobile li:first-child, #menu-menu-espanol-1 li:first-child{
     margin: 80px 0 0 0;
 }
 #menu-mobile{
-    margin: auto 10%;
+    margin: 0;
+    height: 100%;
 }
-#menu-mobile li a{
+#menu-menu-espanol-1{
+    margin: auto 10%;
+    height: 100%;
+}
+#menu-mobile li a, #menu-menu-espanol-1 li a{
     display: block;
     font-size: 20px;
     font-weight: normal;
@@ -562,7 +570,7 @@ z-index: 10;
     width: 100%;
     height: 100%;
 }
-#menu-mobile li a:after{
+#menu-mobile li a:after, #menu-menu-espanol-1 li a:after{
     display: block;
     content: '';
     position: absolute;
@@ -573,10 +581,10 @@ z-index: 10;
     left: 50%;
     transition: ease all .5s;
 }
-#menu-mobile li a:hover{
+#menu-mobile li a:hover, #menu-menu-espanol-1 li a:hover{
     opacity: 1;
 }
-#menu-mobile li a:hover:after{
+#menu-mobile li a:hover:after, #menu-menu-espanol-1 li a:hover:after{
     width: 70%;
 }
 .first-section-home{
@@ -719,6 +727,9 @@ z-index: 10;
     display: flex;
     flex-direction: column;
     padding: 0 0 30px;
+}
+.third-section-home h2{
+    margin-bottom: 20px;
 }
 .third-section-home >span{
     font-size: 1.125em;
@@ -1071,10 +1082,33 @@ footer{
     font-weight: 700;
     text-align: center;
 }
-footer address{
+.third-section-footer{
+    margin: 0 5%;
+}
+.third-section-footer p{
+    margin: auto;
+    display: block;
+    text-align: center;
+    border-top: 1px rgba(220, 226, 229, 0.5) solid;
+    padding-top: 20px;
+}
+.amigos-yc{
     display: flex;
+    flex-direction: row;
+    margin: 3% 0;
     justify-content: center;
-    margin: 2% 5%;
+}
+.amigos-yc a{
+    margin: auto 15px;
+}
+.amigos-yc a > img{
+    width: 100%;
+}
+.tv4{
+    width: 7%;
+}
+footer address{
+    margin: 0 5% 2%;
     font-size: 16px;
     color: rgba(220, 226, 229, 0.5);
     text-align: center;
@@ -1292,17 +1326,24 @@ display: none;
 .noticia-curveball > h1{
     margin-bottom: 20px;
 }
-.noticia-container{
+.noticia-fc-bayern{
     margin: 0 13% 60px;
 }
-.noticia-container h2{
+.noticia-fc-bayern h2{
     margin-top: 101px;
 }
 .first-image{
     display: block;
     width: 100%;
+    margin-bottom: 20px;
 }
-.noticia-container p{
+.second-img{
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.noticia-fc-bayern p{
     display: block;
     margin-bottom: 20px;
     font-size: 18px;
@@ -1327,14 +1368,14 @@ display: none;
 }
 .modal{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50vw;
+	top: 50%;
+	left: 50%;
+	width: 60vw;
     height: 60vh;
-    margin: -35vh 0 0 -25vw;
-    background: #FFF;
-    color: #333;
-    overflow: auto;
+    transform: translate(-50%, -50%);
+	background: #FFF;
+	color: #333;
+	overflow: auto;
 }
 .cerrar-modal{
     cursor: pointer;
@@ -1351,20 +1392,25 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    margin: 6% 10%;
+    position: absolute;
+    margin: auto 5%;
+    width: 90%;
+    height: 330px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 #modal-wrapper h2{
     font-size: 24px;
-    margin: auto auto 20px;
+    margin: 10px auto 20px;
     text-align: center;
-    color: #DB052C;
+	color: #DB052C;
 }
 #modal-wrapper form{
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background: none;
     border: none;
 }
@@ -1378,12 +1424,28 @@ display: none;
     font-size: 16px;
     margin-top: 20px;
     color: #001829;
+    text-align: center;
 }
 #modal-wrapper p a{ 
     color: #DB052C;
 }
 #modal-wrapper .boton{
-    margin-top: 30px;
+    margin-top: 0px;
+}
+.modal-content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
+}
+.jersey-contain{
+    width: 30%;
+}
+.jersey-contain img{
+    width: 100%;
+    margin-top: -35px;
+    margin-left: 20px;
 }
 .formulario li{
     list-style: none;
@@ -1550,7 +1612,7 @@ display: none;
     display: block;
     font-size: 18px;
     line-height: 1.51em;
-    margin: 0px 13% 30px;
+    margin: 50px 13% 30px;
 }
 .historia-yc p, .freestyle-bayern p, .aviso-privacidad p{
     margin-bottom: 20px;
@@ -1646,6 +1708,13 @@ display: none;
 .second-subsection-footer a:hover{
     color: #FFF;
     text-decoration: underline;
+}
+.noticia-container > img{
+    display: none;
+}
+.noticia-container h2{
+    margin-top: 80px;
+    margin-bottom: 20px;
 }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -1986,6 +2055,32 @@ display: none;
     .ediciones-anteriores iframe{
         width: 90%;
     }
+    .modal{
+        height: 80vh;
+    }
+    #modal-wrapper{
+        margin: 40px 5% 50px;
+        height: 82%;
+    }
+    #modal-wrapper form{
+        width: 100%;
+    }
+    .modal-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .jersey-contain{
+        width: 35%;
+        margin-top: -30px;
+    }
+    .jersey-contain img{
+        margin-top: 0px;
+        margin-left: 00px;
+    }
+    .noticia-container h2{
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
 @media screen and (max-width:750px){
     .logo-header{
         width: 100%;
@@ -2012,13 +2107,14 @@ display: none;
         margin-bottom: 20px;
     }
     .modal{
-        width: 70vw;
-        height: 60vh;
-        margin: -35vh 0 0 -35vw;
+        width: 80vw;
     }
     .cerrar-modal{
         width: 20px;
         height: 20px;
+    }
+    .amigos-yc a img{
+       width: 100%;
     }
 }
 @media screen and (max-width: 600px){
@@ -2060,6 +2156,10 @@ display: none;
     }
     footer address{
         padding: 4% 0;
+    }
+    .jersey-contain{
+        width: 45%;
+        margin-top: -20px;
     }
 }
 @media screen and (max-width: 500px){
@@ -2144,11 +2244,6 @@ display: none;
     .formulario li{
         margin-bottom: 20px;
     }
-    .modal {
-        width: 90vw;
-        height: 60vh;
-        margin: -35vh 0 0 -45vw;
-    }
     #modal-wrapper .boton{
         margin: 15px auto;
     }
@@ -2177,7 +2272,7 @@ display: none;
     .aviso-privacidad h2{
         margin-bottom: 0px;
     }
-    .noticia-container{
+    .noticia-fc-bayern{
         margin: 51px 7% 30px;
     }
     .noticia-curveball p{
@@ -2282,9 +2377,6 @@ display: none;
     }
     .checkbox-estilizado + label{
         margin: 5px auto;
-    }
-    .modal{
-        height: 55vh;
     }
     #menu-mobile-bar .redes-sociales-header a{
         margin: auto 0px;
