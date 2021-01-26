@@ -158,8 +158,7 @@
     .accordion-body__contents{
         font-size: 15px;
     }
-    
-    
+
     .accordion__item.active > .accordion-header:after {
         /*margin-right: 11%;*/
     }

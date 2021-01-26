@@ -25,6 +25,14 @@
         </div>
         <span class="span-f">contacto@curveball.mx</span>
     </section>
+    <section class="third-section-footer">
+        <p>Amigos de la Youth Cup</p>
+        <div class="amigos-yc">
+            <a href="https://www.tvcuatro.com/" target="_blank" class="tv4"><img src="img/tv4.png" alt=""></a>
+            <!-- <a href=""><img src="img/embajada.svg" alt=""></a>
+            <a href=""><img src="img/estado.svg" alt=""></a>            -->
+        </div>
+    </section>
     <address>FC Bayern Youth Cup 2021 Derechos reservados | <a href="#">Aviso de privacidad</a></address>
 </footer>
 <!-- SCRIPTS -->

@@ -3,6 +3,7 @@
 <div class="noticia-container">
     
     <h1 class="estilos-titulo">La FC Bayern Youth Cup  llega a México</h1>
+    <img src="img/torneo1.jpg" class="first-image">
     <p><span class="letter-capital">F</span>C Bayern y Curveball Sports se han unido para llevar a cabo en México el prestigioso torneo juvenil, la FC Bayern Youth Cup, por primera ocasión en este país en el 2021.</p>
     <p>En un comunicado publicado en las redes oficiales del FC Bayern Munich, el reconocido
 periodista Fernando Palomo conversó sobre la llegada del torneo con Rudolph Vidal,
@@ -23,6 +24,7 @@ campamentos de futbol en los próximos veranos”.</p>
 <p>Rudolph Vidal también resaltó la importancia que el club alemán le da a sus aficionados
 mexicanos: “Uno de nuestros clubes de aficionados más grandes fuera de Alemania está en
 México, con más de 4,000 aficionados”</p>
+<img src="img/torneo2.jpg" alt="" class="second-img">
 <p class="strong-black">“Lo que queremos hacer es brindar oportunidades futbolísticas en el país”</p>
 <p>También se le preguntó a Vidal si “al formar parte de este torneo, ¿estos jóvenes tienen la
 oportunidad de aprender a jugar el modo Bayern?”, a lo que enfatizó que “definitivamente van a

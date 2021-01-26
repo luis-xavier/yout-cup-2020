@@ -975,7 +975,7 @@ nav > ul > li:hover .dropdown-menu li a{
 .page-container{
     position: relative;
     min-height: 100vh;
-    display: grid;
+    /* display: grid; */
     grid-template-rows: 1fr 261px;
 }
 footer{
@@ -986,7 +986,7 @@ footer{
     overflow: hidden;
 }
 .page-container footer{
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
 }
@@ -1062,8 +1062,33 @@ footer a:hover,
     font-weight: 700;
     text-align: center;
 }
+.third-section-footer{
+    margin: 0 5%;
+}
+.third-section-footer p{
+    margin: auto;
+    display: block;
+    text-align: center;
+    border-top: 1px rgba(220, 226, 229, 0.5) solid;
+    padding-top: 20px;
+}
+.amigos-yc{
+    display: flex;
+    flex-direction: row;
+    margin: 3% 0;
+    justify-content: center;
+}
+.amigos-yc a{
+    margin: auto 15px;
+}
+.amigos-yc a > img{
+    width: 100%;
+}
+.tv4{
+    max-width: 57px;
+}
 footer address{
-    margin: 2% 5%;
+    margin: 0 5% 2%;
     font-size: 16px;
     color: rgba(220, 226, 229, 0.5);
     text-align: center;
@@ -1272,8 +1297,7 @@ footer address a{
     margin-top: 60px;
 }
 .noticia-container{
-    display: flex;
-    flex-direction: column;
+    display: block;
     margin: 101px 13% 30px;
 }
 .noticia-container > h1{
@@ -1282,6 +1306,14 @@ footer address a{
 .first-image{
     display: block;
     width: 100%;
+    margin-bottom: 20px;
+}
+.second-img{
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+    max-width: 620px;
 }
 .noticia-container p{
     display: block;
@@ -1310,9 +1342,9 @@ footer address a{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 50vw;
-	height: 60vh;
-	margin: -35vh 0 0 -25vw;
+	width: 60vw;
+    height: 60vh;
+    transform: translate(-50%, -50%);
 	background: #FFF;
 	color: #333;
 	overflow: auto;
@@ -1333,8 +1365,8 @@ footer address a{
     flex-direction: column;
     align-items: center;
     position: absolute;
-    margin: auto;
-    width: 80%;
+    margin: auto 5%;
+    width: 90%;
     height: 330px;
     top: 0;
     left: 0;
@@ -1343,15 +1375,14 @@ footer address a{
 }
 #modal-wrapper h2{
 	font-size: 24px;
-    margin: auto auto 20px;
+    margin: 10px auto 20px;
     text-align: center;
 	color: #DB052C;
 }
 #modal-wrapper form{
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background: none;
     border: none;
 }
@@ -1365,12 +1396,28 @@ footer address a{
     font-size: 16px;
     margin-top: 20px;
     color: #001829;
+    text-align: center;
 }
 #modal-wrapper p a{ 
     color: #DB052C;
 }
 #modal-wrapper .boton{
-    margin-top: 30px;
+    margin-top: 0px;
+}
+.modal-content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
+}
+.jersey-contain{
+    width: 30%;
+}
+.jersey-contain img{
+    width: 100%;
+    margin-top: -35px;
+    margin-left: 20px;
 }
 .formulario li{
     list-style: none;
@@ -1533,7 +1580,6 @@ footer address a{
     display: block;
     margin: 20px auto;
 }
-
 .historia-yc, .freestyle-bayern, .aviso-privacidad{
     display: block;
     font-size: 18px;
@@ -1959,6 +2005,28 @@ footer address a{
     .ediciones-anteriores iframe{
         width: 90%;
     }
+    .modal{
+        height: 80vh;
+    }
+    #modal-wrapper{
+        margin: 40px 5% 50px;
+        height: 82%;
+    }
+    #modal-wrapper form{
+        width: 100%;
+    }
+    .modal-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .jersey-contain{
+        width: 35%;
+        margin-top: -30px;
+    }
+    .jersey-contain img{
+        margin-top: 0px;
+        margin-left: 00px;
+    }
 @media screen and (max-width:750px){
     .logo-header{
         width: 100%;
@@ -1985,13 +2053,14 @@ footer address a{
         margin-bottom: 20px;
     }
     .modal{
-        width: 70vw;
-        height: 80vh;
-        margin: -35vh 0 0 -35vw;
+        width: 80vw;
     }
     .cerrar-modal{
         width: 20px;
         height: 20px;
+    }
+    .amigos-yc a img{
+       width: 100%;
     }
 }
 @media screen and (max-width: 600px){
@@ -2033,6 +2102,13 @@ footer address a{
     }
     footer address{
         padding: 4% 0;
+    }
+    .jersey-contain{
+        width: 45%;
+        margin-top: -20px;
+    }
+    .second-img{
+        width: 100%;
     }
 }
 @media screen and (max-width: 500px){
@@ -2116,11 +2192,6 @@ footer address a{
     }
     .formulario li{
         margin-bottom: 20px;
-    }
-    .modal {
-        width: 90vw;
-        height: 80vh;
-        margin: -35vh 0 0 -45vw;
     }
     #modal-wrapper .boton{
         margin: 15px auto;
@@ -2252,9 +2323,6 @@ footer address a{
     }
     .checkbox-estilizado + label{
         margin: 5px auto;
-    }
-    .modal{
-        height: 55vh;
     }
     #menu-mobile-bar .redes-sociales-header a{
         margin: auto 0px;

@@ -21,9 +21,13 @@
 </style>
 <div class="overlay-confirmacion">
 	<div class="modal">
-		<div class="cerrar-modal"></div>
+        <div class="cerrar-modal"></div>
         <section id="modal-wrapper">
-            <h2>Suscríbete al newsletter y participa en la rifa de un jersey</h2>
+        <h2>Suscríbete al newsletter y participa en la rifa de un jersey</h2>
+        <div class="modal-content">
+            <div class="jersey-contain">
+                <img src="img/jersey.svg" alt="">
+            </div>
             <form action="" method="POST" id="formulario" class="formulario">
                 <ul>
                     <li>
@@ -35,14 +39,11 @@
                         <input id="mail_news" maxlength="50" name="mail_news" size="20" type="text" required="" class="sinvalidar" onBlur="validarC_News('mail_news')" oninput="validarC_News('mail_news')"/>
                         <label for="mail_news">Correo electrónico</label>
                     </li>   
-                    <!--li>
-                        <input type="checkbox" class="checkbox-estilizado" name="aviso_news" id="aviso_news" onchange="validarN_CheckAviso('aviso_news')">
-                        <label for="aviso_news">Acepto términos y condiciones contenidos en el <a href="aviso.php" class="inline-link">Aviso de privacidad</a></label>
-                    </li-->
                 </ul>
-            </form>
-            <button type="submit" name="enviar" onclick="validacion()" class="boton enviar">ENVIAR</button>
+                <button type="submit" name="enviar" onclick="validacion()" class="boton enviar">ENVIAR</button>
             <p>Conoce las reglas <a href="">aquí</a></p>
+            </form>
+        </div>
         </section>
 	</div>
 </div>
