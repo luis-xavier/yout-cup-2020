@@ -143,9 +143,8 @@
         </ul>
         <div id="menu-mobile-bar">
             <div class="idiomas">
-                <button name="button"><span class="idioma seleccionado">ES</span></button>
-                <span class="item-footer if-mobile"></span>
-                <button name="button"><span class="idioma">EN</span></button>
+                <a name="button" href="?lang=es"><span class="seleccionado idioma-desk">ES</span></a>/
+                <a name="button" href="?lang=en"><span class=" idioma-desk">EN</span></a>
             </div>
             <div class="redes-sociales-header">
                 <a class="whatsapp" href="https://wa.me/+524611043805?text=Hola%20quiero%20más%20información%20de%20la%20copa%20juvenil%202021" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/whatsapp.svg" alt=""></a>

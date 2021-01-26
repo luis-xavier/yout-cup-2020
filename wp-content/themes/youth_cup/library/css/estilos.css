@@ -542,14 +542,23 @@ z-index: 10;
 #menu-mobile-bar .redes-sociales-header img{
     width: 100%;
 }
-#menu-mobile li, #menu-menu-espanol-1 li{
+.menu-mobile-bar .idiomas{
+    margin: auto 0;
+}
+.idiomas a{
+    margin: auto 0 auto 7px;
+}
+#menu-menu-ingles-1{
+    margin-left: 7%;
+}
+#menu-mobile li, #menu-menu-espanol-1 li, #menu-menu-ingles-1 li{
     display: block;
     position: relative;
     width: 100%;
     height: 8%;
     margin: 5px 0 0 0;
 }
-#menu-mobile li:first-child, #menu-menu-espanol-1 li:first-child{
+#menu-mobile li:first-child, #menu-menu-espanol-1 li:first-child, #menu-menu-ingles-1 li:first-child{
     margin: 80px 0 0 0;
 }
 #menu-mobile{
@@ -560,7 +569,7 @@ z-index: 10;
     margin: auto 10%;
     height: 100%;
 }
-#menu-mobile li a, #menu-menu-espanol-1 li a{
+#menu-mobile li a, #menu-menu-espanol-1 li a, #menu-menu-ingles-1 li a{
     display: block;
     font-size: 20px;
     font-weight: normal;
@@ -570,7 +579,7 @@ z-index: 10;
     width: 100%;
     height: 100%;
 }
-#menu-mobile li a:after, #menu-menu-espanol-1 li a:after{
+#menu-mobile li a:after, #menu-menu-espanol-1 li a:after, #menu-menu-ingles-1 li a:after{
     display: block;
     content: '';
     position: absolute;
@@ -581,10 +590,10 @@ z-index: 10;
     left: 50%;
     transition: ease all .5s;
 }
-#menu-mobile li a:hover, #menu-menu-espanol-1 li a:hover{
+#menu-mobile li a:hover, #menu-menu-espanol-1 li a:hover, #menu-menu-ingles-1 li li a:hover{
     opacity: 1;
 }
-#menu-mobile li a:hover:after, #menu-menu-espanol-1 li a:hover:after{
+#menu-mobile li a:hover:after, #menu-menu-espanol-1 li a:hover:after, #menu-menu-ingles-1 li a:hover:after{
     width: 70%;
 }
 .first-section-home{
