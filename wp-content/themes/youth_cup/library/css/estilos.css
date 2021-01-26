@@ -653,10 +653,9 @@ z-index: 10;
     width: 90%;
     max-width: 950px;
     height:auto;
-    padding: 37px 20px 10px;
+    padding: 50px 20px 20px;
     box-sizing: border-box;
     background: #FFF;
-    margin-top: -29px;
 }
 .modal-video iframe{
     margin: 0 auto;
@@ -741,6 +740,7 @@ z-index: 10;
     display: flex;
     flex-direction: row;
     margin: 0 5% 15px;
+    justify-content: space-around;
 }
 .noticia{
     width: 33%;
@@ -816,8 +816,8 @@ text-decoration: none;
 #display-noticia{
     flex-wrap: wrap;
     align-items: center;
-    align-items: stretch;
-    justify-content: space-between;
+    align-items: stretch;    
+    justify-content: space-around;
 }
 #display-noticia .noticia{
     width: 31%;
@@ -1005,12 +1005,23 @@ text-decoration: none;
 .newsletter form button:focus{
     outline: none;
 }
+.page-container{
+    position: relative;
+    min-height: 100vh;
+    /* display: grid; */
+    grid-template-rows: 1fr 261px;
+}
 footer{
     color: #DCE2E5;
     background-color: #001829;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+}
+.page-container footer{
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
 }
 .subsections-footer{
     display: flex;
@@ -1048,9 +1059,15 @@ footer{
     justify-content: space-between;
     width: 20%;
 }
+#menu-item-188{
+    margin-bottom: 10px;
+}
+footer a,
 .third-subsection-footer a{
     color: #DCE2E5;
+    margin-bottom: 10px;
 }
+footer a:hover,
 .third-subsection-footer a:hover{
     text-decoration:underline #DCE2E5;
 }
@@ -1105,7 +1122,7 @@ footer{
     width: 100%;
 }
 .tv4{
-    width: 7%;
+    max-width: 57px;
 }
 footer address{
     margin: 0 5% 2%;
@@ -1342,6 +1359,7 @@ display: none;
     width: 70%;
     margin: auto;
     margin-bottom: 20px;
+    max-width: 620px;
 }
 .noticia-fc-bayern p{
     display: block;
@@ -1608,13 +1626,13 @@ display: none;
     display: block;
     margin: 20px auto;
 }
-.historia-yc, .freestyle-bayern, .aviso-privacidad{
+.historia-yc, .freestyle-bayern, .aviso-privacidad, .terminos{
     display: block;
     font-size: 18px;
     line-height: 1.51em;
     margin: 50px 13% 30px;
 }
-.historia-yc p, .freestyle-bayern p, .aviso-privacidad p{
+.historia-yc p, .freestyle-bayern p, .aviso-privacidad p, .terminos p{
     margin-bottom: 20px;
 }
 .historia-yc h2{
@@ -1626,7 +1644,7 @@ display: none;
     display: block;
     text-align: center;
 }
-.aviso-privacidad a{
+.aviso-privacidad a, .terminos a{
     color: #DB052C;
     text-decoration: underline;
 }
@@ -1644,6 +1662,9 @@ display: none;
 }
 .aviso-privacidad ul li{
     margin: 15px auto;
+}
+.number-s{
+    text-transform: initial;
 }
 .freestyle-bayern iframe{
     width: 100%;
@@ -1663,6 +1684,7 @@ display: none;
     padding: 20px 0;
     width: 40%;
     height: 40%;
+    max-width: 600px;
     min-width: 450px;
     position: absolute;
     top: 50%;
@@ -1674,11 +1696,15 @@ display: none;
     height: 94%;
     font-size: 18px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 .agradecimiento-wrapper h2{
     margin-top: 0px;
     margin-bottom: 20px;
+}
+.agradecimiento-wrapper p{
+    text-align: center;
 }
 #back_form{
     width: 100%;
@@ -2049,7 +2075,7 @@ display: none;
     footer address{
         font-size: 12px;
     }
-    .historia-yc, .freestyle-bayern, .aviso-privacidad{
+    .historia-yc, .freestyle-bayern, .aviso-privacidad, .terminos{
         margin-top: 91px;
     }
     .ediciones-anteriores iframe{
@@ -2161,6 +2187,20 @@ display: none;
         width: 45%;
         margin-top: -20px;
     }
+    .second-img{
+        width: 100%;
+    }
+    .historia-yc, .freestyle-bayern, .aviso-privacidad, .terminos{
+        margin: 91px 7% 30px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .aviso-privacidad h2, .terminos h2{
+        margin-bottom: 0px;
+    }
+    .historia-yc p, .freestyle-bayern p, .aviso-privacidad p, .terminos p{
+        margin-bottom: 10px;
+    }
 }
 @media screen and (max-width: 500px){
     h2{
@@ -2264,14 +2304,6 @@ display: none;
     .abrir-modal{
         right: -1%;
     }
-    .historia-yc, .freestyle-bayern, .aviso-privacidad{
-        margin: 91px 7% 30px;
-        font-size: 15px;
-        line-height: 20px;
-    }
-    .aviso-privacidad h2{
-        margin-bottom: 0px;
-    }
     .noticia-fc-bayern{
         margin: 51px 7% 30px;
     }
@@ -2285,9 +2317,6 @@ display: none;
     }
     h2, .estilos-titulo{
         font-size: 22px;
-    }
-    .historia-yc p, .freestyle-bayern p, .aviso-privacidad p{
-        margin-bottom: 10px;
     }
     .agradecimiento-wrapper{
         min-width: 350px;

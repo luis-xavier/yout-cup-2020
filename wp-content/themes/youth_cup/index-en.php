@@ -94,6 +94,7 @@ endif;
             </div>
             <div class="swiper-pagination"></div>
         </div>
+        <a href="noticias.php" class="boton boton-reverse">MORE NEWS</a>
 </section>
 
 <!-- Swiper JS -->
