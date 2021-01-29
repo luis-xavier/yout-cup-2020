@@ -61,6 +61,7 @@ if(isset($_POST['enviado'])) {
                 
             }else{
              // echo "no hay falla";
+             include 'library/mailer.php';
 
                     //si si si ya todo esta chido...
                 global $wpdb;
@@ -83,10 +84,10 @@ if(isset($_POST['enviado'])) {
                 $format = array('%s','%s','%s','%s','%s','%d','%s','%s','%s','%s','%s','%s','%s');
                 $wpdb->insert($table,$data);
                 $my_id = $wpdb->insert_id;
-
                 if (isset($my_id)){
 
-                  mandadora ();
+                  palEquipo ($_POST['email'], $_POST['nombre']);
+                  palAdmin ($_POST['nombre_equipo'],$_POST['direccion'],$_POST['pais'],$_POST['ciudad'],$_POST['cp'],$_POST['mobile'],$_POST['nombre'],$_POST['email'],$_POST['yourrelation'],$_POST['enteraste'],$_POST['reasontoregister'],$_POST['afiliacion']);
 
 
                 }
@@ -99,78 +100,6 @@ if(isset($_POST['enviado'])) {
         //var_dump($my_id);
         //$wpdb->print_error();
         //var_dump($wpdb);
-
-        function mandadora (){
-
-          
-          require_once(ABSPATH . WPINC . '/PHPMailer/PHPMailer.php');
-          require_once(ABSPATH . WPINC . '/PHPMailer/SMTP.php');
-          require_once(ABSPATH . WPINC . '/PHPMailer/Exception.php');
-           $phpmailer = new PHPMailer\PHPMailer\PHPMailer();
-
-
-          //var_dump($phpmailer);
-
-          $phpmailer->IsSMTP();
-          $phpmailer->Host = 'smtp.google.com';
-          $phpmailer->Port = '587';
-          $phpmailer->SMTPSecure = 'tls';
-          $phpmailer->SMTPAuth = true;
-          $phpmailer->Username = 'contacto@curveball.mx';
-          $phpmailer->Password = 'Contacto2021?';
-
-          $phpmailer->addAddress($_POST['email'], $_POST['nombre']);
-          $phpmailer->setFrom('contacto@curveball.mx', 'Contacto Curveball ');
-          $phpmailer->addReplyTo('contacto@curveball.mx', 'Contacto Curveball ');
-          $phpmailer->isHTML(true);
-          $phpmailer->Subject = 'Registro Bayern Youth Cup';
-          $phpmailer->Body    = "<html>
-
-          <head>
-              <meta charset='UTF-8'>
-              <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-              <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-              <title>Registro Bayern Youth Cup</title>
-              <style type='text/css'>
-                  html, body{margin: 0 !important;padding: 0 !important;height: 100% !important;width: 100% !important;}*{-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}.ExternalClass{width: 100%;}div[style*='margin: 16px 0']{margin: 0 !important;}table, td{mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;}table{border-spacing: 0 !important;border-collapse: collapse !important;table-layout: fixed !important;margin: 0 auto !important;}table table table{table-layout: auto;}img{-ms-interpolation-mode: bicubic;}.yshortcuts a{border-bottom: none !important;}a[x-apple-data-detectors]{color: inherit !important;}
-              </style>
-              <style type='text/css'>
-                  .button-td, .button-a{transition: all 100ms ease-in;}.button-td:hover, .button-a:hover{background: #555555 !important; border-color: #555555 !important;}@media screen and (max-width: 600px){.email-container{width: 100% !important;}.fluid, .fluid-centered{max-width: 100% !important; height: auto !important; margin-left: auto !important; margin-right: auto !important;}.fluid-centered{margin-left: auto !important; margin-right: auto !important;}.stack-column, .stack-column-center{display: block !important; width: 100% !important; max-width: 100% !important; direction: ltr !important;}.stack-column-center{text-align: center !important;}.center-on-narrow{text-align: center !important; display: block !important; margin-left: auto !important; margin-right: auto !important; float: none !important;}table.center-on-narrow{display: inline-block !important;}}
-              </style>
-          </head>
-          
-          <body bgcolor='#FFFFFF' width='100%' style='margin: 0;' yahoo='yahoo'>
-              <table bgcolor='#FFFFFF' cellpadding='0' cellspacing='0' border='0' height='100%' width='100%' style='border-collapse:collapse;'>
-                  <tr>
-                      <td>
-                          <center style='width: 100%;'>
-                              <table align='center' width='600' class='email-container' style='background:#DCE2E5;'>
-                                  <tr>
-                                      <td style='padding: 20px 0; text-align: center'><img src='http://xochimaco.com/youth-cup/img/logo-mail.png' width='334' height='48' alt='alt_text' border='0'></td>
-                                  </tr>
-                              </table>
-                              <table cellspacing='0' cellpadding='0' border='0' align='center' bgcolor='#F3F5F6' width='600' class='email-container'>
-                                  <tr>
-                                      <td style='padding: 40px; text-align: left; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;'>
-                                          <h1 style='font-size: 20px;'>Gracias por tu registro ".$_POST['nombre']."</h1>
-                                          <br>
-                                          <p>Hemos recibido tus datos, pronto estaremos en contacto contigo para dar seguimiento a tu proceso de inscripción</p>
-                                  </tr>
-                                  <table align='center' width='600' class='email-container' style='background: #001829;'>
-                                      <tr>
-                                          <td style='padding: 20px 10px 9px;width: 100%;font-size: 12px; font-family: sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #F3F5F6;'><span class='mobile-link--footer'>Bayern Youth Cup 2021</span> <br><br></tr>
-                                  </table>
-                          </center>
-                          </td>
-                  </tr>
-                  </table>
-          </body>
-          
-          </html>";              
-          $phpmailer->send();
-
-        }
-
 
 get_header(); 
 
