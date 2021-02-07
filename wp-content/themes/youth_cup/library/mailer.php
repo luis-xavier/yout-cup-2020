@@ -26,6 +26,9 @@ $mail->Password = 'Contacto2021?';
 
 function palEquipo ($paraMail, $paraName) {
     global $mail;
+
+    //vaciar var
+    $mail->ClearAllRecipients();
     //Recipients
     $mail->setFrom('contacto@curveball.mx', 'Contacto Curveball ');
     $mail->addAddress($paraMail, $paraName);
@@ -71,12 +74,16 @@ function palEquipo ($paraMail, $paraName) {
 
 function palAdmin ($nombre_equipo,$direccion,$pais,$ciudad,$cp,$telefono,$nombre,$email,$yourrelation,$enteraste,$reasontoregister,$afiliacion) {
     global $mail;
+    
+    //vaciar var
+    $mail->ClearAllRecipients();
+    
     //Recipients
     $mail->setFrom('contacto@curveball.mx', 'Contacto Curveball ');
     $mail->addAddress('contacto@curveball.mx', 'Registro en linea');
     // Content
     $mail->isHTML(true);
-    $mail->Subject = 'Registro Bayern Youth Cup';
+    $mail->Subject = 'Nuevo equipo registardo';
           $mail->Body    = "<!doctype html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><meta http-equiv='X-UA-Compatible' content='IE=edge'>
               <title>Registro Bayern Youth Cup</title>
               <style type='text/css'>
