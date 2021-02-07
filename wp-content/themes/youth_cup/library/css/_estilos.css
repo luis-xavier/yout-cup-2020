@@ -208,20 +208,20 @@ header{
     height: 100%;
     margin: auto 0 auto;
 }
-#menu-item-102, #menu-item-125, #menu-item-228, #menu-item-224{
+#menu-item-102, #menu-item-125{
     background-color: #DB052C;
     z-index: 2;
 }
 #menu-item-101, #menu-item-127{
     z-index: 4;
 }
-#menu-item-124, #menu-item-126{
+#menu-item-124, , #menu-item-126{
     z-index: 3;
 }
 #menu-item-99, #menu-item-130{
     z-index: 5;
 }
-#menu-item-102 a, #menu-item-125 a, #menu-item-228 a, #menu-item-224 a{
+#menu-item-102 a, #menu-item-125 a{
     color: #FFF;
 }
 .menu-desktop > ul{
@@ -248,7 +248,7 @@ header{
     box-shadow: 23px 0px 20px 3px rgba(0,0,0,0.1);
     transition: all .8s;
 }
-.menu-desktop > ul > li:last-child::before {
+.menu-desktop > ul > li:last-child:before{
     position: absolute;
     content: "";
     z-index: -5;
@@ -256,10 +256,7 @@ header{
     width: 100%;
     height: 100%;
     box-shadow: none;
-    transform: skew(334deg);
-}
-.menu-desktop > ul > li:last-child a{
-    color: white;
+    transform: skew(324deg);
 }
 .menu-desktop > ul > li:after{
     display: block;
@@ -723,6 +720,7 @@ z-index: 10;
     width: 728px;
     height: 90px;
     margin: auto;
+    border: 1px black solid;
 }
 .banner-tvcuatro img{
     width: 100%;
@@ -1868,7 +1866,7 @@ display: none;
         font-size: 2.15em;
     }
     .preguntas-frecuentes h2{
-        margin-top: 74px;
+        margin-top: 41px;
     }
     header{
         display: flex;
@@ -2202,12 +2200,9 @@ display: none;
         width: 100%;
     }
     .historia-yc, .freestyle-bayern, .aviso-privacidad, .terminos{
-        margin: 20px 7% 30px;
+        margin: 91px 7% 30px;
         font-size: 15px;
         line-height: 20px;
-    }
-    .historia-yc h4{
-        margin-top: 15px;
     }
     .aviso-privacidad h2, .terminos h2{
         margin-bottom: 0px;
@@ -2434,9 +2429,5 @@ display: none;
     .agradecimiento-wrapper{
         min-width: 250px;
         height: 50%;
-    }
-    .fourth-section-footer a:first-child {
-        margin-top: 14px;
-        margin-right: 5px;
     }
 }
