@@ -10,12 +10,12 @@ $miBanner = get_field('home_banner',$id);
 
 if ( $miCover != null){
 	// estoy en el home traigo template correspondinete
-	include ('page-home.php');
+	require ('page-home.php');
 
 
 }else{ 
 	//traigo el generico
- 	include ('page-generic.php');
+ 	require ('page-generic.php');
 
 }
 
