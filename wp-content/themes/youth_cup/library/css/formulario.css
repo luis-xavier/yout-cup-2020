@@ -24,6 +24,16 @@ html, body{
     background-color: transparent;
     border: 2px #DB052C solid;
 }
+#back_form_login{
+    width: 100%;
+	height: 100%;
+	padding: 30px 0 60px;
+	background: url(../img/back_stadium.jpg) no-repeat;
+	background-position: bottom left;
+	background-size: cover;
+    display: inline-table;
+    margin-top: 57px;
+}
 #back_form{
 	width: 100%;
 	height: 100%;
@@ -32,7 +42,7 @@ html, body{
 	background-position: bottom left;
 	background-size: cover;
     display: inline-table;
-    margin-top: 41px;
+    margin-top: 57px;
 }
 #form-wrapper{
     font-family: 'FC Bayern Sans', sans-serif;
@@ -58,7 +68,7 @@ html, body{
     font-weight: 700;
     margin: 0 auto 30px;
 }
-#form-wrapper p{
+#form-wrapper > p{
     font-size: 1em;
     line-height: 1.3em;
     color: #001829;
@@ -92,7 +102,7 @@ html, body{
 	width: 46%;
 	margin: 0 4% 1.45em 0;
 	float: left;
-	clear: none;
+	clear: both;
 }
 .formulario li.half-columnB{
     width: 46%;
@@ -186,6 +196,7 @@ html, body{
 	color: red;
 	font-weight: 700;
 	margin: 4px 0 0;
+    text-align: left;
 }
 .formulario .error{
     border-color: red;
@@ -199,6 +210,16 @@ html, body{
 }
 .formulario select.error{
     border:2px solid red;
+}
+.div-form button{
+    border: none;
+    background-color: transparent;
+}
+.div-form button:focus{
+    outline: none;
+}
+.cerrado{
+    height: unset;
 }
 .checkbox-estilizado {
     position: absolute;
@@ -369,6 +390,9 @@ html, body{
 }
 @media (max-width: 960px){
     #back_form{
+        margin-top: 37px;
+    }
+    #back_form_login{
         margin-top: 51px;
     }
 }
@@ -387,6 +411,18 @@ html, body{
         margin-top: unset;
         margin-bottom: 20px;
     }
+    .form-login .fecha{
+        display: flex;
+        flex-direction: column;
+    }
+    .date-selector{
+        width: 100%;
+    }
+    .fecha label{
+        margin-bottom: 10px;
+        text-align: left;
+        width: 100%;
+    }
 }
 @media (max-width: 370px){
     .contraseña:after{
@@ -402,4 +438,163 @@ html, body{
 /*-- Campos ocultos --*/ 
 .oculto{
     display:none !important;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++    Formulario de Registro   ++++++++++++++++++++++++++++++++++++++++++++++++*/
+.formulario-registro{
+}
+.jugador{
+    display: block;
+    float: left;
+    margin-top: -15px;
+    font-size: 13px;
+}
+.container-first-i{
+    background-color: #F3F5F6;
+    padding: 0 3%;
+    margin: 0% 3% 0%;
+}
+.formulario-registro .form-jugador{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    transition: all .3s;
+}
+.formulario-registro input[type="text"]{
+
+    background-color: #FFF;
+}
+.formulario-registro input[type="text"]:focus{
+
+}
+.formulario-registro input[type="text"] + label{
+
+}
+.formulario-registro input[type="text"]:focus + label{
+
+}
+.container-first-i .fecha{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    margin: unset;
+    margin-bottom: 20px;
+}
+.fecha label{
+    font-size: 14px;
+}
+.date-selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px #001829 solid;
+    width: 100%;
+}
+.formulario-registro select{
+    background-color: #FFF;
+    width: 25%;
+}
+.formulario-registro select:first-child{
+    width: 40%;
+}
+.boton-registro{
+    margin-top: 0px;
+    font-size: 14px;
+    padding: 7px 10px 5px;
+    letter-spacing: 0px;
+    margin: 15px auto 0;
+}
+.formulario-registro .checkbox-estilizado + label:before {
+    width: 12px;
+    height: 12px;
+    background: #FFF;
+}
+.formulario-registro .checkbox-estilizado + label{
+    font-size: 14px;
+}
+.formulario-registro .checkbox-estilizado:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 5px;
+    background: white;
+    width: 2px;
+    height: 2px;
+}
+
+.formulario-registro .checkbox-estilizado:hover + label:before {
+    background: #001829;
+}
+.formulario-registro .checkbox-estilizado:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.22);
+}
+.formulario-registro .checkbox-estilizado:checked + label:before {
+    background: #001829;
+}
+.formulario-registro .checkbox-estilizado:checked + label:after {
+    background: white;
+}
+
+
+
+.formulario-registro .form-jugador-cerrado{
+    margin-bottom: 0;
+}
+.container-jugador{
+    margin: 0 0 20px 0;
+}
+.container-jugador h5{
+    text-align: left;
+    color: #001829;
+    margin: 0 0 4px 3px;
+    font-weight: .85em;
+}
+.jugadores-botones{
+    background:#F3F5F6;
+    border-radius: 3px;
+    display: grid;
+    grid-gap:1rem;
+    grid-template-columns: 1fr 18px;
+    padding: 9px 15px;
+    box-sizing: border-box;
+    align-items: center;
+}
+.jugadores-botones{
+    text-align: left;
+}
+.jugadores-editar{
+    justify-self: end;
+    display: block;
+    width: 100%;
+}
+.jugadores-cerrar{
+    justify-self: end;
+    display: block;
+    width: 100%;
+}
+.jugadores-formulario{
+    background:#F3F5F6;
+    border-radius: 3px;
+    padding: 30px 15px;
+    box-sizing: border-box;
+}
+.jugadores-formulario li{
+    text-align: left;
+}
+.cuadro-datos.cerrado .jugadores-formulario{
+    display: none;
+}
+.cuadro-datos.cerrado .jugadores-botones{
+    display: grid;
+}
+.cuadro-datos.abierto .jugadores-formulario{
+    display: block;
+}
+.cuadro-datos.abierto .jugadores-botones{
+    display: none;
 }

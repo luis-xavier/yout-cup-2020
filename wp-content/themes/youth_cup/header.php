@@ -59,7 +59,7 @@
                 <a href="https://www.youtube.com/c/fcbayern" class="youtube-header" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/youtube.svg" alt=""></a>
             </div>
             <div class="mi-equipo">
-                <a href="login.php"><span>Mi equipo</span><img src="<?= get_stylesheet_directory_uri() ?>/library/img/equipo.svg" alt=""></a>
+                <a href="<?= home_url() ?>/wp-login.php?action=register"><span>Mi equipo</span><img src="<?= get_stylesheet_directory_uri() ?>/library/img/equipo.svg" alt=""></a>
             </div>
         </div>
         <div class="header-nav">

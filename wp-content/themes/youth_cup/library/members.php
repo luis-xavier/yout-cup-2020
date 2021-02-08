@@ -96,8 +96,8 @@ class Lista_De_Miembros extends WP_List_Table{
             'como'      => '¿Cómo te enteraste del torneo?',
             'motivo'      => '¿Porqué te registras en el torneo?',
             'created'      => 'Fecha registro',
-            'aviso'      => 'Términos y condiciones',
-            //'invite'    => $this->invitador()
+            'aviso'      => 'T&C',
+            //'invitacion'    => 'Invite'//$this->invitador()
         );
 
         return $columns;
@@ -109,7 +109,9 @@ class Lista_De_Miembros extends WP_List_Table{
      * @return string
      */
     public function invitador(){
-        echo '<input type="button" value="ha ha!" >';
+        return sprintf(
+                '<input type="button" value="ha ha!" >'
+            );        
     }
 
     /**
