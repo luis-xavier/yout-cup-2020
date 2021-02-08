@@ -239,5 +239,21 @@ function new_excerpt_more($more) {
   return '';
 }
 add_filter('excerpt_more','new_excerpt_more',11);
-?>
 
+
+
+/*************  login directo a los playres  *********************/
+function my_custom_login_redirect(){
+  wp_redirect( home_url("players-registration") );
+
+  exit();
+}
+add_action( 'wp_login','my_custom_login_redirect' );
+
+function my_custom_logout_redirect(){
+  wp_redirect( home_url() );
+  exit();
+}
+add_action( 'wp_logout', 'my_custom_logout_redirect' );
+
+?>
