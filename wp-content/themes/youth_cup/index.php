@@ -18,6 +18,13 @@
     </div>
 
     <article>
+
+    <?= 
+    'holi' ?>
+    <?= the_field('video_cover') ?>
+    <?php 
+            var_dump(the_field('video_cover',233));
+    ?>
         <h1>FC Bayern Youth Cup Mexico</h1>
         <p>El torneo que te brindará la oportunidad de mostrar tu talento enfrente de representantes del FC Bayern Munich que te permitirán representar a México en la<strong class="strong-red"> final Mundial en Munich, Alemania</strong></p>
     </article>
