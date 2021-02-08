@@ -7,7 +7,7 @@
 
 <section class="first-section-home section-white">
 <div class="section-video">
-        <h1>FC Bayern Youth Cup México</h1>
+        <h1><?php the_title(); ?></h1>
         <div class="video-overlay"></div>
         <video playsinline autoplay muted loop width="100%" height="auto">
             <source src="<?= $miCover ?>" type="video/mp4">
@@ -15,12 +15,9 @@
         <button id="abrir-modal" class="abrir-modal"><img src="<?= get_template_directory_uri(); ?>/library/img/expand.svg" alt=""></button>
     </div>
 
-<article>
-
-        <h1>FC Bayern Youth Cup Mexico</h1>
-        <p>El torneo que te brindará la oportunidad de mostrar tu talento enfrente de representantes del FC Bayern Munich que te permitirán representar a México en la<strong class="strong-red"> final Mundial en Munich, Alemania</strong></p>
+<article>    
+        <?php  the_content(); ?>
     </article>
-    <a href="" class="boton">INSCRÍBETE AQUÍ</a>
 </section>
 
 
@@ -54,7 +51,7 @@ $category_link = get_category_link( $category_id );
     <!--span>Actualización al 29 de dicembre</span-->
     <div class="noticias-wrapper">
     <?php 
-
+        query_posts('cat=$cualCat&showposts=3');
         if ( have_posts() ) :
             while ( have_posts() ) : the_post();
                 ?>
