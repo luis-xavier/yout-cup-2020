@@ -50,13 +50,16 @@ $category_link = get_category_link( $category_id );
     <h2>Noticias</h2>
     <!--span>Actualización al 29 de dicembre</span-->
     <div class="noticias-wrapper">
+
     <?php 
         query_posts('cat=$cualCat&showposts=3');
         if ( have_posts() ) :
             while ( have_posts() ) : the_post();
                 ?>
             <div class="noticia">
-                <?php (has_post_thumbnail() ? the_post_thumbnail() : false) ?>
+                <?php 
+                (has_post_thumbnail() ? the_post_thumbnail('medium') : false) 
+                ?>
                 <h3><?php the_title(); ?></h3>
                 <?php the_excerpt(); ?>
                 <a href="<?= esc_url( get_permalink( )) ?>"><?= $copyLeer ?></a>
