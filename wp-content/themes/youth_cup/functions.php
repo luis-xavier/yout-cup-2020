@@ -303,9 +303,6 @@ function my_custom_login_url($url) {
 }
 
 
-
-
-
 function my_login_stylesheet() {
     wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/library/css/style-login.css' );
     wp_enqueue_script( 'custom-login', get_stylesheet_directory_uri() . '/library/js/style-login.js' );
