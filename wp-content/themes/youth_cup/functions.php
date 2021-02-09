@@ -118,14 +118,14 @@ new image size.
 
 /************* THEME CUSTOMIZE *********************/
 
-/* 
+/*
   A good tutorial for creating your own Sections, Controls and Settings:
   http:#code.tutsplus.com/series/a-guide-to-the-wordpress-theme-customizer--wp-33722
-  
+
   Good articles on modifying the default options:
   http:#natko.com/changing-default-wordpress-theme-customization-api-sections/
   http:#code.tutsplus.com/tutorials/digging-into-the-theme-customizer-components--wp-27162
-  
+
   To do:
   - Create a js for the postmessage transport method
   - Create some sanitize functions to sanitize inputs
@@ -135,7 +135,7 @@ new image size.
 function bones_theme_customizer($wp_customize) {
   # $wp_customize calls go here.
   #
-  # Uncomment the below lines to remove the default customize sections 
+  # Uncomment the below lines to remove the default customize sections
 
   # $wp_customize->remove_section('title_tagline');
    $wp_customize->remove_section('colors');
@@ -145,7 +145,7 @@ function bones_theme_customizer($wp_customize) {
 
   # Uncomment the below lines to remove the default controls
   # $wp_customize->remove_control('blogdescription');
-  
+
   # Uncomment the following to change the default section titles
   # $wp_customize->get_section('colors')->title = __( 'Theme Colors' );
   # $wp_customize->get_section('background_image')->title = __( 'Images' );
@@ -237,7 +237,7 @@ function bones_comments( $comment, $args, $depth ) {
 /************* quit read more  *********************/
 function new_excerpt_more($more) {
   global $post;
-  remove_filter('excerpt_more', 'new_excerpt_more'); 
+  remove_filter('excerpt_more', 'new_excerpt_more');
   return '';
 }
 add_filter('excerpt_more','new_excerpt_more',11);
@@ -252,7 +252,7 @@ function my_custom_login_redirect(){
 
   if ( isset( $user->roles ) && is_array( $user->roles ) ) {
       if ( in_array('subscriber', $user->roles) ) {
-          
+
           wp_redirect( get_permalink('page_id=277') );
           die;
       }
@@ -300,11 +300,12 @@ function my_login_logo() { ?>
         }
     </style>
 <?php }
+
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 add_filter( 'login_headerurl', 'my_custom_login_url' );
 function my_custom_login_url($url) {
-    return 'https://www.xochimaco.com/youth-cup-wp';
+    return home_url();
 }
 
 

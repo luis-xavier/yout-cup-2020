@@ -1,6 +1,5 @@
 <?php
 get_header(); 
-/* Template Name: Torneo */
 ?>
 
 			<div id="content">

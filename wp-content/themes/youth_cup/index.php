@@ -16,6 +16,7 @@
         </video>
         <button id="abrir-modal" class="abrir-modal"><img src="<?= get_template_directory_uri(); ?>/library/img/expand.svg" alt=""></button>
     </div>
+
     <article>
         <h1>FC Bayern Youth Cup Mexico</h1>
         <p>El torneo que te brindará la oportunidad de mostrar tu talento enfrente de representantes del FC Bayern Munich que te permitirán representar a México en la<strong class="strong-red"> final Mundial en Munich, Alemania</strong></p>
@@ -32,6 +33,24 @@
 </section>
 
 <section class="third-section-home noticias section-gray">
+
+<?php 
+$lang = isset($lang) ? $_GET['lang'] : 'en';
+$cualCat = "news";
+$copyLeer = "Read more";
+$copyMasNots = "All news";
+
+if ($lang == 'es'){
+    $cualCat = "noticias";
+    $copyLeer = "Leer Más";
+    $copyMasNots = "Mas noticias";
+}
+
+$category_id = get_cat_ID( $cualCat  );
+$category_link = get_category_link( $category_id );
+
+
+?> 
     <h2>Noticias</h2>
     <!--span>Actualización al 29 de dicembre</span-->
     <div class="noticias-wrapper">
@@ -40,14 +59,12 @@
         if ( have_posts() ) :
             while ( have_posts() ) : the_post();
                 ?>
-                <div class="noticia">
+            <div class="noticia">
                 <?php (has_post_thumbnail() ? the_post_thumbnail() : false) ?>
-            <h3><?php the_title(); ?></h3>
-            <p><?php the_excerpt(); ?></p>
-            <a href="<?= esc_url( get_permalink( )) ?>">LEER MÁS</a>
-        </div>
-
-
+                <h3><?php the_title(); ?></h3>
+                <?php the_excerpt(); ?>
+                <a href="<?= esc_url( get_permalink( )) ?>"><?= $copyLeer ?></a>
+            </div>
 
 
                 <?php
@@ -79,7 +96,7 @@ if ( have_posts() ) :
                         <?php (has_post_thumbnail() ? the_post_thumbnail() : false) ?>
                         <h3><?php the_title(); ?></h3>
                         <p><?php the_excerpt(); ?></p>
-                        <a href="<?php get_permalink() ?>">LEER MÁS</a>
+                        <a href="<?php get_permalink() ?>"><?= $copyLeer ?></a>
                     </div>
         </div>
 
@@ -94,12 +111,16 @@ endif;
             </div>
             <div class="swiper-pagination"></div>
         </div>
-        <a href="noticias.php" class="boton boton-reverse">MÁS NOTICIAS</a>
+
+
+
+
+        <a href="<?= $category_link ?>" class="boton boton-reverse"><?= $copyMasNots ?></a>
 
 </section>
 
 <!-- Swiper JS -->
-<script src="js/swiper-6.4.5.min.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/library/js/swiper-6.4.5.min.js"></script>
 
 <!-- Initialize Swiper -->
 <script>
@@ -121,10 +142,11 @@ endif;
             spaceBetween: 0,
         },
         // when window width is >= 640px
-        800: {
+        1000: {
             slidesPerView: 3,
             spaceBetween: 20,
         },
+
         
     }
    

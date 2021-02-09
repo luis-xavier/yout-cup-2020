@@ -18,7 +18,7 @@
 
 <section class="np-wrapper">
     <div class="noticia-principal noticia">
-	<?php (has_post_thumbnail() ? the_post_thumbnail() : false) ?>
+	<?php (has_post_thumbnail() ? the_post_thumbnail('medium') : false) ?>
         <article>
             <h2><?php the_title(); ?></h2>
 			<p><?php the_excerpt(); ?></p>
@@ -35,7 +35,7 @@
     
         
             <div id="noticia-<?= $contador?>" class="noticia">
-			<?php (has_post_thumbnail() ? the_post_thumbnail('thumbnail', array('class' => 'img-np')) : false) ?>
+			<?php (has_post_thumbnail() ? the_post_thumbnail('medium', array('class' => 'img-np')) : false) ?>
                 <h3><?php the_title(); ?></h3>
                 <p><?php the_excerpt(); ?></p>
                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">LEER MÁS</a>
@@ -52,6 +52,8 @@
 <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 
 <?php endif; ?>
+
+
 </div>
 </div>
     </section>

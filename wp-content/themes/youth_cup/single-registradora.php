@@ -61,6 +61,7 @@ if(isset($_POST['enviado'])) {
                 
             }else{
              // echo "no hay falla";
+             include 'library/mailer.php';
 
                     //si si si ya todo esta chido...
                 global $wpdb;
@@ -83,6 +84,16 @@ if(isset($_POST['enviado'])) {
                 $format = array('%s','%s','%s','%s','%s','%d','%s','%s','%s','%s','%s','%s','%s');
                 $wpdb->insert($table,$data);
                 $my_id = $wpdb->insert_id;
+                
+                if (isset($my_id)){
+
+                  palAdmin ($_POST['nombre_equipo'],$_POST['direccion'],$_POST['pais'],$_POST['ciudad'],$_POST['cp'],$_POST['mobile'],$_POST['nombre'],$_POST['email'],$_POST['yourrelation'],$_POST['enteraste'],$_POST['reasontoregister'],$_POST['afiliacion']);
+                  palEquipo ($_POST['email'], $_POST['nombre']);
+                  
+
+
+                }
+                
             }
           }
 
@@ -91,8 +102,6 @@ if(isset($_POST['enviado'])) {
         //var_dump($my_id);
         //$wpdb->print_error();
         //var_dump($wpdb);
-
-
 
 get_header(); 
 
@@ -120,8 +129,14 @@ jQuery(document).ready(function($) {
 </script>
 
 <section id="gracias">
-<h1>Gracias por tu registro </h1>
-<?php
+<div class="agradecimiento-wrapper">
+        <section>
+            <h2>¡Gracias por registrare <?= $_POST['nombre'] ?>!</h2>
+            <p>Hemos recibido tus datos correctamente, nos pondremos en contacto contigo muy pronto.</p>
+            <a href="<?= home_url() ?>" class="boton boton-reverse">Inicio</a>
+        </section>
+
+        <?php
         if (isset($reg_errors) && count($reg_errors->get_error_messages()) > 0) {
 
             foreach ( $reg_errors->get_error_messages() as $error ) {
@@ -129,7 +144,12 @@ jQuery(document).ready(function($) {
                }
           
         }
-?>
+?>  
+    
+    </div>
+
+
+
 </section>
 
 <section id="form-wrapper">

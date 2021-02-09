@@ -1,13 +1,7 @@
 <?php
 /*
- Template Name: Custom Page Example
+ Template Name: Players registration
  *
- * This is your custom page template. You can create as many of these as you need.
- * Simply name is "page-whatever.php" and in add the "Template Name" title at the
- * top, the same way it is here.
- *
- * When you create your page, you can just select the template and viola, you have
- * a custom page template to call your very own. Your mother would be so proud.
  *
  * For more info: http://codex.wordpress.org/Page_Templates
 */
@@ -15,87 +9,92 @@
 
 <?php get_header(); ?>
 
-			<div id="content">
+<link rel="stylesheet" type="text/css" href="<?= get_stylesheet_directory_uri() . '/library/css/formulario.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= get_stylesheet_directory_uri() . '/library/css/registro.css' ?>">
+<script type="text/javascript" src="<?= get_stylesheet_directory_uri() . '/library/js/registro.js' ?>"></script>
 
-				<div id="inner-content" class="wrap cf">
-
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-
-								<header class="article-header">
-
-									<h1 class="page-title"><?php the_title(); ?></h1>
-
-									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
-
-
-								</header>
-
-								<section class="entry-content cf" itemprop="articleBody">
-									<?php
-										// the content (pretty self explanatory huh)
-										the_content();
-
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
-								</section>
-
-
-								<footer class="article-footer">
-
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-								</footer>
-
-								<?php comments_template(); ?>
-
-							</article>
-
-							<?php endwhile; else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-											<header class="article-header">
-												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page-custom.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
-						</main>
-
-						<?php get_sidebar(); ?>
-
+<div id="back_form_login">
+<section id="form-wrapper">
+	<h1><?php the_title(); ?></h1>
+    <?php  the_content(); ?>
+	
+	<form action="" method="POST" id="formulario" class="formulario formulario-registro">
+	    <?php
+		    $numjugador = 1;
+		    while($numjugador <= 15):
+	    ?>
+		<div id="container-jugador-<?= $numjugador ?>" class="container-jugador">
+			<h5>Jugador <?= $numjugador ?></h5>
+			<div class="cuadro-datos cerrado">
+				<div class="jugadores-botones">
+					<p>Nombre del jugador</p>
+					<!--a href="#" class="jugadores-cerrar"><img src="img/jugador-close.svg"></a-->
+					<a href="#" class="jugadores-editar"><img src="<?= get_stylesheet_directory_uri() . '/library/img/jugador-edit.svg' ?>"></a>
 				</div>
+				<div class="jugadores-formulario">
+					<ul>
+						<li>
+							<input id="nombre-<?= $numjugador ?>" maxlength="50" name="nombre-<?= $numjugador ?>" size="20" type="text" required="" class="sinvalidar nombre-jugador" onBlur="//validarNombre('nombre-<?= $numjugador ?>')" oninput="//validarNombre('nombre-<?= $numjugador ?>')"/>
+	            			<label for="nombre-<?= $numjugador ?>">Nombre completo:</label>
+						</li>
+						<li>
+							<label for="año-<?= $numjugador ?>">Fecha de nacimiento</label>
+							<div class="date-selector"> 
+			                    <select name="año-<?= $numjugador ?>" id="año-<?= $numjugador ?>" class="año">
+			                        <option value="AAAA">Año</option>
+			                        <option value="2004">2004</option>
+			                        <option value="2005">2005</option>
+			                        <option value="2006">2006</option>
+			                        <option value="2007">2007</option>
+			                    </select>
+			                    <select name="meses-<?= $numjugador ?>" id="meses-<?= $numjugador ?>" class="meses">
+			                        <option value="MM">Mes</option>
+			                        <option value="enero">01</option>
+			                        <option value="febrero">02</option>
+			                        <option value="marzo">03</option>
+			                        <option value="abril">04</option>
+			                        <option value="mayo">05</option>
+			                        <option value="junio">06</option>
+			                        <option value="julio">07</option>
+			                        <option value="agosto">08</option>
+			                        <option value="septiembre">09</option>
+			                        <option value="octubre">10</option>
+			                        <option value="noviembre">11</option>
+			                        <option value="diciembre">12</option>
+			                    </select>
+			                    <select name="dias-<?= $numjugador ?>" id="dias-<?= $numjugador ?>" class="dias">
+			                        <option value="DD">Día</option>
+			                    </select> 
+	                		</div>
+						</li>
+						<li>
+							<label for="talla-<?= $numjugador ?>">Talla de la camiseta</label>
+							<select name="talla-<?= $numjugador ?>" id="talla-<?= $numjugador ?>" class="talla">
+								<option value="talla"></option>
+			                    <option value="xg">XG</option>
+			                    <option value="l">G</option>
+			                    <option value="m">M</option>
+			                    <option value="ch">CH</option>
+			                </select>
+						</li>
 
+						<li style="text-align: left; margin-bottom: 10px;">
+			                <input type="checkbox" class="checkbox-estilizado" name="pasaporte-<?= $numjugador ?>" id="pasaporte-<?= $numjugador ?>" onchange="">
+			                <label for="pasaporte-<?= $numjugador ?>">Cuenta con pasaporte vigente</label></li>
+			            	<a href="#" class="boton boton-registro">ACEPTAR</a>
+					</ul>
+				</div>
 			</div>
+	
+	    </div>
+	    <?php 
+	    $numjugador++;
+		endwhile;
+		?>
+		<button type="submit" name="enviar" onclick="//validacion()" class="boton">FINALIZAR REGISTRO</button> 
+	</form>
+</section>
+</div>
 
 
 <?php get_footer(); ?>

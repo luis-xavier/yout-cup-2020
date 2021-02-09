@@ -13,7 +13,7 @@ if(isset($_POST['enviado'])) {
           }
 
         if ( empty( $_POST['nombre'] ) ) {
-            $name = "no name"
+            $name = "no name";
           }
 
         if ( empty( $_POST['acepta'] ) ) {

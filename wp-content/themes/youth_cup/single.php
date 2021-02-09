@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="noticia-container">
+<div class="noticia-curveball">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -12,9 +12,10 @@ $thumb_url = wp_get_attachment_image_src($thumb_id,'large', true);
 $url_imagen=$thumb_url[0];
 
 ?>
-    <img src="<?= $url_imagen ?>" class="first-image" alt="">
+    <!--img src="<?= $url_imagen ?>" class="first-image" alt=""-->
+	<div></div>
     <h2><?php the_title(); ?></h2>
-    <p><?php  the_content(); ?></p>
+    <?php  the_content(); ?>
 	
 </div>
 

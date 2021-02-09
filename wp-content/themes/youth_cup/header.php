@@ -42,16 +42,17 @@
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
-	<header>
+	<header <?php if(is_user_logged_in()){echo 'style="margin-top:30px"';}?> >
     <div class="first-section-header">
         <a href="<?= home_url() ?>">
-		<img class="logo-header" src="<?= get_stylesheet_directory_uri() ?>/library/img/fcyouthcup-mx.svg" alt=""></a>
+		<img class="logo-header" src="<?= get_stylesheet_directory_uri() ?>/library/img/fcyouthcup-mx.svg" alt="">
+        </a>
     </div>
     <div class="second-section-header">
         <div class="top-bar">
         <div class="idiomas">
-                <a name="button" href="?lang=es"><span class="seleccionado idioma-desk">ES</span></a>/
-                <a name="button" href="?lang=en"><span class=" idioma-desk">EN</span></a>
+                <a name="button" href="<?= home_url() ?>/?lang=es"><span class="seleccionado idioma-desk">ES</span></a>/
+                <a name="button" href="<?= home_url() ?>/?lang=en"><span class=" idioma-desk">EN</span></a>
             </div>
             <div class="redes-sociales-header">
                 <a href="https://www.instagram.com/" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram-gris.svg" alt=""></a>
@@ -59,7 +60,24 @@
                 <a href="https://www.youtube.com/c/fcbayern" class="youtube-header" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/youtube.svg" alt=""></a>
             </div>
             <div class="mi-equipo">
-                <a href="login.php"><span>Mi equipo</span><img src="<?= get_stylesheet_directory_uri() ?>/library/img/equipo.svg" alt=""></a>
+                <a href="<?php 
+                if ( is_user_logged_in() ) {
+                    echo esc_url(get_permalink( get_page_by_title( 'Players registration' ) ));
+                }else{
+                    echo esc_url( wp_login_url() );
+                }
+                ?>"><span>
+
+                        <?php if ( is_user_logged_in() ) {
+                            global $current_user;
+                            echo $current_user->user_login;
+                        } else {
+                            echo 'Mi equipo';
+                        }
+                        ?>
+                    
+                
+                </span><img src="<?= get_stylesheet_directory_uri() ?>/library/img/equipo.svg" alt=""></a>
             </div>
         </div>
         <div class="header-nav">
@@ -143,9 +161,8 @@
         </ul>
         <div id="menu-mobile-bar">
             <div class="idiomas">
-                <button name="button"><span class="idioma seleccionado">ES</span></button>
-                <span class="item-footer if-mobile"></span>
-                <button name="button"><span class="idioma">EN</span></button>
+                <a name="button" href="?lang=es"><span class="seleccionado idioma-desk">ES</span></a>/
+                <a name="button" href="?lang=en"><span class=" idioma-desk">EN</span></a>
             </div>
             <div class="redes-sociales-header">
                 <a class="whatsapp" href="https://wa.me/+524611043805?text=Hola%20quiero%20más%20información%20de%20la%20copa%20juvenil%202021" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/whatsapp.svg" alt=""></a>
