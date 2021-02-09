@@ -256,10 +256,6 @@ function my_custom_login_redirect(){
       }
   }
 
-
-
-  wp_redirect( home_url("?page_id=277") );
-
   exit();
 }
 add_action( 'wp_login','my_custom_login_redirect' );
