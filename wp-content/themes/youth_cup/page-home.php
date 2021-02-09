@@ -92,7 +92,7 @@ if ( have_posts() ) :
 
         <div class="swiper-slide">
                     <div class="noticia">
-                        <?php (has_post_thumbnail() ? the_post_thumbnail() : false) ?>
+                        <?php (has_post_thumbnail() ? the_post_thumbnail('medium') : false) ?>
                         <h3><?php the_title(); ?></h3>
                         <p><?php the_excerpt(); ?></p>
                         <a href="<?php get_permalink() ?>"><?= $copyLeer ?></a>
