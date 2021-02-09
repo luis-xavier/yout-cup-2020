@@ -51,8 +51,8 @@
     <div class="second-section-header">
         <div class="top-bar">
         <div class="idiomas">
-                <a name="button" href="?lang=es"><span class="seleccionado idioma-desk">ES</span></a>/
-                <a name="button" href="?lang=en"><span class=" idioma-desk">EN</span></a>
+                <a name="button" href="<?= home_url() ?>/?lang=es"><span class="seleccionado idioma-desk">ES</span></a>/
+                <a name="button" href="<?= home_url() ?>/?lang=en"><span class=" idioma-desk">EN</span></a>
             </div>
             <div class="redes-sociales-header">
                 <a href="https://www.instagram.com/" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/instagram-gris.svg" alt=""></a>
@@ -62,11 +62,22 @@
             <div class="mi-equipo">
                 <a href="<?php 
                 if ( is_user_logged_in() ) {
-                    echo esc_url( get_permalink('page_id=277') );
+                    echo esc_url(get_permalink( get_page_by_title( 'Players registration' ) ));
                 }else{
                     echo esc_url( wp_login_url() );
                 }
-                ?>"><span>Mi equipo</span><img src="<?= get_stylesheet_directory_uri() ?>/library/img/equipo.svg" alt=""></a>
+                ?>"><span>
+
+                        <?php if ( is_user_logged_in() ) {
+                            global $current_user;
+                            echo $current_user->user_login;
+                        } else {
+                            echo 'Mi equipo';
+                        }
+                        ?>
+                    
+                
+                </span><img src="<?= get_stylesheet_directory_uri() ?>/library/img/equipo.svg" alt=""></a>
             </div>
         </div>
         <div class="header-nav">

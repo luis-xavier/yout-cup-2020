@@ -52,6 +52,8 @@
 <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 
 <?php endif; ?>
+
+
 </div>
 </div>
     </section>
