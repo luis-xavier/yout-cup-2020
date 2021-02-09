@@ -42,10 +42,11 @@
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
-	<header>
+	<header <?php if(is_user_logged_in()){echo 'style="margin-top:30px"';}?> >
     <div class="first-section-header">
         <a href="<?= home_url() ?>">
-		<img class="logo-header" src="<?= get_stylesheet_directory_uri() ?>/library/img/fcyouthcup-mx.svg" alt=""></a>
+		<img class="logo-header" src="<?= get_stylesheet_directory_uri() ?>/library/img/fcyouthcup-mx.svg" alt="">
+        </a>
     </div>
     <div class="second-section-header">
         <div class="top-bar">
@@ -59,7 +60,13 @@
                 <a href="https://www.youtube.com/c/fcbayern" class="youtube-header" target="_blank"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/youtube.svg" alt=""></a>
             </div>
             <div class="mi-equipo">
-                <a href="<?= home_url() ?>/wp-login.php?action=register"><span>Mi equipo</span><img src="<?= get_stylesheet_directory_uri() ?>/library/img/equipo.svg" alt=""></a>
+                <a href="<?php 
+                if ( is_user_logged_in() ) {
+                    echo esc_url( get_permalink('page_id=277') );
+                }else{
+                    echo esc_url( wp_login_url() );
+                }
+                ?>"><span>Mi equipo</span><img src="<?= get_stylesheet_directory_uri() ?>/library/img/equipo.svg" alt=""></a>
             </div>
         </div>
         <div class="header-nav">

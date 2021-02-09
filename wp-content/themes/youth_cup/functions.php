@@ -244,7 +244,21 @@ add_filter('excerpt_more','new_excerpt_more',11);
 
 /*************  login directo a los playres  *********************/
 function my_custom_login_redirect(){
-  wp_redirect( home_url("players-registration") );
+
+
+  $user = wp_get_current_user();
+
+  if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+      if ( in_array('subscriber', $user->roles) ) {
+          
+          wp_redirect( get_permalink('page_id=277') );
+          die;
+      }
+  }
+
+
+
+  wp_redirect( home_url("?page_id=277") );
 
   exit();
 }
@@ -255,5 +269,20 @@ function my_custom_logout_redirect(){
   exit();
 }
 add_action( 'wp_logout', 'my_custom_logout_redirect' );
+
+// Añadir permisos de lectura a páginas y entradas privadas para cualquier usuario con rol suscriptor.
+
+function wp_acceso_contenido_privado(){
+global $wp_roles;
+// Obtenemos en una variable el rol suscriptor.
+$role = get_role('subscriber');
+// Le añadimos el permiso de lectura a páginas privadas.
+$role->add_cap('read_private_pages');
+// Incluimos también el permiso de lectura a posts privados.
+$role->add_cap('read_private_posts');
+}
+
+// Llamada a nuestra función.
+add_action ( 'admin_init', 'wp_acceso_contenido_privado' );
 
 ?>
