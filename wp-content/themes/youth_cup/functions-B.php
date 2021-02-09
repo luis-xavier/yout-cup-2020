@@ -75,7 +75,6 @@ if ( ! isset( $content_width ) ) {
 
 # Thumbnail sizes
 add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 420, 280, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 
 /*
@@ -103,7 +102,6 @@ add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'bones-thumb-600' => __('600px by 150px'),
-        'bones-thumb-420' => __('420px by 280px'),
         'bones-thumb-300' => __('300px by 100px'),
     ) );
 }
@@ -241,80 +239,5 @@ function new_excerpt_more($more) {
   return '';
 }
 add_filter('excerpt_more','new_excerpt_more',11);
-
-
-
-/*************  login directo a los playres  *********************/
-function my_custom_login_redirect(){
-
-
-  $user = wp_get_current_user();
-
-  if ( isset( $user->roles ) && is_array( $user->roles ) ) {
-      if ( in_array('subscriber', $user->roles) ) {
-          
-          wp_redirect( get_permalink('page_id=277') );
-          die;
-      }
-  }
-
-
-
-  wp_redirect( home_url("?page_id=277") );
-
-  exit();
-}
-add_action( 'wp_login','my_custom_login_redirect' );
-
-function my_custom_logout_redirect(){
-  wp_redirect( home_url() );
-  exit();
-}
-add_action( 'wp_logout', 'my_custom_logout_redirect' );
-
-// Añadir permisos de lectura a páginas y entradas privadas para cualquier usuario con rol suscriptor.
-
-function wp_acceso_contenido_privado(){
-global $wp_roles;
-// Obtenemos en una variable el rol suscriptor.
-$role = get_role('subscriber');
-// Le añadimos el permiso de lectura a páginas privadas.
-$role->add_cap('read_private_pages');
-// Incluimos también el permiso de lectura a posts privados.
-$role->add_cap('read_private_posts');
-}
-
-// Llamada a nuestra función.
-add_action ( 'admin_init', 'wp_acceso_contenido_privado' );
-
-
-function my_login_logo() { ?>
-    <style type="text/css">
-        #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/library/images/login-logo.png);
-			height:48px;
-			width:334px;
-			background-size: 334px 48px;
-			background-repeat: no-repeat;
-        	padding-bottom: 30px;
-        }
-    </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'my_login_logo' );
-
-add_filter( 'login_headerurl', 'my_custom_login_url' );
-function my_custom_login_url($url) {
-    return 'https://www.xochimaco.com/youth-cup-wp';
-}
-
-
-
-
-
-function my_login_stylesheet() {
-    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/library/css/style-login.css' );
-    wp_enqueue_script( 'custom-login', get_stylesheet_directory_uri() . '/library/js/style-login.js' );
-}
-add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
-
 ?>
+
