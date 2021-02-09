@@ -1,0 +1,62 @@
+body.login { 
+	width: 100%;
+	height: auto;
+	padding: 30px 0 60px;
+	background: url(../img/back_stadium.jpg) no-repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+	background-position: center top;
+	background-size: cover;
+	display: inline-table;
+	margin-top: 71px;
+}
+body.login div#login {
+	font-family: 'FC Bayern Sans', sans-serif;
+	margin: 0 auto;
+	width: 41%;
+	max-width: 650px;
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.13);
+	box-sizing: border-box;
+	padding: 2.5% 3%;
+}
+body.login div#login h1 {}
+body.login div#login h1 a {}
+body.login div#login form#loginform {
+	border: none;
+	box-shadow: none;
+}
+body.login div#login form#loginform p {}
+body.login div#login form#loginform p label {}
+body.login div#login form#loginform input {}
+body.login div#login form#loginform input#user_login {}
+body.login div#login form#loginform input#user_pass {}
+body.login div#login form#loginform p.forgetmenot {}
+body.login div#login form#loginform p.forgetmenot input#rememberme {}
+body.login div#login form#loginform p.submit {
+	text-align: center;
+	width: 100%;
+}
+body.login div#login form#loginform p.submit input#wp-submit {
+	clear: both;
+	cursor: pointer;
+	display: inline-block;
+	transition: all .3s;
+	text-align: center;
+	background-color: #DB052C;
+	color: #ffffff;
+	font-size: 1.05em;
+	font-weight: 700;
+	letter-spacing: .06em;
+	padding: 10px 65px 9px;
+	margin: 15px auto;
+	border: 2px #DB052C solid;
+}
+body.login div#login p#nav {}
+body.login div#login p#nav a {}
+body.login div#login p#backtoblog {}
+body.login div#login p#backtoblog a {}
