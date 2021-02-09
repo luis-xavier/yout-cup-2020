@@ -281,4 +281,35 @@ $role->add_cap('read_private_posts');
 // Llamada a nuestra función.
 add_action ( 'admin_init', 'wp_acceso_contenido_privado' );
 
+
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/library/images/login-logo.png);
+			height:48px;
+			width:334px;
+			background-size: 334px 48px;
+			background-repeat: no-repeat;
+        	padding-bottom: 30px;
+        }
+    </style>
+<?php }
+
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+add_filter( 'login_headerurl', 'my_custom_login_url' );
+function my_custom_login_url($url) {
+    return home_url();
+}
+
+
+
+
+
+function my_login_stylesheet() {
+    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/library/css/style-login.css' );
+    wp_enqueue_script( 'custom-login', get_stylesheet_directory_uri() . '/library/js/style-login.js' );
+}
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
 ?>
