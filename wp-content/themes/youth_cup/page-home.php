@@ -20,11 +20,17 @@
     </article>
 </section>
 
+<?php 
+var_dump()
+?>
+
 
 <section class="second-section-home">
     <div class="banner-tvcuatro">
-        <img src="<?= $miBanner ?>" alt="" class="tv-cuatro-desktop">
-        <img src="<?= $miBanner ?>" alt="" class="tv-cuatro-mobile">
+        <a href="<?= $miBannerLink ?>" target="_blank">
+            <img src="<?= $miBanner ?>" alt="" class="tv-cuatro-desktop">
+            <img src="<?= $miBanner ?>" alt="" class="tv-cuatro-mobile">
+        </a>
     </div>
 </section>
 

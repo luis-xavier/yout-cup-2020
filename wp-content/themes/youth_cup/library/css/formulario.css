@@ -598,3 +598,10 @@ html, body{
 .cuadro-datos.abierto .jugadores-botones{
     display: none;
 }
+
+
+#seleccionarte{
+    width: 100%;
+    min-height: 150px;
+
+}

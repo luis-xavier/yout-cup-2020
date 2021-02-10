@@ -18,7 +18,7 @@ if (isset($url_imagen) && $last11 != "default.png"){
 		</div>
 <?php } ?>
 
-<div class="preguntas-frecuentes">
+<div class="noticia-curveball">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

@@ -159,7 +159,7 @@ function bones_scripts_and_styles() {
 		wp_enqueue_style( 'formulario_style' );
 		wp_enqueue_style( 'acordeon_style' );
 		wp_enqueue_style( 'login_style' );
-		#wp_enqueue_style( 'swiper_style' );
+		wp_enqueue_style( 'swiper_style' );
 
 
 		#$wp_styles->add_data( 'main', 'swiper', 'lt IE 9' ); # add conditional wrapper around ie stylesheet

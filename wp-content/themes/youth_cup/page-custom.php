@@ -45,7 +45,6 @@
 			                        <option value="2004">2004</option>
 			                        <option value="2005">2005</option>
 			                        <option value="2006">2006</option>
-			                        <option value="2007">2007</option>
 			                    </select>
 			                    <select name="meses-<?= $numjugador ?>" id="meses-<?= $numjugador ?>" class="meses">
 			                        <option value="MM">Mes</option>
