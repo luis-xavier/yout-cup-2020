@@ -48,8 +48,8 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = 2;
-    $mail->Debugoutput = 'html';
+    $mail->SMTPDebug = 0;
+    //$mail->Debugoutput = 'html';
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAutoTLS = false; 
@@ -61,10 +61,10 @@ try {
     $mail->SMTPAuth = true;
 
     //Username to use for SMTP authentication - use full email address for gmail
-    $mail->Username = 'contacto@curveball.mx';
+    $mail->Username = '@gmail.com';
 
     //Password to use for SMTP authentication
-    $mail->Password = '?';
+    $mail->Password = '';
 
     //Recipients
     $mail->setFrom('contacto@curveball.mx', 'Curveball Sports');
