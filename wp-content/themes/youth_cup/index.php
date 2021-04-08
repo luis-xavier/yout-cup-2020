@@ -27,8 +27,8 @@
 
 <section class="second-section-home">
     <div class="banner-tvcuatro">
-        <img src="<?= get_template_directory_uri(); ?>/library/img/banner-desktop.jpg" alt="" class="tv-cuatro-desktop">
-        <img src="<?= get_template_directory_uri(); ?>/library/img/banner-mobile.jpg" alt="" class="tv-cuatro-mobile">
+        <a href="https://www.tvcuatro.com/" target="_blank"><img src="<?= get_template_directory_uri(); ?>/library/img/banner-desktop.jpg" alt="" class="tv-cuatro-desktop"></a>
+        <a href="https://www.tvcuatro.com/" target="_blank"><img src="<?= get_template_directory_uri(); ?>/library/img/banner-mobile.jpg" alt="" class="tv-cuatro-mobile"></a>
     </div>
 </section>
 

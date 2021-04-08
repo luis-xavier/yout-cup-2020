@@ -102,4 +102,15 @@ $('.overlay-confirmacion, .modal .btn-morado, .cerrar-modal').on('click', functi
     
   });
   
+
+    $('.list-downloads li').on('click', function(){
+        var actual = $(this).text().toLowerCase();
+        console.log(actual);
+        $('.tabstrip').hide();
+        $('#'+actual).show();
+        $('.list-downloads li').removeClass('selected');
+        $(this).addClass('selected');
+    });
+
+  
   });// cierra el ready

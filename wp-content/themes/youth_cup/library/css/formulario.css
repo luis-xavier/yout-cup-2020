@@ -72,7 +72,7 @@ html, body{
     font-size: 1em;
     line-height: 1.3em;
     color: #001829;
-    text-align: left;
+    text-align: center;
     margin: 0 0 30px 0;
 }
 #form-wrapper p b{
@@ -132,6 +132,15 @@ html, body{
     font-weight: 500;
     color:#001829;
     width: 100%;
+}
+.formulario textarea{
+    width: 100%;
+    position: relative;
+    display: block;
+    padding: 1rem;
+    font-family: 'FC Bayern Sans', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
 }
 .formulario input[type="text"] + label,
 .formulario input[type="password"] + label{
@@ -396,6 +405,11 @@ html, body{
         margin-top: 51px;
     }
 }
+@media (max-width: 550px){
+    #form-wrapper form {
+        padding: 6px 0px 46px;
+    }
+}
 @media (max-width: 470px){
     .contraseña{
        font-size: 13px;
@@ -599,9 +613,13 @@ html, body{
     display: none;
 }
 
-
-#seleccionarte{
+#seleccionarte {
     width: 100%;
     min-height: 150px;
-
+    background-color: #F3F5F6;
+    border: none;
+    border-bottom: 1px solid black;
+}
+#seleccionarte:focus {
+    outline: none;
 }

@@ -14,15 +14,45 @@
         </video>
         <button id="abrir-modal" class="abrir-modal"><img src="<?= get_template_directory_uri(); ?>/library/img/expand.svg" alt=""></button>
     </div>
+    
+    <?php 
+        $language = explode('/', $_SERVER['REQUEST_URI']);
+        $language = $language[1];
+$lang = isset($lang) ? $_GET['lang'] : 'en';
+$cualCat = "news";
+$copyLeer = "Read more";
+$copyMasNots = "All news";
+
+
+if ($lang == 'es'){
+    $cualCat = "noticias";
+    $copyLeer = "Leer Más";
+    $copyMasNots = "Mas noticias";
+    
+}
+
+if ($language == 'en'){
+    $titleh2 = 'News';
+}else{
+    $titleh2 = 'Noticias';
+}
+
+$category_id = get_cat_ID( $cualCat  );
+$category_link = get_category_link( $category_id );
+
+
+?> 
 
 <article>    
         <?php  the_content(); ?>
     </article>
+    <?php if ($language == 'en'){ ?>
+    <a href="https://youthcup.mx/?registradora=join-in" class="boton">SIGN UP HERE</a>
+    
+    <?php }else{ ?>
+    <a href="https://youthcup.mx/?registradora=registro" class="boton">INSCRÍBETE AQUÍ</a>
+    <?php } ?>
 </section>
-
-<?php 
-var_dump()
-?>
 
 
 <section class="second-section-home">
@@ -36,24 +66,7 @@ var_dump()
 
 <section class="third-section-home noticias section-gray">
 
-<?php 
-$lang = isset($lang) ? $_GET['lang'] : 'en';
-$cualCat = "news";
-$copyLeer = "Read more";
-$copyMasNots = "All news";
-
-if ($lang == 'es'){
-    $cualCat = "noticias";
-    $copyLeer = "Leer Más";
-    $copyMasNots = "Mas noticias";
-}
-
-$category_id = get_cat_ID( $cualCat  );
-$category_link = get_category_link( $category_id );
-
-
-?> 
-    <h2>Noticias</h2>
+    <h2><?= $titleh2; ?></h2>
     <!--span>Actualización al 29 de dicembre</span-->
     <div class="noticias-wrapper">
 
@@ -61,11 +74,13 @@ $category_link = get_category_link( $category_id );
         query_posts('cat=$cualCat&showposts=3');
         if ( have_posts() ) :
             while ( have_posts() ) : the_post();
+            
+            // Get desktop image banner
+    $noticiaImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');
+    $noticiaImage = $noticiaImage[0];
                 ?>
             <div class="noticia">
-                <?php 
-                (has_post_thumbnail() ? the_post_thumbnail('medium') : false) 
-                ?>
+                <img src="<?= $noticiaImage;  ?>" alt="">
                 <h3><?php the_title(); ?></h3>
                 <?php the_excerpt(); ?>
                 <a href="<?= esc_url( get_permalink( )) ?>"><?= $copyLeer ?></a>
@@ -94,11 +109,14 @@ $category_link = get_category_link( $category_id );
 if ( have_posts() ) :
     while ( have_posts() ) : the_post();
         // Your loop code
+        // Get desktop image banner
+    $noticiaImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');
+    $noticiaImage = $noticiaImage[0];
         ?>
 
         <div class="swiper-slide">
                     <div class="noticia">
-                        <?php (has_post_thumbnail() ? the_post_thumbnail('medium') : false) ?>
+                        <img src="<?= $noticiaImage;  ?>" alt="">
                         <h3><?php the_title(); ?></h3>
                         <p><?php the_excerpt(); ?></p>
                         <a href="<?php get_permalink() ?>"><?= $copyLeer ?></a>

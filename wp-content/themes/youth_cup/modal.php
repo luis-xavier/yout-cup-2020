@@ -20,7 +20,7 @@
 }
 </style>
 <div class="overlay-confirmacion">
-	<div class="modal">
+    <div class="modal">
         <div class="cerrar-modal"></div>
         <section id="modal-wrapper">
         <h2>Suscríbete al newsletter y participa en la rifa de un jersey</h2>
@@ -45,28 +45,39 @@
             </form>
         </div>
         </section>
-	</div>
+    </div>
 </div>
 
 
 <script type="text/javascript">
 
+
+var jq = jQuery.noConflict();
 function mensajeIntro(){
-	$('.overlay-confirmacion').fadeIn('slow');
+    jq('.overlay-confirmacion').fadeIn('slow');
 }
 
-if ($.cookie('modal_shown') == null) {
-    $.cookie('modal_shown', 'yes', { expires: 7, path: '/' });
-    mensajeIntro();
-}
+(function($) {
+  $(document).ready(function(){
+        if ($.cookie('modal_shown') == null) {
+            $.cookie('modal_shown', 'yes', { path: '/' });
+            setTimeout(function(){
+                mensajeIntro();
+            }, 5000);
+        }
+    });
+}(jQuery));
 
-$('.modal').on('click', function(){
-	return false;
+jq('.modal').on('click', function(){
+    return false;
 });
 
-$('.overlay-confirmacion, .modal .btn-morado, .cerrar-modal').on('click', function(){
-	$('.overlay-confirmacion').fadeOut();
+jq('.overlay-confirmacion, .modal .btn-morado, .cerrar-modal').on('click', function(){
+    jq('.overlay-confirmacion').fadeOut();
 });
+
+
+
 
 function errorForm(idElementForm, textoAlerta){
     let elemento = idElementForm;

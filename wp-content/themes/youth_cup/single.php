@@ -13,7 +13,6 @@ $url_imagen=$thumb_url[0];
 
 ?>
     <!--img src="<?= $url_imagen ?>" class="first-image" alt=""-->
-	<div></div>
     <h2><?php the_title(); ?></h2>
     <?php  the_content(); ?>
 	

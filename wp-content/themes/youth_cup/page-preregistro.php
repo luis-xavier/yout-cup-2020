@@ -42,8 +42,12 @@ if(isset($_POST['enviado'])) {
             if (count($reg_errors->get_error_messages()) > 0) {
 
                 //si hay falla
+                foreach ( $reg_errors->get_error_messages() as $error ) {
+                  echo  "<p> ".$error."</p>";
+                 }
              }else{
                   //si si si ya todo esta chido...
+                  //echo "no hay";
               include 'library/mailer.php';
               global $wpdb;
               $table = $wpdb->prefix.'preregistro';
@@ -61,8 +65,8 @@ if(isset($_POST['enviado'])) {
               $my_id = $wpdb->insert_id;
               //var_dump($my_id);
 
-              $wpdb->print_error();
-              var_dump($wpdb);
+              //$wpdb->print_error();
+              //var_dump($wpdb);
 
               if (isset($my_id)){
                 palAdminDos ($_POST['nombre'],$_POST['nombre_equipo'],$_POST['ciudad'],$_POST['mobile'],$_POST['email'],esc_textarea($_POST['seleccionarte']));
@@ -79,7 +83,7 @@ if(isset($_POST['enviado'])) {
 <div id="back_form_login">
 
 <script type="text/javascript">
-jQuery(function ($) {
+jQuery(document).ready(function($) {
     <?php 
 
         if (isset($my_id)){
@@ -115,7 +119,37 @@ jQuery(function ($) {
     
     </div>
 
+    <?php 
 
+(string)$lang = pll_current_language();
+
+//echo $lang." _here";
+
+$esp = array(
+  "Nombre",
+  "Nombre del equipo",
+  "Ciudad",
+  "Teléfono",
+  "Correo electrónico",
+  "¿Por qué crees que debamos seleccionarte?",
+  "Mi equipo corresponde a la categoría participante (2004-06) y deberíamos ser seleccionador por...",
+  "Acepto los términos y condiciones",
+  "Enviar",
+  );
+
+  $ing = array(
+    "Name",
+    "Team name",
+    "City",
+    "Phone number",
+    "Email",
+    "Tell us why why your team can be selected",
+    "My team has on category (2004-06) and can be selected because...",
+    "I accept the terms and conditions",
+    "Send",
+    );
+  
+?>
 
 </section>
 
@@ -126,42 +160,52 @@ jQuery(function ($) {
     <form action="" method="POST" id="formulario" class="formulario">            
         <ul>
         	<li>
-                <input id="nombre" maxlength="50" name="nombre" size="20" type="text" required="" class="sinvalidar" onBlur="validarNombre('nombre')" oninput="validarNombre('nombre')"/>
-                <label for="nombre">Nombre</label>
+                <input id="nombre" maxlength="50" name="nombre" size="20" type="text" required="" class="sinvalidar" onBlur="validarNombre('nombre')" oninput="validarNombre('nombre')" <?= (isset($_POST['nombre'])) ? 'value="'.$_POST['nombre'].'"' : false ?> />
+                <label for="nombre"><?= ($lang == 'en') ? $ing[0] : $esp[0]; ?> </label>
             </li>
             
             <li>
-                <input id="nombre_equipo" maxlength="50" name="nombre_equipo" size="20" type="text" required="" class="sinvalidar" onBlur="validarNombreEquipo('nombre_equipo')" oninput="validarNombreEquipo('nombre_equipo')"/>
-                <label for="nombre_equipo">Nombre del equipo</label>
+                <input id="nombre_equipo" maxlength="50" name="nombre_equipo" <?= (isset($_POST['nombre_equipo'])) ? 'value="'.$_POST['nombre_equipo'].'"' : false ?>size="20" type="text" required="" class="sinvalidar" onBlur="validarNombreEquipo('nombre_equipo')" oninput="validarNombreEquipo('nombre_equipo')"/>
+                <label for="nombre_equipo"><?= ($lang == 'en') ? $ing[1] : $esp[1]; ?></label>
             </li>
 			
 			<li>
-                <input id="ciudad" maxlength="80" name="ciudad" size="20" type="text" required="" class="sinvalidar" onBlur="validarCiudad('ciudad')" oninput="validarCiudad('ciudad')"/>
-                <label for="ciudad">Ciudad</label>
+                <input id="ciudad" maxlength="80" name="ciudad" <?= (isset($_POST['ciudad'])) ? 'value="'.$_POST['ciudad'].'"' : false ?> size="20" type="text" required="" class="sinvalidar" onBlur="validarCiudad('ciudad')" oninput="validarCiudad('ciudad')"/>
+                <label for="ciudad"><?= ($lang == 'en') ? $ing[2] : $esp[2]; ?></label>
             </li>
 			
 			<li>
-                <input id="telefono" maxlength="13" name="mobile" size="20" type="text" required="" class="sinvalidar" onBlur="validarTelefono('telefono')" oninput="validarTelefono('telefono')" onkeypress="return isNumberKey(event)"/>
-                <label for="telefono">Teléfono</label>
+                <input id="telefono" maxlength="13" name="mobile" <?= (isset($_POST['mobile'])) ? 'value="'.$_POST['mobile'].'"' : false ?> size="20" type="text" required="" class="sinvalidar" onBlur="validarTelefono('telefono')" oninput="validarTelefono('telefono')" onkeypress="return isNumberKey(event)"/>
+                <label for="telefono"><?= ($lang == 'en') ? $ing[3] : $esp[3]; ?></label>
             </li>
             
             <li>
-                <input id="email" maxlength="80" name="email" size="20" type="text" required="" class="sinvalidar" onBlur="validarCorreo('email')" oninput="validarCorreo('email')" />
-                <label for="email">Correo electrónico</label>
+                <input id="email" maxlength="80" name="email" <?= (isset($_POST['email'])) ? 'value="'.$_POST['email'].'"' : false ?> size="20" type="text" required="" class="sinvalidar" onBlur="validarCorreo('email')" oninput="validarCorreo('email')" />
+                <label for="email"><?= ($lang == 'en') ? $ing[4] : $esp[4]; ?></label>
             </li>
 
             <li>
-                <label for="seleccionarte">¿Por qué crees que debamos seleccionarte?</label>
-                <textarea id="seleccionarte" name="seleccionarte" required="" class="sinvalidar" onBlur="validarSeleccionarte('seleccionarte')" oninput="validarSeleccionarte('seleccionarte')" /></textarea>
+                <label for="seleccionarte"><?= ($lang == 'en') ? $ing[5] : $esp[5]; ?></label>
+                <textarea id="seleccionarte" name="seleccionarte" required="" class="sinvalidar" onBlur="validarSeleccionarte('seleccionarte')" oninput="validarSeleccionarte('seleccionarte')" />
+                <?php 
+                if (isset($_POST['seleccionarte'])){
+                  echo $_POST['seleccionarte'];
+                }else{
+                 echo  ($lang == 'en') ? $ing[6] : $esp[6];
+                }
+
+
+                ?>
+              </textarea>
             </li>
 
             <li style="text-align: left;">
                 <input type="checkbox" class="checkbox-estilizado" name="aviso" id="aviso" onchange="validarCheckAviso('aviso')">
-                <label for="aviso">Acepto términos y condiciones contenidos en el <a href="<?= get_permalink( get_page_by_title( 'Aviso de privacidad' ) )?>" target="_blank" class="inline-link">Aviso de privacidad</a></label>
+                <label for="aviso"><?= ($lang == 'en') ? $ing[7] : $esp[7]; ?> <a href="<?= get_permalink( get_page_by_title( 'Aviso de privacidad' ) )?>" target="_blank" class="inline-link"></a></label>
             </li>
         </ul>
 
-        <button type="submit" name="enviar" onclick="window.validacion()" class="boton" id="enviador">ENVIAR</button>
+        <button type="submit" name="enviar" onclick="window.validacion()" class="boton" id="enviador"><?= ($lang == 'en') ? $ing[8] : $esp[8]; ?></button>
 
         <input type="hidden" name="enviado" value="true" />
 
@@ -169,3 +213,4 @@ jQuery(function ($) {
 
 </section>
 </div>
+<?php get_footer(); ?>

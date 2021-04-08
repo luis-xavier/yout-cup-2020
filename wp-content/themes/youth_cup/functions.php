@@ -25,6 +25,9 @@ function bones_ahoy() {
   # pal form de regiastro
   require_once( 'library/registro.php' );
 
+    # Que sea el mio
+    require_once( 'library/solicitudes.php' );
+
   # pa ver los regisytrados
   require_once( 'library/members.php' );
 

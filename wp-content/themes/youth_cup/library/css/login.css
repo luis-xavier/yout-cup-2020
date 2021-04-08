@@ -28,12 +28,12 @@ with the width and height.
   padding-bottom: 15px;
   display: block; }
 
-form {
+#form-wrapper form {
   margin-left: 8px;
   padding: 26px 24px 46px;
   font-weight: normal;
   background: white;
-  border: 1px solid #E5E5E5;
+  border: unset;
   border-radius: 3px;
   box-shadow: none; }
 

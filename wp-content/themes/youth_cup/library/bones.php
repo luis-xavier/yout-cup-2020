@@ -153,13 +153,14 @@ function bones_scripts_and_styles() {
 						wp_register_script( 'entrar', get_stylesheet_directory_uri() . '/library/js/login.js', array ('jquery'), '0.1', false);
 						wp_register_script( 'main', get_stylesheet_directory_uri() . '/library/js/javascript.js', array ('jquery'), '0.1', true);
 						wp_register_script( 'acordeon', get_stylesheet_directory_uri() . '/library/js/acordeon.js', array ('jquery'), '0.1', true);
+						wp_register_script( 'cookie', get_stylesheet_directory_uri() . '/library/js/jquery.cookie.js', array ('jquery'), '0.1', true);
 
 		# encolar estilos
 		wp_enqueue_style( 'youth_cup' );
 		wp_enqueue_style( 'formulario_style' );
 		wp_enqueue_style( 'acordeon_style' );
 		wp_enqueue_style( 'login_style' );
-		wp_enqueue_style( 'swiper_style' );
+		#wp_enqueue_style( 'swiper_style' );
 
 
 		#$wp_styles->add_data( 'main', 'swiper', 'lt IE 9' ); # add conditional wrapper around ie stylesheet
@@ -194,6 +195,7 @@ add_action('wp_default_scripts', 'remove_jquery_migrate');
 		wp_enqueue_script( 'acordeon' );
 		wp_enqueue_script( 'formulario' );
 		wp_enqueue_script( 'entrar' );
+		wp_enqueue_script( 'cookie' );
 
 	}
 }

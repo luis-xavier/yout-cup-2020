@@ -37,6 +37,15 @@
 
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVN3NXBVFY"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-NVN3NXBVFY');
+        </script>
 
 	</head>
 

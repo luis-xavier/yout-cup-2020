@@ -1,3 +1,6 @@
+<?php  
+(string)$language = pll_current_language(); 
+        ?>
 <footer>
     <section class="second-section-footer">
         <div class="subsections-footer">
@@ -7,7 +10,11 @@
                 <a href="" class="curveball"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/logo-curveball.svg" alt=""></a>
             </div>
             <div class="second-subsection-footer subsection-footer">
-                <p>Contáctanos:</p>
+                <?php if($language == 'es'){ ?>
+        <?php }else{ ?>
+        <p>Contact us:</p>
+        <?php } ?>
+                
                 <p>+52 461104 3805</p>
                 <a href="mailto:contacto@curveball.mx">contacto@curveball.mx</a>
             </div>
@@ -39,20 +46,106 @@
         <span class="span-f"><a href="">contacto@curveball.mx</a></span>
     </section>
     <section class="third-section-footer">
+        
+        <?php if($language == 'en'){ ?>
+        <p>Youth Cup Friends</p>
+        <?php }else{ ?>
         <p>Amigos de la Youth Cup</p>
+        <?php } ?>
         <div class="amigos-yc">
-            <a href="https://www.tvcuatro.com/" target="_blank" class="tv4"><img src="<?= get_stylesheet_directory_uri() ?>/library/img/tv4.png" alt=""></a>
+            
+            <?php
+
+  rewind_posts();
+
+  // Get all items in slider post type
+  $query = new WP_Query( array(
+    'post_type' => 'Amigos',
+    'posts_per_page' => -1 ) );
+
+    while($query->have_posts()) : $query->the_post();
+    
+    // Get desktop image banner
+    $amigosImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');
+    $amigosImage = $amigosImage[0];
+
+?>
+            <a href="<?php echo get_the_content(); ?>" target="_blank" class="tv4"><img src="<?= $amigosImage; ?>" alt=""></a>
             <!-- <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/embajada.svg" alt=""></a>
             <a href=""><img src="<?= get_stylesheet_directory_uri() ?>/library/img/estado.svg" alt=""></a>            -->
+            <?php endwhile; ?>
         </div>
     </section>
-    <address><?php bloginfo( 'name' ); ?> <?= date('Y'); ?> &copy; Derechos reservados |<a href=""> Aviso de Privacidad</a></address>
+    <?php
+        if($language == 'en'){
+    ?>
+    <address><?php bloginfo( 'name' ); ?> <?= date('Y'); ?> &copy; All rights reserved |<a href="https://youthcup.mx/?page_id=118"> Notice of privacy</a></address>
+    
+    <?php }else{ ?>
+    <address><?php bloginfo( 'name' ); ?> <?= date('Y'); ?> &copy; Derechos reservados |<a href="https://youthcup.mx/?page_id=118&lang=es"> Aviso de Privacidad</a></address>
+    <?php } ?>
+
+
+    
 </footer>
+
+<!--?php if ( is_front_page() || is_home() ) { 
+
+if($language == 'en'){
+    $modalClick = 'Click <a onclick="window.open("https://youthcup.mx/que-sea-mi-equipo/")" href="https://youthcup.mx/que-sea-mi-equipo/">HERE</a> to fill in your data to become one of the two teams FC Bayern and Tigres will put through the Youth Cup México';
+}else{
+    $modalClick = 'Haz click <a onclick="window.open("https://youthcup.mx/que-sea-mi-equipo/")" href="https://youthcup.mx/que-sea-mi-equipo/">aquí</a> y llena el formulario para que tu equipo sea uno de los 2 becados por FC Bayern y Tigres';
+}
+?-->
+<!--div class="overlay-confirmacion" style="display: block;">
+	<div class="modal">
+        <div class="cerrar-modal"></div>
+        <section id="modal-wrapper" style="
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: 100%;
+">
+    <div id="back_form_login" style="
+    margin: 0;
+    padding: 90px 90px 0 90px;
+    box-sizing: border-box;
+">
+        <div class="modal-content" style="flex-wrap: wrap;justify-content: center;align-items: center;">
+            <h2>Haz click <a onclick="window.open('https://youthcup.mx/que-sea-mi-equipo/')" href="https://youthcup.mx/que-sea-mi-equipo/">aquí</a> y llena el formulario para que tu equipo sea uno de los 2 becados por FC Bayern y Tigres</h2>   
+            <img src="https://youthcup.mx/wp-content/themes/youth_cup/library/img/jersey.svg" alt="">
+            </div>
+            
+        </div>
+    </div>
+            
+        </section>
+	</div>
+</div-->
+
+<?php //} ?>
+
+
+<style>
+#back_form_login {
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 60px;
+    background: url(https://youthcup.mx/wp-content/themes/youth_cup/library/img/back_stadium.jpg) no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    display: inline-table;
+    margin-top: 57px;
+}
+</style>
+
+<?php include 'modal-registro.php' ?>
 
 
 
 <?php wp_footer(); ?>
 
 	</body>
+
 
 </html> <!-- end of site. what a ride! -->

@@ -1,6 +1,24 @@
 <?php
 if(is_admin()){
     new Mis_equipos();
+
+    if (isset($_POST['nombre']) && isset($_POST['mail'])) {
+        #echo "ha ha! <br >";
+        #echo $_POST['nombre']."<br >";
+        #echo $_POST['mail']."<br >";
+        # code...
+        if (invitadora($_POST[ 'nombre' ],$_POST[ 'mail' ]) ){
+            $msj = "Haz invitado a ".$_POST['nombre']." en breve recibirá un email con instrucciones";
+        }else{
+            $msj = "Algo ha salido  mal, por favor reintenta mas tarde";
+        }
+
+        echo "<script type=\"text/javascript\">
+        alert('$msj')
+        </script>";
+    }
+
+    
 }
 
 class Mis_equipos{
@@ -61,7 +79,7 @@ class Lista_De_Miembros extends WP_List_Table{
         
         usort( $data, array( &$this, 'sort_data' ) );
 
-        $perPage = 10;
+        $perPage = 20;
         $currentPage = $this->get_pagenum();
         $totalItems = count($data);
 
@@ -97,21 +115,30 @@ class Lista_De_Miembros extends WP_List_Table{
             'motivo'      => '¿Porqué te registras en el torneo?',
             'created'      => 'Fecha registro',
             'aviso'      => 'T&C',
-            //'invitacion'    => 'Invite'//$this->invitador()
+            'invite'    => 'Invite'
         );
 
         return $columns;
     }
 
     /**
-     * Define which columns are hidden
+     * mi funcion pa invitar a la bandita
      *
-     * @return string
+     * @return stringsote
      */
-    public function invitador(){
+    public function invitador($quien, $mail){
         return sprintf(
-                '<input type="button" value="ha ha!" >'
-            );        
+                '<form action="" method="post">
+                <input type="submit" value="Invitar">
+                <input type="hidden" value="'.$quien.'" name="nombre" />
+                <input type="hidden" value="'.$mail.'" name="mail" />
+                </form>'
+
+            );
+            
+            //$user_login = sanitize_text_field( $_POST['user_login'] );
+            //$user_email = sanitize_email( $_POST['user_email'] );
+            //$user = register_new_user( $user_login, $user_email );
     }
 
     /**
@@ -175,9 +202,16 @@ class Lista_De_Miembros extends WP_List_Table{
             case 'relacion':
             case 'como':
             case 'motivo':
-            case 'created':
             case 'aviso':
                 return $item[ $column_name ];
+            case 'created':
+                return date("d/m/Y H:i", strtotime($item[ $column_name ]));    
+            case 'invite':
+                if ($item['invitado'] == 'No' || $item['invitado'] == NULL ){
+                    return $this->invitador($item[ 'contacto' ],$item[ 'correo' ]);
+                }else{
+                    return 'Listo';
+                };
             default:
                 return print_r( $item, true ) ;
         }
@@ -191,7 +225,7 @@ class Lista_De_Miembros extends WP_List_Table{
     private function sort_data( $a, $b ){
         // Set defaults
         $orderby = 'id';
-        $order = 'asc';
+        $order = 'desc';
 
         // If orderby is set, use this as the sort column
         if(!empty($_GET['orderby'])){
@@ -217,5 +251,25 @@ class Lista_De_Miembros extends WP_List_Table{
 
 function grabar_miembros(){
     require_once( 'save-member.php' );
+}
+
+function invitadora ($nombre, $mail){
+        global $wpdb;
+        $table = $wpdb->prefix.'registro';
+
+
+        $user_login = sanitize_text_field( $nombre );
+        $user_email = sanitize_email( $mail );
+        $newUser = register_new_user( $user_login, $user_email );
+
+
+        if ($newUser){
+            if ($wpdb->update( $table, array( 'invitado' => 'yes', 'id_contacto' => $newUser), array( 'correo' => $user_email ) ) ){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
 }
 ?>
